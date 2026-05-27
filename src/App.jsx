@@ -108,6 +108,17 @@ function BatchSendDemo() {
           </div>
 
           <div className="batch-demo">
+            {/* Batch screenshot */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
+              viewport={{ once: true }}
+              className="batch-screenshot"
+            >
+              <img src="/assets/batch.png" alt="Batch Send UI" className="feature-screenshot" />
+            </motion.div>
+
             {/* Upload Area */}
             <div
               className={`csv-drop-zone ${dragging ? 'dragging' : ''}`}
@@ -272,44 +283,80 @@ function HomePage() {
 
         <BatchSendDemo />
 
-        {/* More Features */}
-        <section className="section">
-          <div className="cta-section">
-            <motion.h2
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              className="section-title"
-              style={{ marginBottom: '1.5rem' }}
-            >
-              Everything You Need
-            </motion.h2>
-            <p className="hero-subtitle" style={{ margin: '0 auto 3rem', textAlign: 'center' }}>
-              Full-featured and production-ready. From staking to dApp integration, IOTA Wallet Pro covers it all.
-            </p>
+        {/* Feature Showcase */}
+        <section id="showcase" className="section">
+          <h2 className="section-title">Everything You Need</h2>
 
-            <div className="features-grid" style={{ textAlign: 'left' }}>
-              <div className="glass-card">
-                <div className="flex items-center gap-3 mb-4">
-                  <Layers className="text-blue-400" />
-                  <h4 className="font-bold">Native Staking</h4>
-                </div>
-                <p className="text-sm text-gray-400">Delegate to validators, track APY and rewards, and unstake — all from the wallet with live epoch data.</p>
-              </div>
-              <div className="glass-card">
-                <div className="flex items-center gap-3 mb-4">
-                  <Globe className="text-purple-400" />
-                  <h4 className="font-bold">Full dApp Support</h4>
-                </div>
-                <p className="text-sm text-gray-400">Implements IOTA Wallet Standard and EIP-1193 (MetaMask-compatible). Connect to any IOTA dApp and sign transactions with full approval UI.</p>
-              </div>
-              <div className="glass-card">
-                <div className="flex items-center gap-3 mb-4">
-                  <Users className="text-green-400" />
-                  <h4 className="font-bold">Multi-Profile Accounts</h4>
-                </div>
-                <p className="text-sm text-gray-400">Manage multiple independent mnemonics and derived accounts. Import private keys, rename, lock, and export — all password-protected.</p>
-              </div>
-            </div>
+          {/* Bridge */}
+          <div className="showcase-row">
+            <motion.div
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="showcase-text"
+            >
+              <div className="showcase-tag">Cross-Chain</div>
+              <h3 className="showcase-title">L1 ↔ EVM Bridge</h3>
+              <p className="showcase-desc">Transfer IOTA between the native L1 chain and IOTA EVM without leaving the wallet. Bridge direction is automatically determined by your active account type — no manual switching needed.</p>
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, x: 30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="showcase-img"
+            >
+              <img src="/assets/bridge.png" alt="Bridge UI" className="feature-screenshot" />
+            </motion.div>
+          </div>
+
+          {/* Address Book */}
+          <div className="showcase-row reverse">
+            <motion.div
+              initial={{ opacity: 0, x: 30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="showcase-img"
+            >
+              <img src="/assets/addressbook1.png" alt="Address Book" className="feature-screenshot" />
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="showcase-text"
+            >
+              <div className="showcase-tag">Address Book</div>
+              <h3 className="showcase-title">Contacts & Quick Fill</h3>
+              <p className="showcase-desc">Save frequently used addresses to your contact book. When sending or bridging, the address picker automatically filters contacts by network type — showing only L1 or EVM addresses as appropriate.</p>
+            </motion.div>
+          </div>
+
+          {/* Address Book 2 */}
+          <div className="showcase-row">
+            <motion.div
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="showcase-text"
+            >
+              <div className="showcase-tag">Multi-Profile</div>
+              <h3 className="showcase-title">Multiple Accounts</h3>
+              <p className="showcase-desc">Manage multiple independent mnemonic profiles, each with unlimited derived accounts. Import external private keys, lock individual accounts, and export keys — all protected by your password.</p>
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, x: 30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="showcase-img"
+            >
+              <img src="/assets/addressbook2.png" alt="Account Management" className="feature-screenshot" />
+            </motion.div>
           </div>
         </section>
       </main>
