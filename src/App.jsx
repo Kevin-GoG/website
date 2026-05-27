@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React from 'react';
+import { Routes, Route, useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import {
   Shield,
@@ -29,26 +30,15 @@ const FeatureCard = ({ icon: Icon, title, description, delay }) => (
   </motion.div>
 );
 
-function App() {
-  const [currentPage, setCurrentPage] = useState('home');
-
-  const navigate = (page) => {
-    setCurrentPage(page);
-  };
-
-  if (currentPage === 'privacy') {
-    return <PrivacyPolicy onBack={() => navigate('home')} />;
-  }
-  if (currentPage === 'terms') {
-    return <TermsOfService onBack={() => navigate('home')} />;
-  }
+function HomePage() {
+  const navigate = useNavigate();
 
   return (
     <div className="app-container">
       <div className="gradient-bg"></div>
-      
+
       <nav className="nav">
-        <div className="logo cursor-pointer" onClick={() => navigate('home')}>IOTA WALLET</div>
+        <div className="logo cursor-pointer" onClick={() => navigate('/')}>IOTA WALLET</div>
         <div className="nav-links">
           <a href="#features" className="btn-primary" style={{ padding: '0.5rem 1.25rem' }}>Features</a>
         </div>
@@ -158,20 +148,18 @@ function App() {
 
       <footer className="footer flex justify-between items-center flex-wrap gap-4">
         <div>
-          <div className="logo cursor-pointer" style={{ marginBottom: '1rem' }} onClick={() => setCurrentPage('home')}>IOTA WALLET</div>
+          <div className="logo cursor-pointer" style={{ marginBottom: '1rem' }} onClick={() => navigate('/')}>IOTA WALLET</div>
           <p>The professional wallet for the IOTA ecosystem.</p>
         </div>
         <div className="text-right flex flex-col items-end gap-2">
           <div className="flex gap-4">
-            <a href="javascript:void(0)"
-              onClick={() => navigate('privacy')}
+            <a href="/privacy"
               className="text-gray-400 hover:text-white transition-colors"
               style={{ fontSize: '0.9rem', fontStyle: 'italic', textDecoration: 'underline' }}
             >
               Privacy Policy
             </a>
-            <a href="javascript:void(0)"
-              onClick={() => navigate('terms')}
+            <a href="/terms"
               className="text-gray-400 hover:text-white transition-colors"
               style={{ fontSize: '0.9rem', fontStyle: 'italic', textDecoration: 'underline' }}
             >
@@ -184,6 +172,16 @@ function App() {
         </div>
       </footer>
     </div>
+  );
+}
+
+function App() {
+  return (
+    <Routes>
+      <Route path="/" element={<HomePage />} />
+      <Route path="/privacy" element={<PrivacyPolicy onBack={() => window.history.back()} />} />
+      <Route path="/terms" element={<TermsOfService onBack={() => window.history.back()} />} />
+    </Routes>
   );
 }
 
