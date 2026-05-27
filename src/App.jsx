@@ -176,11 +176,12 @@ function HomePage() {
 }
 
 function App() {
+  const navigate = useNavigate();
   return (
     <Routes>
       <Route path="/" element={<HomePage />} />
-      <Route path="/privacy" element={<PrivacyPolicy onBack={() => window.history.back()} />} />
-      <Route path="/terms" element={<TermsOfService onBack={() => window.history.back()} />} />
+      <Route path="/privacy" element={<PrivacyPolicy onBack={() => navigate('/')} />} />
+      <Route path="/terms" element={<TermsOfService onBack={() => navigate('/')} />} />
     </Routes>
   );
 }
