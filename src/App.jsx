@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import {
   Shield,
@@ -30,21 +30,9 @@ const FeatureCard = ({ icon: Icon, title, description, delay }) => (
 );
 
 function App() {
-  const getPageFromHash = () => {
-    const hash = window.location.hash.replace('#', '');
-    if (hash === 'privacy' || hash === 'terms') return hash;
-    return 'home';
-  };
-  const [currentPage, setCurrentPage] = useState(getPageFromHash);
-
-  useEffect(() => {
-    const onHashChange = () => setCurrentPage(getPageFromHash());
-    window.addEventListener('hashchange', onHashChange);
-    return () => window.removeEventListener('hashchange', onHashChange);
-  }, []);
+  const [currentPage, setCurrentPage] = useState('home');
 
   const navigate = (page) => {
-    window.location.hash = page === 'home' ? '' : page;
     setCurrentPage(page);
   };
 
