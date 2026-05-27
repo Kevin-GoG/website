@@ -209,3 +209,116 @@ body {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+
+/* Batch Send Demo */
+.batch-section {
+  background: linear-gradient(135deg, rgba(59, 130, 246, 0.08) 0%, rgba(168, 85, 247, 0.08) 100%);
+  border: 1px solid var(--glass-border);
+  border-radius: 3rem;
+  padding: 4rem 2rem;
+}
+
+.batch-header {
+  text-align: center;
+}
+
+.batch-demo {
+  max-width: 680px;
+  margin: 0 auto;
+}
+
+.csv-drop-zone {
+  border: 2px dashed var(--glass-border);
+  border-radius: 1.25rem;
+  padding: 2.5rem;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  background: var(--glass);
+}
+
+.csv-drop-zone:hover,
+.csv-drop-zone.dragging {
+  border-color: var(--primary);
+  background: rgba(59, 130, 246, 0.07);
+}
+
+.btn-outline {
+  background: transparent;
+  border: 1px solid var(--glass-border);
+  color: var(--text-muted);
+  padding: 0.5rem 1.25rem;
+  border-radius: 99px;
+  font-size: 0.875rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-outline:hover {
+  border-color: var(--primary);
+  color: #f8fafc;
+}
+
+.csv-error {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(239, 68, 68, 0.1);
+  border: 1px solid rgba(239, 68, 68, 0.3);
+  border-radius: 0.75rem;
+  padding: 0.75rem 1rem;
+  color: #fca5a5;
+  font-size: 0.875rem;
+  margin-top: 1rem;
+}
+
+.csv-preview {
+  margin-top: 1.5rem;
+  background: var(--glass);
+  border: 1px solid var(--glass-border);
+  border-radius: 1.25rem;
+  padding: 1.25rem;
+}
+
+.csv-preview-header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #22c55e;
+  margin-bottom: 1rem;
+}
+
+.csv-table-wrap {
+  max-height: 220px;
+  overflow-y: auto;
+  border-radius: 0.75rem;
+}
+
+.csv-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.85rem;
+}
+
+.csv-table th {
+  text-align: left;
+  padding: 0.5rem 0.75rem;
+  color: var(--text-muted);
+  font-weight: 500;
+  border-bottom: 1px solid var(--glass-border);
+  position: sticky;
+  top: 0;
+  background: var(--bg-dark);
+}
+
+.csv-table td {
+  padding: 0.5rem 0.75rem;
+  border-bottom: 1px solid rgba(255,255,255,0.04);
+}
+
+.csv-addr {
+  font-family: monospace;
+  color: var(--text-muted);
+}

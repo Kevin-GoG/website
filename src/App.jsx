@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useRef } from 'react';
 import { Routes, Route, useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import {
@@ -6,16 +6,19 @@ import {
   Zap,
   Layers,
   Globe,
-  ArrowRight,
   Download,
+  Users,
+  Upload,
+  FileText,
   CheckCircle,
-  Users
+  AlertCircle,
+  X
 } from 'lucide-react';
 import PrivacyPolicy from './PrivacyPolicy';
 import TermsOfService from './TermsOfService';
 
 const FeatureCard = ({ icon: Icon, title, description, delay }) => (
-  <motion.div 
+  <motion.div
     initial={{ opacity: 0, y: 20 }}
     whileInView={{ opacity: 1, y: 0 }}
     transition={{ duration: 0.5, delay }}
@@ -29,6 +32,169 @@ const FeatureCard = ({ icon: Icon, title, description, delay }) => (
     <p className="feature-description">{description}</p>
   </motion.div>
 );
+
+const EXAMPLE_CSV = `0x1a2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a2b,10.5
+0x2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a2b3c,25.0
+0x3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a2b3c4d,5.75`;
+
+function BatchSendDemo() {
+  const [rows, setRows] = useState([]);
+  const [error, setError] = useState('');
+  const [dragging, setDragging] = useState(false);
+  const inputRef = useRef(null);
+
+  const parseCSV = (text) => {
+    setError('');
+    const lines = text.trim().split('\n').filter(l => l.trim());
+    const parsed = [];
+    for (let i = 0; i < lines.length; i++) {
+      const parts = lines[i].split(',');
+      if (parts.length < 2) {
+        setError(`Line ${i + 1}: expected "address,amount"`);
+        return;
+      }
+      const address = parts[0].trim();
+      const amount = parts[1].trim();
+      if (!/^(0x[0-9a-fA-F]{64}|0x[0-9a-fA-F]{40})$/.test(address)) {
+        setError(`Line ${i + 1}: invalid address format`);
+        return;
+      }
+      if (isNaN(parseFloat(amount)) || parseFloat(amount) <= 0) {
+        setError(`Line ${i + 1}: invalid amount`);
+        return;
+      }
+      parsed.push({ address, amount });
+    }
+    setRows(parsed);
+  };
+
+  const handleFile = (file) => {
+    if (!file) return;
+    if (!file.name.endsWith('.csv') && file.type !== 'text/csv') {
+      setError('Please upload a .csv file');
+      return;
+    }
+    const reader = new FileReader();
+    reader.onload = (e) => parseCSV(e.target.result);
+    reader.readAsText(file);
+  };
+
+  const handleDrop = (e) => {
+    e.preventDefault();
+    setDragging(false);
+    handleFile(e.dataTransfer.files[0]);
+  };
+
+  const total = rows.reduce((sum, r) => sum + parseFloat(r.amount), 0);
+
+  return (
+    <section className="section">
+      <motion.div
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+        viewport={{ once: true }}
+      >
+        <div className="batch-section">
+          <div className="batch-header">
+            <div className="feature-icon" style={{ width: '3.5rem', height: '3.5rem', marginBottom: '1.5rem' }}>
+              <Zap size={28} />
+            </div>
+            <h2 className="section-title" style={{ marginBottom: '1rem' }}>Instant Batch Sending</h2>
+            <p style={{ color: 'var(--text-muted)', fontSize: '1.1rem', maxWidth: '560px', margin: '0 auto 2.5rem' }}>
+              Send IOTA to hundreds of addresses in a single atomic transaction block.
+              Upload a CSV file — <strong style={{ color: '#f8fafc' }}>address, amount</strong> per line.
+            </p>
+          </div>
+
+          <div className="batch-demo">
+            {/* Upload Area */}
+            <div
+              className={`csv-drop-zone ${dragging ? 'dragging' : ''}`}
+              onDragOver={(e) => { e.preventDefault(); setDragging(true); }}
+              onDragLeave={() => setDragging(false)}
+              onDrop={handleDrop}
+              onClick={() => inputRef.current.click()}
+            >
+              <input
+                ref={inputRef}
+                type="file"
+                accept=".csv,text/csv"
+                style={{ display: 'none' }}
+                onChange={(e) => handleFile(e.target.files[0])}
+              />
+              <Upload size={32} style={{ marginBottom: '0.75rem', color: 'var(--primary)' }} />
+              <p style={{ fontWeight: 600, marginBottom: '0.25rem' }}>Drop CSV file here or click to upload</p>
+              <p style={{ color: 'var(--text-muted)', fontSize: '0.875rem' }}>Format: address,amount — one per line</p>
+            </div>
+
+            {/* Example download */}
+            <div style={{ textAlign: 'center', margin: '1rem 0' }}>
+              <button
+                className="btn-outline"
+                onClick={() => {
+                  const blob = new Blob([EXAMPLE_CSV], { type: 'text/csv' });
+                  const url = URL.createObjectURL(blob);
+                  const a = document.createElement('a');
+                  a.href = url; a.download = 'example-batch.csv'; a.click();
+                  URL.revokeObjectURL(url);
+                }}
+              >
+                <FileText size={15} style={{ marginRight: '6px', verticalAlign: 'middle' }} />
+                Download Example CSV
+              </button>
+            </div>
+
+            {/* Error */}
+            {error && (
+              <div className="csv-error">
+                <AlertCircle size={16} />
+                <span>{error}</span>
+                <X size={16} style={{ marginLeft: 'auto', cursor: 'pointer' }} onClick={() => setError('')} />
+              </div>
+            )}
+
+            {/* Preview Table */}
+            {rows.length > 0 && (
+              <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="csv-preview">
+                <div className="csv-preview-header">
+                  <CheckCircle size={16} style={{ color: '#22c55e' }} />
+                  <span>{rows.length} recipients parsed</span>
+                  <span style={{ marginLeft: 'auto', color: 'var(--text-muted)', fontSize: '0.85rem' }}>
+                    Total: <strong style={{ color: '#f8fafc' }}>{total.toFixed(4)} IOTA</strong>
+                  </span>
+                </div>
+                <div className="csv-table-wrap">
+                  <table className="csv-table">
+                    <thead>
+                      <tr>
+                        <th>#</th>
+                        <th>Address</th>
+                        <th>Amount (IOTA)</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {rows.map((r, i) => (
+                        <tr key={i}>
+                          <td style={{ color: 'var(--text-muted)' }}>{i + 1}</td>
+                          <td className="csv-addr">{r.address.slice(0, 10)}…{r.address.slice(-8)}</td>
+                          <td>{r.amount}</td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
+                <p style={{ color: 'var(--text-muted)', fontSize: '0.8rem', marginTop: '1rem', textAlign: 'center' }}>
+                  Install the extension to execute this batch in one transaction
+                </p>
+              </motion.div>
+            )}
+          </div>
+        </div>
+      </motion.div>
+    </section>
+  );
+}
 
 function HomePage() {
   const navigate = useNavigate();
@@ -103,6 +269,8 @@ function HomePage() {
             />
           </div>
         </section>
+
+        <BatchSendDemo />
 
         {/* More Features */}
         <section className="section">
