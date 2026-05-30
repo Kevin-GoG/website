@@ -101,7 +101,7 @@ const Support = ({ onBack }) => (
           Choose the best way to get support for IOTA Wallet.
         </p>
 
-        <div className="features-grid">
+        <div className="features-grid" style={{ gridTemplateColumns: 'repeat(3, 1fr)' }}>
           {SUPPORT_ITEMS.map((item, i) => (
             <SupportCard key={item.title} {...item} delay={i * 0.1} />
           ))}
