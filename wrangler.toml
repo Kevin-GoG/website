@@ -3,4 +3,4 @@ name = "iota-wallet-website"
 [[d1_databases]]
 binding = "DB"
 database_name = "feedback_db"
-database_id = "REPLACE_WITH_ACTUAL_ID"
+database_id = "6b0e79e2-20e4-49e1-9ff0-2f266f19cda6"
