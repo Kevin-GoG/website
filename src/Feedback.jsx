@@ -109,7 +109,7 @@ const Feedback = ({ onBack }) => {
                   Category
                 </label>
                 <select name="category" value={form.category} onChange={handleChange} style={inputStyle}>
-                  {CATEGORIES.map((c) => <option key={c} value={c}>{c}</option>)}
+                  {CATEGORIES.map((c) => <option key={c} value={c} style={{ background: '#1e293b', color: '#f8fafc' }}>{c}</option>)}
                 </select>
               </div>
 
