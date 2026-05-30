@@ -232,7 +232,7 @@ function HomePage() {
             transition={{ duration: 0.8 }}
           >
             <h1 className="hero-title">
-              The Professional <span className="text-gradient">IOTA Wallet Pro</span>
+              The Professional <span className="text-gradient">IOTA Wallet</span>
             </h1>
             <p className="hero-subtitle">
               A Chrome extension wallet supporting both IOTA L1 (Move) and IOTA EVM. Self-custodial, dApp-ready, and built for power users.

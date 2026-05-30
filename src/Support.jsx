@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 const SUPPORT_ITEMS = [
   {
     icon: BookOpen,
-    title: 'Search Documentation',
+    title: 'Documentation',
     description: 'Browse the official IOTA docs for guides, API references, and tutorials.',
     label: 'View Docs',
     href: 'https://docs.iota.org',
