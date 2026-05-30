@@ -217,7 +217,7 @@ function HomePage() {
       <div className="gradient-bg"></div>
 
       <nav className="nav">
-        <div className="logo cursor-pointer" onClick={() => navigate('/')}>IOTA WALLET</div>
+        <div className="logo cursor-pointer" onClick={() => navigate('/')}>IOTA WALLET PRO</div>
         <div className="nav-links">
           <a href="#features" className="btn-primary" style={{ padding: '0.5rem 1.25rem' }}>Features</a>
         </div>
@@ -232,7 +232,7 @@ function HomePage() {
             transition={{ duration: 0.8 }}
           >
             <h1 className="hero-title">
-              The Professional <span className="text-gradient">IOTA Wallet</span>
+              The Professional <span className="text-gradient">IOTA Wallet Pro</span>
             </h1>
             <p className="hero-subtitle">
               A Chrome extension wallet supporting both IOTA L1 (Move) and IOTA EVM. Self-custodial, dApp-ready, and built for power users.
@@ -365,7 +365,7 @@ function HomePage() {
 
       <footer className="footer flex justify-between items-center flex-wrap gap-4">
         <div>
-          <div className="logo cursor-pointer" style={{ marginBottom: '1rem' }} onClick={() => navigate('/')}>IOTA WALLET</div>
+          <div className="logo cursor-pointer" style={{ marginBottom: '1rem' }} onClick={() => navigate('/')}>IOTA WALLET PRO</div>
           <p>The professional wallet for the IOTA ecosystem.</p>
         </div>
         <div className="text-right flex flex-col items-end gap-2">
@@ -390,7 +390,7 @@ function HomePage() {
             </a>
           </div>
           <div className="text-gray-500 text-sm mt-2">
-            &copy; 2026 IOTA Wallet Extension. Built with passion for the decentralized web.
+            &copy; 2026 IOTA Wallet Pro. Built with passion for the decentralized web.
           </div>
         </div>
       </footer>

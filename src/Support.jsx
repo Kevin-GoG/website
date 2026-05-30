@@ -15,7 +15,7 @@ const SUPPORT_ITEMS = [
   {
     icon: HelpCircle,
     title: 'Read FAQ',
-    description: 'Find answers to the most common questions about IOTA Wallet.',
+    description: 'Find answers to the most common questions about IOTA Wallet Pro.',
     label: 'Read FAQ',
     href: 'https://docs.iota.org/about-iota/FAQ',
     external: true,
@@ -98,7 +98,7 @@ const Support = ({ onBack }) => (
         </div>
 
         <p style={{ color: 'var(--text-muted)', fontSize: '1.1rem', marginBottom: '3rem' }}>
-          Choose the best way to get support for IOTA Wallet.
+          Choose the best way to get support for IOTA Wallet Pro.
         </p>
 
         <div className="features-grid" style={{ gridTemplateColumns: 'repeat(3, 1fr)' }}>
