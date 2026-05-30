@@ -16,6 +16,7 @@ import {
 } from 'lucide-react';
 import PrivacyPolicy from './PrivacyPolicy';
 import TermsOfService from './TermsOfService';
+import Support from './Support';
 
 const FeatureCard = ({ icon: Icon, title, description, delay }) => (
   <motion.div
@@ -380,6 +381,12 @@ function HomePage() {
             >
               Terms of Service
             </a>
+            <a href="/support"
+              className="text-gray-400 hover:text-white transition-colors"
+              style={{ fontSize: '0.9rem', fontStyle: 'italic', textDecoration: 'underline' }}
+            >
+              Support
+            </a>
           </div>
           <div className="text-gray-500 text-sm mt-2">
             &copy; 2026 IOTA Wallet Extension. Built with passion for the decentralized web.
@@ -397,6 +404,7 @@ function App() {
       <Route path="/" element={<HomePage />} />
       <Route path="/privacy" element={<PrivacyPolicy onBack={() => navigate('/')} />} />
       <Route path="/terms" element={<TermsOfService onBack={() => navigate('/')} />} />
+      <Route path="/support" element={<Support onBack={() => navigate('/')} />} />
     </Routes>
   );
 }
