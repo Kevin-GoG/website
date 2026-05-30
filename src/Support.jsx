@@ -15,7 +15,7 @@ const SUPPORT_ITEMS = [
     title: 'Read FAQ',
     description: 'Find answers to the most common questions about IOTA Wallet.',
     label: 'Read FAQ',
-    href: 'https://docs.iota.org/users/iota-wallet/FAQ',
+    href: 'https://docs.iota.org/about-iota/FAQ',
   },
   {
     icon: MessageCircle,
