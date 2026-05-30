@@ -92,7 +92,7 @@ const Support = ({ onBack }) => (
       >
         <div className="flex items-center gap-4 mb-8">
           <div className="feature-icon">
-            <Mail size={32} />
+            <HelpCircle size={32} />
           </div>
           <h1 className="hero-title" style={{ fontSize: '2.5rem', marginBottom: 0 }}>Need Help?</h1>
         </div>
