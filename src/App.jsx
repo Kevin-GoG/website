@@ -17,6 +17,7 @@ import {
 import PrivacyPolicy from './PrivacyPolicy';
 import TermsOfService from './TermsOfService';
 import Support from './Support';
+import Feedback from './Feedback';
 
 const FeatureCard = ({ icon: Icon, title, description, delay }) => (
   <motion.div
@@ -405,6 +406,7 @@ function App() {
       <Route path="/privacy" element={<PrivacyPolicy onBack={() => navigate('/')} />} />
       <Route path="/terms" element={<TermsOfService onBack={() => navigate('/')} />} />
       <Route path="/support" element={<Support onBack={() => navigate('/')} />} />
+      <Route path="/feedback" element={<Feedback onBack={() => navigate('/')} />} />
     </Routes>
   );
 }
