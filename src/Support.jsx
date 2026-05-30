@@ -1,5 +1,5 @@
 import React from 'react';
-import { BookOpen, HelpCircle, MessageSquare, Mail, ArrowLeft } from 'lucide-react';
+import { BookOpen, HelpCircle, MessageSquare, ArrowLeft } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 
@@ -27,14 +27,6 @@ const SUPPORT_ITEMS = [
     label: 'Give Feedback',
     href: '/feedback',
     external: false,
-  },
-  {
-    icon: Mail,
-    title: 'Contact via Email',
-    description: "Can't find what you need? Send us a message directly.",
-    label: 'iota.wallet@hotmail.com',
-    href: 'mailto:iota.wallet@hotmail.com',
-    external: true,
   },
 ];
 
