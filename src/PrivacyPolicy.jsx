@@ -93,6 +93,8 @@ const PrivacyPolicy = ({ onBack }) => {
             <ul className="list-disc pl-6 mb-8 text-gray-300 space-y-2">
               <li><code>storage</code> and <code>unlimitedStorage</code>: store encrypted wallet state, settings, and cached blockchain data locally.</li>
               <li><code>activeTab</code>: inject the wallet provider into the site you explicitly choose to interact with.</li>
+              <li><code>alarms</code>: schedule automatic clipboard clearing 30 seconds after copying sensitive data such as private keys or recovery phrases.</li>
+              <li><code>clipboardWrite</code>: clear clipboard contents after the 30-second security timeout to prevent sensitive data from persisting in the system clipboard.</li>
             </ul>
 
             <h2 className="text-xl font-bold mb-4 text-white">8. Your Rights</h2>
