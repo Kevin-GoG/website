@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
+import { Helmet } from 'react-helmet-async';
 import { MessageSquare, ArrowLeft } from 'lucide-react';
 import { motion } from 'framer-motion';
+import { useTranslation } from './useTranslation';
+import { LanguageThemeSelector } from './App';
 
 const CATEGORIES = ['Bug Report', 'Feature Request', 'General Feedback'];
 
@@ -10,18 +13,29 @@ const inputStyle = {
   border: '1px solid rgba(255,255,255,0.1)',
   borderRadius: '0.5rem',
   padding: '0.65rem 0.9rem',
-  color: '#f8fafc',
+  color: 'var(--text-main)',
   fontSize: '0.95rem',
   outline: 'none',
   boxSizing: 'border-box',
 };
 
-const Feedback = ({ onBack }) => {
+const Feedback = ({ onBack, theme, setTheme }) => {
+  const { lang, t } = useTranslation();
   const [form, setForm] = useState({ name: '', email: '', category: 'General Feedback', message: '' });
   const [status, setStatus] = useState(null); // null | 'submitting' | 'success' | 'error'
 
   const handleChange = (e) => {
     setForm((prev) => ({ ...prev, [e.target.name]: e.target.value }));
+  };
+
+  const getCategoryLabel = (cat) => {
+    if (cat === 'Bug Report') {
+      return lang === 'zh' ? '報告錯誤' : lang === 'ko' ? '버그 보고' : 'Bug Report';
+    }
+    if (cat === 'Feature Request') {
+      return lang === 'zh' ? '功能建議' : lang === 'ko' ? '기능 요청' : 'Feature Request';
+    }
+    return lang === 'zh' ? '一般反饋' : lang === 'ko' ? '일반 피드백' : 'General Feedback';
   };
 
   const handleSubmit = async (e) => {
@@ -42,11 +56,23 @@ const Feedback = ({ onBack }) => {
 
   return (
     <div className="app-container" style={{ minHeight: '100vh', padding: '2rem 5%' }}>
+      <Helmet>
+        <html lang={lang === 'zh' ? 'zh-Hant' : lang === 'ko' ? 'ko' : 'en'} />
+        <title>{t('feedback_meta_title')}</title>
+        <meta name="description" content={t('feedback_meta_desc')} />
+        <link rel="canonical" href={lang === 'en' ? 'https://iotawallet.8787887.xyz/feedback' : `https://iotawallet.8787887.xyz/${lang}/feedback`} />
+        <meta property="og:title" content={t('feedback_meta_title')} />
+        <meta property="og:description" content={t('feedback_meta_desc')} />
+        <meta property="og:url" content={lang === 'en' ? 'https://iotawallet.8787887.xyz/feedback' : `https://iotawallet.8787887.xyz/${lang}/feedback`} />
+      </Helmet>
       <div className="gradient-bg"></div>
 
       <nav className="nav" style={{ marginBottom: '3rem' }}>
         <div className="logo cursor-pointer flex items-center gap-2" onClick={onBack}>
-          <ArrowLeft size={20} /> Back to Home
+          <ArrowLeft size={20} /> {t('nav_back')}
+        </div>
+        <div style={{ display: 'flex', alignItems: 'center' }}>
+          <LanguageThemeSelector theme={theme} setTheme={setTheme} />
         </div>
       </nav>
 
@@ -60,62 +86,66 @@ const Feedback = ({ onBack }) => {
             <div className="feature-icon">
               <MessageSquare size={32} />
             </div>
-            <h1 className="hero-title" style={{ fontSize: '2.5rem', marginBottom: 0 }}>Feedback</h1>
+            <h1 className="hero-title" style={{ fontSize: '2.5rem', marginBottom: 0 }}>{t('feedback_title')}</h1>
           </div>
 
           <p style={{ color: 'var(--text-muted)', fontSize: '1.1rem', marginBottom: '2.5rem' }}>
-            Share your thoughts, report issues, or suggest improvements.
+            {t('feedback_desc')}
           </p>
 
           {status === 'success' ? (
             <div className="glass-card" style={{ textAlign: 'center', padding: '3rem' }}>
               <p style={{ fontSize: '1.2rem', color: '#22c55e', fontWeight: 600, marginBottom: '0.5rem' }}>
-                Thank you for your feedback!
+                {t('feedback_success_title')}
               </p>
-              <p style={{ color: 'var(--text-muted)' }}>We'll review it and get back to you if needed.</p>
+              <p style={{ color: 'var(--text-muted)' }}>{t('feedback_success_desc')}</p>
             </div>
           ) : (
             <form className="glass-card" onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '1.25rem' }}>
               <div>
-                <label style={{ display: 'block', marginBottom: '0.4rem', color: '#e5e7eb', fontSize: '0.9rem' }}>
-                  Name <span style={{ color: 'var(--text-muted)' }}>(optional)</span>
+                <label style={{ display: 'block', marginBottom: '0.4rem', color: 'var(--text-main)', fontSize: '0.9rem' }}>
+                  {t('feedback_label_name')}
                 </label>
                 <input
                   name="name"
                   type="text"
                   value={form.name}
                   onChange={handleChange}
-                  placeholder="Your name"
+                  placeholder={t('feedback_placeholder_name')}
                   style={inputStyle}
                 />
               </div>
 
               <div>
-                <label style={{ display: 'block', marginBottom: '0.4rem', color: '#e5e7eb', fontSize: '0.9rem' }}>
-                  Email <span style={{ color: 'var(--text-muted)' }}>(optional)</span>
+                <label style={{ display: 'block', marginBottom: '0.4rem', color: 'var(--text-main)', fontSize: '0.9rem' }}>
+                  {t('feedback_label_email')}
                 </label>
                 <input
                   name="email"
                   type="email"
                   value={form.email}
                   onChange={handleChange}
-                  placeholder="your@email.com"
+                  placeholder={t('feedback_placeholder_email')}
                   style={inputStyle}
                 />
               </div>
 
               <div>
-                <label style={{ display: 'block', marginBottom: '0.4rem', color: '#e5e7eb', fontSize: '0.9rem' }}>
-                  Category
+                <label style={{ display: 'block', marginBottom: '0.4rem', color: 'var(--text-main)', fontSize: '0.9rem' }}>
+                  {t('feedback_label_category')}
                 </label>
                 <select name="category" value={form.category} onChange={handleChange} style={inputStyle}>
-                  {CATEGORIES.map((c) => <option key={c} value={c} style={{ background: '#1e293b', color: '#f8fafc' }}>{c}</option>)}
+                  {CATEGORIES.map((c) => (
+                    <option key={c} value={c} style={{ background: 'var(--bg-dark)', color: 'var(--text-main)' }}>
+                      {getCategoryLabel(c)}
+                    </option>
+                  ))}
                 </select>
               </div>
 
               <div>
-                <label style={{ display: 'block', marginBottom: '0.4rem', color: '#e5e7eb', fontSize: '0.9rem' }}>
-                  Message <span style={{ color: '#ef4444' }}>*</span>
+                <label style={{ display: 'block', marginBottom: '0.4rem', color: 'var(--text-main)', fontSize: '0.9rem' }}>
+                  {t('feedback_label_message')} <span style={{ color: '#ef4444' }}>*</span>
                 </label>
                 <textarea
                   name="message"
@@ -123,14 +153,14 @@ const Feedback = ({ onBack }) => {
                   onChange={handleChange}
                   required
                   rows={5}
-                  placeholder="Describe your feedback..."
+                  placeholder={t('feedback_placeholder_message')}
                   style={{ ...inputStyle, resize: 'vertical' }}
                 />
               </div>
 
               {status === 'error' && (
                 <p style={{ color: '#ef4444', fontSize: '0.9rem' }}>
-                  Something went wrong. Please try again.
+                  {t('feedback_error')}
                 </p>
               )}
 
@@ -140,7 +170,7 @@ const Feedback = ({ onBack }) => {
                 className="btn-primary"
                 style={{ alignSelf: 'flex-start', opacity: status === 'submitting' ? 0.6 : 1 }}
               >
-                {status === 'submitting' ? 'Sending...' : 'Send Feedback'}
+                {status === 'submitting' ? t('feedback_btn_sending') : t('feedback_btn_send')}
               </button>
             </form>
           )}

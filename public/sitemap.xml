@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <!-- / (Home) -->
+  <url>
+    <loc>https://iotawallet.8787887.xyz/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://iotawallet.8787887.xyz/"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://iotawallet.8787887.xyz/zh"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://iotawallet.8787887.xyz/ko"/>
+    <lastmod>2026-05-31</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://iotawallet.8787887.xyz/zh</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://iotawallet.8787887.xyz/"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://iotawallet.8787887.xyz/zh"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://iotawallet.8787887.xyz/ko"/>
+    <lastmod>2026-05-31</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://iotawallet.8787887.xyz/ko</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://iotawallet.8787887.xyz/"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://iotawallet.8787887.xyz/zh"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://iotawallet.8787887.xyz/ko"/>
+    <lastmod>2026-05-31</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- /privacy -->
+  <url>
+    <loc>https://iotawallet.8787887.xyz/privacy</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://iotawallet.8787887.xyz/privacy"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://iotawallet.8787887.xyz/zh/privacy"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://iotawallet.8787887.xyz/ko/privacy"/>
+    <lastmod>2026-05-31</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://iotawallet.8787887.xyz/zh/privacy</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://iotawallet.8787887.xyz/privacy"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://iotawallet.8787887.xyz/zh/privacy"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://iotawallet.8787887.xyz/ko/privacy"/>
+    <lastmod>2026-05-31</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://iotawallet.8787887.xyz/ko/privacy</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://iotawallet.8787887.xyz/privacy"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://iotawallet.8787887.xyz/zh/privacy"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://iotawallet.8787887.xyz/ko/privacy"/>
+    <lastmod>2026-05-31</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
+  <!-- /terms -->
+  <url>
+    <loc>https://iotawallet.8787887.xyz/terms</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://iotawallet.8787887.xyz/terms"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://iotawallet.8787887.xyz/zh/terms"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://iotawallet.8787887.xyz/ko/terms"/>
+    <lastmod>2026-05-31</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://iotawallet.8787887.xyz/zh/terms</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://iotawallet.8787887.xyz/terms"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://iotawallet.8787887.xyz/zh/terms"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://iotawallet.8787887.xyz/ko/terms"/>
+    <lastmod>2026-05-31</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://iotawallet.8787887.xyz/ko/terms</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://iotawallet.8787887.xyz/terms"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://iotawallet.8787887.xyz/zh/terms"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://iotawallet.8787887.xyz/ko/terms"/>
+    <lastmod>2026-05-31</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
+  <!-- /support -->
+  <url>
+    <loc>https://iotawallet.8787887.xyz/support</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://iotawallet.8787887.xyz/support"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://iotawallet.8787887.xyz/zh/support"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://iotawallet.8787887.xyz/ko/support"/>
+    <lastmod>2026-05-31</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://iotawallet.8787887.xyz/zh/support</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://iotawallet.8787887.xyz/support"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://iotawallet.8787887.xyz/zh/support"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://iotawallet.8787887.xyz/ko/support"/>
+    <lastmod>2026-05-31</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://iotawallet.8787887.xyz/ko/support</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://iotawallet.8787887.xyz/support"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://iotawallet.8787887.xyz/zh/support"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://iotawallet.8787887.xyz/ko/support"/>
+    <lastmod>2026-05-31</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <!-- /feedback -->
+  <url>
+    <loc>https://iotawallet.8787887.xyz/feedback</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://iotawallet.8787887.xyz/feedback"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://iotawallet.8787887.xyz/zh/feedback"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://iotawallet.8787887.xyz/ko/feedback"/>
+    <lastmod>2026-05-31</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.4</priority>
+  </url>
+  <url>
+    <loc>https://iotawallet.8787887.xyz/zh/feedback</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://iotawallet.8787887.xyz/feedback"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://iotawallet.8787887.xyz/zh/feedback"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://iotawallet.8787887.xyz/ko/feedback"/>
+    <lastmod>2026-05-31</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.4</priority>
+  </url>
+  <url>
+    <loc>https://iotawallet.8787887.xyz/ko/feedback</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://iotawallet.8787887.xyz/feedback"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://iotawallet.8787887.xyz/zh/feedback"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://iotawallet.8787887.xyz/ko/feedback"/>
+    <lastmod>2026-05-31</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.4</priority>
+  </url>
+
+  <!-- /faq -->
+  <url>
+    <loc>https://iotawallet.8787887.xyz/faq</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://iotawallet.8787887.xyz/faq"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://iotawallet.8787887.xyz/zh/faq"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://iotawallet.8787887.xyz/ko/faq"/>
+    <lastmod>2026-05-31</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://iotawallet.8787887.xyz/zh/faq</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://iotawallet.8787887.xyz/faq"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://iotawallet.8787887.xyz/zh/faq"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://iotawallet.8787887.xyz/ko/faq"/>
+    <lastmod>2026-05-31</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://iotawallet.8787887.xyz/ko/faq</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://iotawallet.8787887.xyz/faq"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://iotawallet.8787887.xyz/zh/faq"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://iotawallet.8787887.xyz/ko/faq"/>
+    <lastmod>2026-05-31</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+</urlset>

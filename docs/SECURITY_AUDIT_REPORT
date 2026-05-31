@@ -1,0 +1,68 @@
+# Security Audit Report
+
+**Project:** IOTA Wallet Website (React SPA + Cloudflare Pages Functions)  
+**Date:** May 31, 2026  
+**Status:** Complete
+
+---
+
+## Executive Summary
+A comprehensive security review was conducted on the IOTA Wallet Pro website, covering front-end React components, build-time configurations, and backend Cloudflare Pages Functions. 
+
+No critical vulnerabilities (e.g., exposed private keys, credential leaks, or active DOM-based XSS) were found. However, several weaknesses of Medium and Low severity were identified, primarily concerning rate limiting and input size constraints in the API, and missing security headers on the static hosting environment.
+
+---
+
+## Summary of Findings
+
+| ID | Severity | Title | Status |
+|----|----------|-------|--------|
+| **SEC-001** | Medium | Lack of Input Length & Format Validation in Feedback API | Pending Fix |
+| **SEC-002** | Low | Missing Security Headers (CSP, X-Frame-Options, etc.) | Pending Fix |
+| **SEC-003** | Low | Missing `.env*` Exclusions in `.gitignore` | Pending Fix |
+
+---
+
+## Detailed Findings
+
+### SEC-001: Lack of Input Length & Format Validation in Feedback API
+- **Severity:** Medium
+- **Location:** [functions/api/feedback.js](file:///H:/web3/gemini/website/functions/api/feedback.js#L1-L20)
+- **Evidence:**
+  ```javascript
+  const body = await context.request.json();
+  const { name, email, category, message } = body;
+  // No length limit or validation checks on name, email, or category
+  ```
+- **Impact:** An attacker can spam the `/api/feedback` endpoint with extremely large payloads (e.g., several megabytes of text per message) and a high frequency of requests. This can lead to D1 database storage exhaustion (Denial of Service) and increase Cloudflare Pages resource billing.
+- **Remediation:** 
+  - Restrict the payload size and length of individual fields: `name` (max 100), `email` (max 100), `message` (max 5000).
+  - Whitelist the acceptable values for the `category` field (`Bug Report`, `Feature Request`, `General Feedback`).
+  - Add basic email format validation if the email is provided.
+
+---
+
+### SEC-002: Missing Security Headers on Static Hosting
+- **Severity:** Low
+- **Location:** `public/` directory (lack of `_headers` configuration file)
+- **Impact:** Without explicit security headers, the website is vulnerable to:
+  - **Clickjacking**: Other websites can embed the wallet homepage in an `<iframe>` (mitigated by `X-Frame-Options` or CSP `frame-ancestors`).
+  - **MIME Sniffing**: Browsers might try to parse non-JS files as JS if MIME type headers are missing or spoofed (mitigated by `X-Content-Type-Options: nosniff`).
+  - **XSS Fallback**: The lack of a Content Security Policy (CSP) means the app relies solely on React's default sanitization, leaving no defense-in-depth against unexpected HTML injection.
+- **Remediation:** Create a `public/_headers` file to define secure defaults for all routes:
+  ```http
+  /*
+    X-Frame-Options: DENY
+    X-Content-Type-Options: nosniff
+    Referrer-Policy: strict-origin-when-cross-origin
+    Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-eval'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https:;
+  ```
+  *(Note: 'unsafe-eval' is required because React 19's hydration and developer bundles may use it, but script sources are locked to 'self').*
+
+---
+
+### SEC-003: Missing `.env*` Exclusions in `.gitignore`
+- **Severity:** Low
+- **Location:** [.gitignore](file:///H:/web3/gemini/website/.gitignore)
+- **Impact:** While `*.local` is ignored, common file names like `.env`, `.env.production`, or `.env.development` are not explicitly excluded. Developers might accidentally commit local environment configurations containing secrets or local testing endpoints to public repositories.
+- **Remediation:** Add `.env*` and `*.env` to the `.gitignore` file.

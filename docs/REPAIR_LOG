@@ -1,0 +1,16 @@
+# Code Repair Log
+
+This document tracks code fixes, repairs, and security remediations applied to the project.
+
+---
+
+## [Completed] May 31, 2026: Input Length and Format Validation in Feedback API (SEC-001)
+- **Target File:** [functions/api/feedback.js](file:///H:/web3/gemini/website/functions/api/feedback.js)
+- **Problem:** Lack of payload validation, format verification, and length bounds on input fields (`name`, `email`, `category`, `message`).
+- **Remediation:**
+  - Added strict parameter type and length validation: `message` (required, max 5000), `name` (optional, max 100), `email` (optional, max 100).
+  - Whitelisted allowed `category` values to `['Bug Report', 'Feature Request', 'General Feedback']`.
+  - Added regex checking for email format validation.
+  - Returns `400 Bad Request` with structured error messages.
+  - Sanitized database entry bindings with `.trim()`.
+
