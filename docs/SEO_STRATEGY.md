@@ -66,3 +66,62 @@
 加载速度是 Google 的排名因素之一：
 - 随时在 [Google PageSpeed Insights](https://pagespeed.web.dev/) 评估页面性能。
 - 确保 `public/assets/` 下的截图（如 `bridge.png`, `batch.png` 等）使用了无损压缩或已转换为更高性能的 WebP 格式，并确保图片标有 `width` 与 `height` 以防止页面布局抖动（CLS）。
+- 对关键外部字体资源实施预加载，减少字体加载阻碍渲染的时间。
+
+---
+
+## ⚡ 高级与进阶优化方法 (Advanced Optimizations)
+
+除了基础的 Sitemap、Metadata 和预渲染，您还可以在项目迭代中实施以下高级优化手段，进一步提升搜索引擎表现和用户体验：
+
+### 1. 资源提示优化 (Resource Hints)
+在 `index.html` 中预连接到外部关键第三方域名，例如 Google Fonts 或外部 RPC 节点。这能让浏览器提前进行 DNS 解析、TCP 握手和 TLS 协商，加快资源的首次渲染速度（FCP）：
+```html
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+```
+
+### 2. 面包屑结构化数据 (BreadcrumbList Schema)
+对于子页面（如隐私政策、常见问题等），建议使用 `BreadcrumbList` 结构化数据。这能让 Google 在搜索结果中将一长串难懂的网址替换为面包屑导航路径（例如：`首頁 > 常見問題`），从而大幅提升搜索点击率：
+```json
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [{
+    "@type": "ListItem",
+    "position": 1,
+    "name": "Home",
+    "item": "https://iotawallet.8787887.xyz/"
+  },{
+    "@type": "ListItem",
+    "position": 2,
+    "name": "FAQ",
+    "item": "https://iotawallet.8787887.xyz/faq"
+  }]
+}
+```
+
+### 3. Open Graph 本地化声明 (og:locale:alternate)
+向社交媒体爬虫（Facebook, Twitter 等）明确指出网页的多语言版本，让其在不同地区的社交网络分享中呈现对应的语言版本：
+```html
+<!-- 英文首页 -->
+<meta property="og:locale" content="en_US" />
+<meta property="og:locale:alternate" content="zh_TW" />
+<meta property="og:locale:alternate" content="ko_KR" />
+```
+
+### 4. 接入 IndexNow 协议 (秒级收录)
+IndexNow 是一项支持 Bing、Yandex 的快速索引协议。它允许网站所有者在内容更新或发布时，主动通知搜索引擎进行抓取，避免等待爬虫周期性轮询：
+- 您可以在必应站长管理后台中生成并下载 `IndexNow key`。
+- 将 key 对应的 `.txt` 文件放置于 `public/` 目录下。
+- 当有路由页面变更时，通过 API 直接向必应提交受影响的 URL 列表。
+
+### 5. 自定义 404 友好路由 (防用户跳出)
+高跳出率会负面影响搜索引擎对网站权重的评价。在 React 路由配置中，建议添加通配符 404 路由（指引到自定义 404 友好界面），提供清晰的“返回首页”或“常见问题”按钮，而不是让用户直接面对空白屏幕或浏览器默认的无响应页面。
+
+### 6. 无障碍体验优化 (Accessibility)
+谷歌的 Lighthouse 评分直接将无障碍性（Accessibility）作为评估维度。
+- 为所有的 SVG 图标（如 `Lucide` 图标）、语言选择下拉框、主题切换下拉框提供清晰的 `aria-label` 属性。
+- 确保所有非交互式的 UI 元素配色满足 WCAG AAA 对比度标准。
+- 良好的无障碍体验不仅能极大提升蜘蛛爬虫可读性，也能直接反馈到 Google 排名的正向评分中。
+
