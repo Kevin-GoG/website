@@ -50,18 +50,6 @@ export function LanguageThemeSelector({ theme, setTheme }) {
         value={lang}
         onChange={(e) => changeLanguage(e.target.value)}
         className="theme-select"
-        style={{
-          background: 'var(--glass)',
-          border: '1px solid var(--glass-border)',
-          color: 'var(--text-main)',
-          padding: '0.4rem 0.6rem',
-          borderRadius: '99px',
-          cursor: 'pointer',
-          fontSize: '0.8rem',
-          outline: 'none',
-          fontWeight: 600,
-          transition: 'all 0.2s ease',
-        }}
       >
         <option value="en">EN</option>
         <option value="zh">繁中</option>
@@ -73,18 +61,6 @@ export function LanguageThemeSelector({ theme, setTheme }) {
         value={theme}
         onChange={(e) => setTheme(e.target.value)}
         className="theme-select"
-        style={{
-          background: 'var(--glass)',
-          border: '1px solid var(--glass-border)',
-          color: 'var(--text-main)',
-          padding: '0.4rem 0.6rem',
-          borderRadius: '99px',
-          cursor: 'pointer',
-          fontSize: '0.8rem',
-          outline: 'none',
-          fontWeight: 600,
-          transition: 'all 0.2s ease',
-        }}
       >
         <option value="dark">🌙 {t('theme_dark')}</option>
         <option value="light">☀️ {t('theme_light')}</option>

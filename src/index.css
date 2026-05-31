@@ -480,3 +480,27 @@ body {
   line-height: 1.75;
 }
 
+/* Theme & Language Select dropdown option styles to fix unreadability */
+.theme-select {
+  background: var(--glass);
+  border: 1px solid var(--glass-border);
+  color: var(--text-main);
+  padding: 0.4rem 0.6rem;
+  border-radius: 99px;
+  cursor: pointer;
+  font-size: 0.8rem;
+  outline: none;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.theme-select:hover {
+  background: var(--glass-hover);
+  border-color: var(--primary);
+}
+
+.theme-select option {
+  background-color: var(--bg-dark) !important;
+  color: var(--text-main) !important;
+}
+
