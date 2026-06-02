@@ -266,13 +266,25 @@ function HomePage({ theme, setTheme }) {
           "name": "IOTA Wallet Pro",
           "applicationCategory": "FinanceApplication",
           "operatingSystem": "Chrome",
+          "softwareVersion": "1.0",
           "description": t('meta_desc'),
-          "url": lang === 'en' ? 'https://iotawallet.8787887.xyz' : `https://iotawallet.8787887.xyz/${lang}`,
+          "url": "https://iotawallet.8787887.xyz",
           "offers": {
             "@type": "Offer",
             "price": "0",
             "priceCurrency": "USD"
+          },
+          "publisher": {
+            "@type": "Organization",
+            "name": "IOTA Wallet Pro",
+            "url": "https://iotawallet.8787887.xyz"
           }
+        })}</script>
+        <script type="application/ld+json">{JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "WebSite",
+          "name": "IOTA Wallet Pro",
+          "url": "https://iotawallet.8787887.xyz"
         })}</script>
       </Helmet>
       <div className="gradient-bg"></div>
