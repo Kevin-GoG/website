@@ -149,7 +149,7 @@ function BatchSendDemo() {
               viewport={{ once: true }}
               className="batch-screenshot"
             >
-              <img src="/assets/batch.png" alt="Batch Send UI" className="feature-screenshot" />
+              <img src="/assets/batch.png" alt="IOTA Wallet Pro batch send interface — upload CSV to send IOTA to multiple addresses" className="feature-screenshot" />
             </motion.div>
 
             {/* Upload Area */}
@@ -339,8 +339,9 @@ function HomePage({ theme, setTheme }) {
           >
             <img
               src="/assets/hero-concept.png"
-              alt="IOTA Wallet Concept"
+              alt="IOTA Wallet Pro Chrome extension showing IOTA L1 and EVM account balance"
               className="hero-image"
+              fetchpriority="high"
             />
           </motion.div>
         </section>
@@ -396,7 +397,7 @@ function HomePage({ theme, setTheme }) {
               viewport={{ once: true }}
               className="showcase-img"
             >
-              <img src="/assets/bridge.png" alt="Bridge UI" className="feature-screenshot" />
+              <img src="/assets/bridge.png" alt="IOTA Wallet Pro L1 to EVM bridge — transfer IOTA between native chain and IOTA EVM" className="feature-screenshot" />
             </motion.div>
           </div>
 
@@ -409,7 +410,7 @@ function HomePage({ theme, setTheme }) {
               viewport={{ once: true }}
               className="showcase-img"
             >
-              <img src="/assets/addressbook1.png" alt="Address Book" className="feature-screenshot" />
+              <img src="/assets/addressbook1.png" alt="IOTA Wallet Pro address book with L1 and EVM contact filtering" className="feature-screenshot" />
             </motion.div>
             <motion.div
               initial={{ opacity: 0, x: -30 }}
@@ -444,7 +445,7 @@ function HomePage({ theme, setTheme }) {
               viewport={{ once: true }}
               className="showcase-img"
             >
-              <img src="/assets/addressbook2.png" alt="Account Management" className="feature-screenshot" />
+              <img src="/assets/addressbook2.png" alt="IOTA Wallet Pro multi-account management — multiple mnemonic profiles with derived accounts" className="feature-screenshot" />
             </motion.div>
           </div>
         </section>
