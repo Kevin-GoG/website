@@ -169,6 +169,9 @@ const TermsOfService = ({ onBack, theme, setTheme }) => {
         <meta property="og:title" content={t('terms_meta_title')} />
         <meta property="og:description" content={t('terms_meta_desc')} />
         <meta property="og:url" content={lang === 'en' ? 'https://iotawallet.8787887.xyz/terms' : `https://iotawallet.8787887.xyz/${lang}/terms`} />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={t('terms_meta_title')} />
+        <meta name="twitter:description" content={t('terms_meta_desc')} />
       </Helmet>
       <div className="gradient-bg"></div>
 

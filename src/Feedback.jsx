@@ -64,6 +64,9 @@ const Feedback = ({ onBack, theme, setTheme }) => {
         <meta property="og:title" content={t('feedback_meta_title')} />
         <meta property="og:description" content={t('feedback_meta_desc')} />
         <meta property="og:url" content={lang === 'en' ? 'https://iotawallet.8787887.xyz/feedback' : `https://iotawallet.8787887.xyz/${lang}/feedback`} />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={t('feedback_meta_title')} />
+        <meta name="twitter:description" content={t('feedback_meta_desc')} />
       </Helmet>
       <div className="gradient-bg"></div>
 

@@ -148,6 +148,9 @@ const PrivacyPolicy = ({ onBack, theme, setTheme }) => {
         <meta property="og:title" content={t('privacy_meta_title')} />
         <meta property="og:description" content={t('privacy_meta_desc')} />
         <meta property="og:url" content={lang === 'en' ? 'https://iotawallet.8787887.xyz/privacy' : `https://iotawallet.8787887.xyz/${lang}/privacy`} />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={t('privacy_meta_title')} />
+        <meta name="twitter:description" content={t('privacy_meta_desc')} />
       </Helmet>
       <div className="gradient-bg"></div>
 
