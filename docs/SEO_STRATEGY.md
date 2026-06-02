@@ -13,9 +13,11 @@
 | **Vite 静态预渲染 (18 个路由)** | ✅ **已启用** | 在构建时，通过 Headless Chrome (Puppeteer) 为 3 种语言 × 6 个页面渲染出静态的 HTML 文件。即使是不运行 JavaScript 的低级爬虫也能瞬间读取完整的网页内容。 |
 | **多语言路由架构 (zh / ko / en)** | ✅ **已启用** | 使用路径前缀（`/zh` 繁中、`/ko` 韩文、`/` 英文）物理分隔不同的语言页面，使 Google 和 Bing 能够针对不同的语言市场进行精确的索引。 |
 | **页面级动态 Meta 标签** | ✅ **已启用** | 集成 `react-helmet-async`，为每一个路由页面和语言版本动态生成独立的 `<title>`、`<meta name="description">`、`<html lang="...">` 和唯一的 `<link rel="canonical">` 规范链接。 |
-| **Schema.org 结构化数据** | ✅ **已启用** | 首页配置了 `SoftwareApplication` 结构化数据，FAQ 页面配置了动态本地化的 `FAQPage` 结构化数据，用于在搜索结果中争取富媒体摘要（Rich Snippets）下拉抽屉的展示。 |
+| **Schema.org 结构化数据** | ✅ **已启用** | 首页配置了增强版 `SoftwareApplication`（含 `softwareVersion`、`publisher`）和 `WebSite` 结构化数据，FAQ 页面配置了动态本地化的 `FAQPage` 结构化数据，用于在搜索结果中争取富媒体摘要（Rich Snippets）下拉抽屉的展示。 |
 | **搜索引擎所有权验证文件** | ✅ **已启用** | `google19a23e9c486a5037.html` 和 `BingSiteAuth.xml` 已放入静态资源目录，部署后可立即进行搜索引擎所有权一键验证。 |
-| **Robots 规则与 Sitemap 地图** | ✅ **已启用** | `robots.txt` 限制了对 API 接口的爬取，`sitemap.xml` 声明了全部 18 个路由，并使用 `hreflang` alternate 标签定义了多语言页面之间的互通映射关系。 |
+| **Robots 规则与 Sitemap 地图** | ✅ **已启用** | `robots.txt` 限制了对 API 接口的爬取，`sitemap.xml` 声明了全部 6 个英文路由（`/`、`/faq`、`/support`、`/feedback`、`/privacy`、`/terms`）。已移除不存在的 `/zh`、`/ko` 语言路由，避免 Google Search Console 爬取错误。 |
+| **页面级 Twitter Card 标签** | ✅ **已启用** | Support、Feedback、Privacy、Terms 四个次级页面均已补全 `twitter:card`、`twitter:title`、`twitter:description`，确保 X/Twitter 分享时每个页面有独立预览。 |
+| **图片 SEO 与 LCP 优化** | ✅ **已启用** | 所有 5 张产品截图已更新为描述性 alt 文案（含 "IOTA Wallet Pro"、功能名称等关键词）；hero 主图加入 `fetchpriority="high"` 提示浏览器优先加载，改善 LCP 指标。 |
 
 ---
 
@@ -34,11 +36,11 @@
    - 添加您的网站网址，选择 **XML 文件验证** 方式。`BingSiteAuth.xml` 将会自动帮助您完成所有权认证。
 
 ### 第二步：提交 Sitemap 网站地图
-向搜索引擎提交您的 Sitemap，加速全站 18 个路径的收录：
+向搜索引擎提交您的 Sitemap，加速全站 6 个路径的收录：
 - 在 Google Search Console 中，点击左侧菜单的 **Sitemaps**。
-- 输入并提交地图网址：`https://iotawallet.8787887.xyz/sitemap.xml`。
+- 若之前已提交过旧版 sitemap，先将其删除，再重新提交：`https://iotawallet.8787887.xyz/sitemap.xml`。
 - 同样在 Bing Webmaster Tools 的 **Sitemaps** 栏目提交相同的网址。
-- *提交后，搜索引擎会自动根据地图里的 hreflang 标记分别抓取并索引英文、中文和韩文页面。*
+- *当前 sitemap 为英文单语言版本，共 6 个 URL，不含已清理的 `/zh`、`/ko` 变体。*
 
 ### 第三步：优化 Chrome Web Store 详情页 (ASO)
 由于您的产品是 Chrome 浏览器插件，应用商店本身的页面是一个极高权重的域名（High-authority Domain），必须利用它向官网导流：
