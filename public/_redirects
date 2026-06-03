@@ -1,1 +1,8 @@
-/* /index.html 200
+# 1. 优先放行静态的站点地图文件，确保它直接返回自身，不被下面的通配符拦截
+/sitemap.xml    /sitemap.xml    200
+
+# 2. 如果你有 robots.txt，建议也一起放行
+/robots.txt     /robots.txt     200
+
+# 3. 最后才是你的单页应用（SPA）暴力通配符路由
+/* /index.html     200
