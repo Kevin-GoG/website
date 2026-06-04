@@ -16,6 +16,15 @@ export default defineConfig({
       rendererOptions: {
         renderAfterDocumentEvent: 'app-rendered',
       },
+      postProcess(renderedRoute) {
+        // Remove tags injected by react-helmet-async (data-rh="true") from the
+        // prerendered HTML. Without this, the static HTML already contains the
+        // helmet tags and the browser re-injects them at runtime, causing duplicates.
+        renderedRoute.html = renderedRoute.html.replace(
+          /<[^>]+ data-rh="true"[^>]*>.*?<\/[^>]+>|<[^>]+ data-rh="true"[^>]*\/?>/gs,
+          '',
+        );
+      },
     }),
   ],
   server: {
