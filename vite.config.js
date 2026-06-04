@@ -2,11 +2,14 @@ import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import prerender from '@prerenderer/rollup-plugin'
 
+// Cloudflare Pages has no Chrome — skip prerender in CI environments
+const isCI = process.env.CF_PAGES === '1' || process.env.CI === 'true'
+
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [
     react(),
-    prerender({
+    !isCI && prerender({
       routes: [
         '/', '/privacy', '/terms', '/support', '/feedback', '/faq',
         '/zh', '/zh/privacy', '/zh/terms', '/zh/support', '/zh/feedback', '/zh/faq',
@@ -26,7 +29,7 @@ export default defineConfig({
         );
       },
     }),
-  ],
+  ].filter(Boolean),
   server: {
     historyApiFallback: true,
   },
