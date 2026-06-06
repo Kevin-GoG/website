@@ -390,7 +390,7 @@ function HomePage({ theme, setTheme }) {
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
             className="glass-card"
-            style={{ maxWidth: '900px', margin: '0 auto', textAlign: 'left' }}
+            style={{ margin: '0 auto', textAlign: 'left' }}
           >
             <h2 id="about-iota-wallet-pro" className="section-title" style={{ textAlign: 'left', marginBottom: '1.25rem' }}>
               About IOTA Wallet Pro
