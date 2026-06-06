@@ -251,6 +251,10 @@ function HomePage({ theme, setTheme }) {
         <title>{t('meta_title')}</title>
         <meta name="description" content={t('meta_desc')} />
         <link rel="canonical" href={lang === 'en' ? 'https://iotawallet.8787887.xyz/' : `https://iotawallet.8787887.xyz/${lang}`} />
+        <link rel="alternate" hreflang="x-default" href="https://iotawallet.8787887.xyz/" />
+        <link rel="alternate" hreflang="en" href="https://iotawallet.8787887.xyz/" />
+        <link rel="alternate" hreflang="zh-Hant" href="https://iotawallet.8787887.xyz/zh" />
+        <link rel="alternate" hreflang="ko" href="https://iotawallet.8787887.xyz/ko" />
         <meta property="og:title" content={t('meta_title')} />
         <meta property="og:description" content={t('meta_desc')} />
         <meta property="og:url" content={lang === 'en' ? 'https://iotawallet.8787887.xyz/' : `https://iotawallet.8787887.xyz/${lang}`} />

@@ -87,6 +87,10 @@ const Support = ({ onBack, theme, setTheme }) => {
         <title>{t('support_meta_title')}</title>
         <meta name="description" content={t('support_meta_desc')} />
         <link rel="canonical" href={lang === 'en' ? 'https://iotawallet.8787887.xyz/support' : `https://iotawallet.8787887.xyz/${lang}/support`} />
+        <link rel="alternate" hreflang="x-default" href="https://iotawallet.8787887.xyz/support" />
+        <link rel="alternate" hreflang="en" href="https://iotawallet.8787887.xyz/support" />
+        <link rel="alternate" hreflang="zh-Hant" href="https://iotawallet.8787887.xyz/zh/support" />
+        <link rel="alternate" hreflang="ko" href="https://iotawallet.8787887.xyz/ko/support" />
         <meta property="og:title" content={t('support_meta_title')} />
         <meta property="og:description" content={t('support_meta_desc')} />
         <meta property="og:url" content={lang === 'en' ? 'https://iotawallet.8787887.xyz/support' : `https://iotawallet.8787887.xyz/${lang}/support`} />
