@@ -346,6 +346,7 @@ function HomePage({ theme, setTheme }) {
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 1, delay: 0.2 }}
             className="hero-image-container"
+          >
             <img
               src="/assets/hero-concept.webp"
               alt="IOTA Wallet Pro Chrome extension showing IOTA L1 and EVM account balance"
