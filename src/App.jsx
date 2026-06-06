@@ -286,6 +286,12 @@ function HomePage({ theme, setTheme }) {
           "name": "IOTA Wallet Pro",
           "url": "https://iotawallet.8787887.xyz"
         })}</script>
+        <script type="application/ld+json">{JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          "name": "IOTA Wallet Pro",
+          "url": "https://iotawallet.8787887.xyz"
+        })}</script>
       </Helmet>
       <div className="gradient-bg"></div>
 
@@ -369,6 +375,27 @@ function HomePage({ theme, setTheme }) {
               delay={0.3}
             />
           </div>
+        </section>
+
+        <section className="section" aria-labelledby="about-iota-wallet-pro">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className="glass-card"
+            style={{ maxWidth: '900px', margin: '0 auto', textAlign: 'left' }}
+          >
+            <h2 id="about-iota-wallet-pro" className="section-title" style={{ textAlign: 'left', marginBottom: '1.25rem' }}>
+              About IOTA Wallet Pro
+            </h2>
+            <p style={{ color: 'var(--text-muted)', fontSize: '1.05rem', lineHeight: '1.8', marginBottom: '1rem' }}>
+              IOTA Wallet Pro is a self-custodial Chrome extension wallet built for the IOTA ecosystem. It helps users manage both IOTA L1 and IOTA EVM accounts from one interface, with local key encryption and no hosted wallet account system.
+            </p>
+            <p style={{ color: 'var(--text-muted)', fontSize: '1.05rem', lineHeight: '1.8', marginBottom: 0 }}>
+              The wallet is designed for users who need more than basic transfers. It supports cross-chain bridge flows, batch sending, address book management, and multiple accounts, making it suitable for both everyday usage and advanced IOTA workflows.
+            </p>
+          </motion.div>
         </section>
 
         <BatchSendDemo />
