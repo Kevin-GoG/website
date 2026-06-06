@@ -14,10 +14,10 @@ This document tracks code fixes, repairs, and security remediations applied to t
   - Returns `400 Bad Request` with structured error messages.
   - Sanitized database entry bindings with `.trim()`.
 
-## [Completed] May 31, 2026: Dropdown Options Unreadability in Dark Mode
-- **Target File:** [src/index.css](file:///H:/web3/gemini/website/src/index.css), [src/App.jsx](file:///H:/web3/gemini/website/src/App.jsx)
-- **Problem:** In dark/light modes, native browser select option backgrounds and text colors did not dynamically scale, leading to low contrast and unreadable options.
+## [Completed] June 6, 2026: Bulk Image Optimization to WebP
+- **Target Files:** `public/assets/` (batch.png, addressbook1.png, addressbook2.png, bridge.png, hero-concept.png)
+- **Problem:** PNG format is less efficient than WebP for web delivery, impacting LCP and page weight.
 - **Remediation:**
-  - Added CSS definitions for `.theme-select` and `.theme-select option`.
-  - Forced option background color to `var(--bg-dark)` and text color to `var(--text-main)` with `!important` to override native OS/browser controls.
-  - Cleaned up inline select styles in `src/App.jsx` to rely entirely on stylesheet class definitions.
+  - Converted all primary product screenshots to WebP using `sharp-cli`.
+  - Updated `src/App.jsx` to use WebP versions with explicit `width`, `height`, and SEO attributes (`loading="lazy"` or `fetchpriority="high"` for hero).
+  - Deleted original PNG files to reduce project size.

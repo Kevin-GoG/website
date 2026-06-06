@@ -105,7 +105,7 @@ git commit -m "seo: enhance SoftwareApplication JSON-LD and add WebSite schema"
 
 Current alt values are generic (`"Batch Send UI"`, `"Bridge UI"`, `"Address Book"`, `"IOTA Wallet Concept"`). The hero image should also have `fetchpriority="high"` to improve LCP score.
 
-- [ ] **Step 1: Update hero image** (around line 328–332):
+- [x] **Step 1: Update hero image** (around line 328–332):
 
 Change:
 ```jsx
@@ -119,14 +119,16 @@ Change:
 To:
 ```jsx
 <img
-  src="/assets/hero-concept.png"
+  src="/assets/hero-concept.webp"
   alt="IOTA Wallet Pro Chrome extension showing IOTA L1 and EVM account balance"
   className="hero-image"
+  width="640"
+  height="640"
   fetchpriority="high"
 />
 ```
 
-- [ ] **Step 2: Update batch send image** (around line 152):
+- [x] **Step 2: Update batch send image** (around line 152):
 
 Change:
 ```jsx
@@ -135,10 +137,10 @@ Change:
 
 To:
 ```jsx
-<img src="/assets/batch.png" alt="IOTA Wallet Pro batch send interface — upload CSV to send IOTA to multiple addresses" className="feature-screenshot" />
+<img src="/assets/batch.webp" alt="IOTA Wallet Pro batch send interface — upload CSV to send IOTA to multiple addresses" className="feature-screenshot" width="516" height="890" loading="lazy" />
 ```
 
-- [ ] **Step 3: Update bridge image** (around line 387):
+- [x] **Step 3: Update bridge image** (around line 387):
 
 Change:
 ```jsx
@@ -147,10 +149,10 @@ Change:
 
 To:
 ```jsx
-<img src="/assets/bridge.png" alt="IOTA Wallet Pro L1 to EVM bridge — transfer IOTA between native chain and IOTA EVM" className="feature-screenshot" />
+<img src="/assets/bridge.webp" alt="IOTA Wallet Pro L1 to EVM bridge — transfer IOTA between native chain and IOTA EVM" className="feature-screenshot" width="516" height="869" loading="lazy" />
 ```
 
-- [ ] **Step 4: Update addressbook1 image** (around line 400):
+- [x] **Step 4: Update addressbook1 image** (around line 400):
 
 Change:
 ```jsx
@@ -159,10 +161,10 @@ Change:
 
 To:
 ```jsx
-<img src="/assets/addressbook1.png" alt="IOTA Wallet Pro address book with L1 and EVM contact filtering" className="feature-screenshot" />
+<img src="/assets/addressbook1.webp" alt="IOTA Wallet Pro address book with L1 and EVM contact filtering" className="feature-screenshot" width="497" height="862" loading="lazy" />
 ```
 
-- [ ] **Step 5: Update addressbook2 image** (around line 435):
+- [x] **Step 5: Update addressbook2 image** (around line 435):
 
 Change:
 ```jsx
@@ -171,7 +173,7 @@ Change:
 
 To:
 ```jsx
-<img src="/assets/addressbook2.png" alt="IOTA Wallet Pro multi-account management — multiple mnemonic profiles with derived accounts" className="feature-screenshot" />
+<img src="/assets/addressbook2.webp" alt="IOTA Wallet Pro multi-account management — multiple mnemonic profiles with derived accounts" className="feature-screenshot" width="519" height="885" loading="lazy" />
 ```
 
 - [ ] **Step 6: Build to verify no errors**

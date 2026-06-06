@@ -68,7 +68,7 @@
 ### 第六步：网页核心指标调优 (Core Web Vitals)
 加载速度是 Google 的排名因素之一：
 - 随时在 [Google PageSpeed Insights](https://pagespeed.web.dev/) 评估页面性能。
-- 确保 `public/assets/` 下的截图（如 `bridge.png`, `batch.png` 等）使用了无损压缩或已转换为更高性能的 WebP 格式，并确保图片标有 `width` 与 `height` 以防止页面布局抖动（CLS）。
+- 确保 `public/assets/` 下的截图（如 `bridge.png`, `batch.webp` 等）使用了无损压缩或已转换为更高性能的 WebP 格式，并确保图片标有 `width` 与 `height` 以防止页面布局抖动（CLS）。
 - 对关键外部字体资源实施预加载，减少字体加载阻碍渲染的时间。
 
 ---
