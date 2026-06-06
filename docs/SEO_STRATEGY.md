@@ -13,10 +13,11 @@
 | **Vite 静态预渲染 (18 个路由)** | ✅ **已启用** | 在构建时，通过 Headless Chrome (Puppeteer) 为 3 种语言 × 6 个页面渲染出静态的 HTML 文件。即使是不运行 JavaScript 的低级爬虫也能瞬间读取完整的网页内容。 |
 | **多语言路由架构 (zh / ko / en)** | ✅ **已启用** | 使用路径前缀（`/zh` 繁中、`/ko` 韩文、`/` 英文）物理分隔不同的语言页面，使 Google 和 Bing 能够针对不同的语言市场进行精确的索引。 |
 | **页面级动态 Meta 标签** | ✅ **已启用** | 集成 `react-helmet-async`，为每一个路由页面和语言版本动态生成独立的 `<title>`、`<meta name="description">`、`<html lang="...">` 和唯一的 `<link rel="canonical">` 规范链接。 |
-| **Schema.org 结构化数据** | ✅ **已启用** | 首页配置了增强版 `SoftwareApplication`（含 `softwareVersion`、`publisher`）和 `WebSite` 结构化数据，FAQ 页面配置了动态本地化的 `FAQPage` 结构化数据，用于在搜索结果中争取富媒体摘要（Rich Snippets）下拉抽屉的展示。 |
+| **Schema.org 结构化数据** | ✅ **已启用** | 首页配置了增强版 `SoftwareApplication`（含 `softwareVersion`、`publisher`）、`WebSite` 与 `Organization` 结构化数据，FAQ 页面配置了动态本地化的 `FAQPage` 结构化数据，用于在搜索结果中争取富媒体摘要（Rich Snippets）下拉抽屉的展示。 |
 | **搜索引擎所有权验证文件** | ✅ **已启用** | `google19a23e9c486a5037.html` 和 `BingSiteAuth.xml` 已放入静态资源目录，部署后可立即进行搜索引擎所有权一键验证。 |
 | **Robots 规则与 Sitemap 地图** | ✅ **已启用** | `robots.txt` 限制了对 API 接口的爬取，`sitemap.xml` 声明了全部 6 个英文路由（`/`、`/faq`、`/support`、`/feedback`、`/privacy`、`/terms`）。已移除不存在的 `/zh`、`/ko` 语言路由，避免 Google Search Console 爬取错误。 |
 | **页面级 Twitter Card 标签** | ✅ **已启用** | Support、Feedback、Privacy、Terms 四个次级页面均已补全 `twitter:card`、`twitter:title`、`twitter:description`，确保 X/Twitter 分享时每个页面有独立预览。 |
+| **首页产品说明内容区块** | ✅ **已启用** | 首页新增了 `About IOTA Wallet Pro` 内容区块，以自然语言解释产品定位、IOTA L1 / EVM 支持、自托管特性，以及 bridge / batch sending / multiple accounts 等能力，增强品牌词与长尾关键词覆盖。 |
 | **图片 SEO 与 LCP 优化** | ✅ **已启用** | 所有 5 张产品截图已更新为描述性 alt 文案（含 "IOTA Wallet Pro"、功能名称等关键词）；hero 主图加入 `fetchpriority="high"` 提示浏览器优先加载，改善 LCP 指标。 |
 
 ---
