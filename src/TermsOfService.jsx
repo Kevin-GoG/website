@@ -178,6 +178,8 @@ const TermsOfService = ({ onBack, theme, setTheme }) => {
         <meta name="twitter:title" content={t('terms_meta_title')} />
         <meta name="twitter:description" content={t('terms_meta_desc')} />
         <meta property="og:image" content="https://iotawallet.8787887.xyz/assets/og-image.png" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
         <meta name="twitter:image" content="https://iotawallet.8787887.xyz/assets/og-image.png" />
         <script type="application/ld+json">{JSON.stringify({
           "@context": "https://schema.org",
