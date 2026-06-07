@@ -172,10 +172,21 @@ const TermsOfService = ({ onBack, theme, setTheme }) => {
         <link rel="alternate" hreflang="ko" href="https://iotawallet.8787887.xyz/ko/terms" />
         <meta property="og:title" content={t('terms_meta_title')} />
         <meta property="og:description" content={t('terms_meta_desc')} />
+        <meta property="og:type" content="website" />
         <meta property="og:url" content={lang === 'en' ? 'https://iotawallet.8787887.xyz/terms' : `https://iotawallet.8787887.xyz/${lang}/terms`} />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={t('terms_meta_title')} />
         <meta name="twitter:description" content={t('terms_meta_desc')} />
+        <meta property="og:image" content="https://iotawallet.8787887.xyz/assets/og-image.png" />
+        <meta name="twitter:image" content="https://iotawallet.8787887.xyz/assets/og-image.png" />
+        <script type="application/ld+json">{JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://iotawallet.8787887.xyz/" },
+            { "@type": "ListItem", "position": 2, "name": "Terms of Service", "item": "https://iotawallet.8787887.xyz/terms" }
+          ]
+        })}</script>
       </Helmet>
       <div className="gradient-bg"></div>
 

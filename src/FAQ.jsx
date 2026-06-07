@@ -81,9 +81,12 @@ const FAQ = ({ theme, setTheme }) => {
         <meta property="og:title" content={t('faq_meta_title')} />
         <meta property="og:description" content={t('faq_meta_desc')} />
         <meta property="og:url" content={lang === 'en' ? 'https://iotawallet.8787887.xyz/faq' : `https://iotawallet.8787887.xyz/${lang}/faq`} />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content="https://iotawallet.8787887.xyz/assets/og-image.png" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={t('faq_meta_title')} />
         <meta name="twitter:description" content={t('faq_meta_desc')} />
+        <meta name="twitter:image" content="https://iotawallet.8787887.xyz/assets/og-image.png" />
         <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
         <script type="application/ld+json">{JSON.stringify({
           "@context": "https://schema.org",
