@@ -316,7 +316,7 @@ function HomePage({ theme, setTheme }) {
             {t('nav_support')}
           </a>
           <LanguageThemeSelector theme={theme} setTheme={setTheme} />
-          <a href="#" className="btn-primary" style={{ padding: '0.5rem 1.25rem' }}>
+          <a href="https://chromewebstore.google.com/detail/iota-wallet-pro/ooaplbpbboopmimeiojphgcmohfghfea" target="_blank" rel="noopener noreferrer" className="btn-primary" style={{ padding: '0.5rem 1.25rem' }}>
             {t('nav_install')}
           </a>
         </div>
@@ -337,7 +337,7 @@ function HomePage({ theme, setTheme }) {
               {t('hero_subtitle')}
             </p>
             <div className="flex gap-4">
-              <a href="#" className="btn-primary">
+              <a href="https://chromewebstore.google.com/detail/iota-wallet-pro/ooaplbpbboopmimeiojphgcmohfghfea" target="_blank" rel="noopener noreferrer" className="btn-primary">
                 {t('hero_btn_install')} <Download size={18} style={{ marginLeft: '8px', verticalAlign: 'middle' }} />
               </a>
             </div>
