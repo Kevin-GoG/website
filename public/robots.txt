@@ -2,4 +2,4 @@ User-agent: *
 Allow: /
 Disallow: /api/
 
-Sitemap: https://iotawallet.8787887.xyz/sitemap.xml
+Sitemap: https://info.web3wallet.qzz.io/sitemap.xml
