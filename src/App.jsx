@@ -395,13 +395,13 @@ function HomePage({ theme, setTheme }) {
             style={{ margin: '0 auto', textAlign: 'left' }}
           >
             <h2 id="about-iota-wallet-pro" className="section-title" style={{ textAlign: 'left', marginBottom: '1.25rem' }}>
-              About IOTA Wallet Pro
+              {t('about_title')}
             </h2>
             <p style={{ color: 'var(--text-muted)', fontSize: '1.05rem', lineHeight: '1.8', marginBottom: '1rem' }}>
-              IOTA Wallet Pro is a self-custodial Chrome extension wallet built for the IOTA ecosystem. It helps users manage both IOTA L1 and IOTA EVM accounts from one interface, with local key encryption and no hosted wallet account system.
+              {t('about_p1')}
             </p>
             <p style={{ color: 'var(--text-muted)', fontSize: '1.05rem', lineHeight: '1.8', marginBottom: 0 }}>
-              The wallet is designed for users who need more than basic transfers. It supports cross-chain bridge flows, batch sending, address book management, and multiple accounts, making it suitable for both everyday usage and advanced IOTA workflows.
+              {t('about_p2')}
             </p>
           </motion.div>
         </section>

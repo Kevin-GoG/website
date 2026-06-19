@@ -29,13 +29,9 @@ const Feedback = ({ onBack, theme, setTheme }) => {
   };
 
   const getCategoryLabel = (cat) => {
-    if (cat === 'Bug Report') {
-      return lang === 'zh' ? '報告錯誤' : lang === 'ko' ? '버그 보고' : 'Bug Report';
-    }
-    if (cat === 'Feature Request') {
-      return lang === 'zh' ? '功能建議' : lang === 'ko' ? '기능 요청' : 'Feature Request';
-    }
-    return lang === 'zh' ? '一般反饋' : lang === 'ko' ? '일반 피드백' : 'General Feedback';
+    if (cat === 'Bug Report') return t('feedback_category_bug');
+    if (cat === 'Feature Request') return t('feedback_category_feature');
+    return t('feedback_category_general');
   };
 
   const handleSubmit = async (e) => {

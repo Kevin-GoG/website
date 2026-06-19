@@ -121,18 +121,12 @@ const FAQ = ({ theme, setTheme }) => {
               <HelpCircle size={32} />
             </div>
             <h1 className="hero-title" style={{ fontSize: '2.5rem', marginBottom: 0 }}>
-              {lang === 'zh' ? '常見問題解答' : lang === 'ko' ? '자주 묻는 질문' : 'Frequently Asked Questions'}
+              {t('faq_page_title')}
             </h1>
           </div>
 
-          <p style={{ color: 'var(--text-muted)', fontSize: '1.1rem', marginBottom: '3rem' }}>
-            {lang === 'zh' ? (
-              <>尋找有關 IOTA Wallet Pro 最常見問題的解答。找不到您需要的？請訪問我們的 <a href={getLocalizedLink('/support')} style={{ color: 'var(--primary)', textDecoration: 'underline' }}>支援頁面</a>。</>
-            ) : lang === 'ko' ? (
-              <>IOTA Wallet Pro에 대한 가장 흔한 질문들의 해답을 확인해 보세요. 원하시는 답변이 없나요? <a href={getLocalizedLink('/support')} style={{ color: 'var(--primary)', textDecoration: 'underline' }}>지원 페이지</a>를 방문해 보세요.</>
-            ) : (
-              <>Find answers to the most common questions about IOTA Wallet Pro. Can't find what you're looking for? Visit our <a href={getLocalizedLink('/support')} style={{ color: 'var(--primary)', textDecoration: 'underline' }}>Support page</a>.</>
-            )}
+          <p style={{ color: 'var(--text-muted)', fontSize: '1.1rem', marginBottom: '3rem' }}
+            dangerouslySetInnerHTML={{ __html: t('faq_intro').replace('{link}', `<a href="${getLocalizedLink('/support')}" style="color: var(--primary); text-decoration: underline">${t('faq_intro_link')}</a>`) }}>
           </p>
 
           {faqData.map((cat, catIdx) => (

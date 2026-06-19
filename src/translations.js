@@ -7,6 +7,9 @@ export const translations = {
     
     faq_meta_title: "FAQ — IOTA Wallet Pro",
     faq_meta_desc: "Frequently asked questions about IOTA Wallet Pro. Learn about installation, security, features, and troubleshooting.",
+    faq_page_title: "Frequently Asked Questions",
+    faq_intro: "Find answers to the most common questions about IOTA Wallet Pro. Can't find what you're looking for? Visit our {link}.",
+    faq_intro_link: "Support page",
     
     support_meta_title: "Support — IOTA Wallet Pro",
     support_meta_desc: "Get help with IOTA Wallet Pro. Browse documentation, read FAQs, or send us feedback.",
@@ -42,6 +45,11 @@ export const translations = {
     feature_2_desc: "Seamlessly manage IOTA L1 (Move / Ed25519) and IOTA EVM (chainId 8822) accounts from a single wallet. Switch networks in one click.",
     feature_3_title: "L1 ↔ EVM Bridge",
     feature_3_desc: "Built-in cross-chain bridge. Deposit IOTA from L1 to EVM or withdraw back to L1 without leaving the wallet.",
+
+    // About Section
+    about_title: "About IOTA Wallet Pro",
+    about_p1: "IOTA Wallet Pro is a self-custodial Chrome extension wallet built for the IOTA ecosystem. It helps users manage both IOTA L1 and IOTA EVM accounts from one interface, with local key encryption and no hosted wallet account system.",
+    about_p2: "The wallet is designed for users who need more than basic transfers. It supports cross-chain bridge flows, batch sending, address book management, and multiple accounts, making it suitable for both everyday usage and advanced IOTA workflows.",
 
     // Batch Send Demo
     batch_title: "Instant Batch Sending",
@@ -109,6 +117,10 @@ export const translations = {
     feedback_success_desc: "We'll review it and get back to you if needed.",
     feedback_error: "Something went wrong. Please try again.",
 
+    feedback_category_bug: "Bug Report",
+    feedback_category_feature: "Feature Request",
+    feedback_category_general: "General Feedback",
+
     // Theme Switcher Labels
     theme_light: "Light",
     theme_dark: "Dark",
@@ -122,6 +134,9 @@ export const translations = {
     
     faq_meta_title: "常見問題 — IOTA Wallet Pro",
     faq_meta_desc: "關於 IOTA Wallet Pro 的常見問題解答。了解安裝、安全性、功能和疑難排解。",
+    faq_page_title: "常見問題解答",
+    faq_intro: "尋找有關 IOTA Wallet Pro 最常見問題的解答。找不到您需要的？請訪問我們的{link}。",
+    faq_intro_link: "支援頁面",
     
     support_meta_title: "客戶支援 — IOTA Wallet Pro",
     support_meta_desc: "獲取 IOTA Wallet Pro 的幫助。瀏覽官方文檔、閱讀常見問題或向我們提供反饋。",
@@ -157,6 +172,11 @@ export const translations = {
     feature_2_desc: "在單一錢包中無縫管理 IOTA L1 (Move / Ed25519) 和 IOTA EVM (chainId 8822) 帳戶。一鍵切換網路。",
     feature_3_title: "L1 ↔ EVM 跨鏈橋",
     feature_3_desc: "內建跨鏈橋功能。無需離開錢包即可將 IOTA 從 L1 充值到 EVM 或提現回 L1。",
+
+    // About Section
+    about_title: "關於 IOTA Wallet Pro",
+    about_p1: "IOTA Wallet Pro 是一款專為 IOTA 生態系統打造的自我託管式 Chrome 擴充功能錢包。它幫助用戶在單一介面中同時管理 IOTA L1 和 IOTA EVM 帳戶，提供本地金鑰加密，無需託管式錢包帳戶系統。",
+    about_p2: "本錢包專為需要超越基本轉帳功能的用戶而設計。它支援跨鏈橋接流程、批量發送、地址簿管理及多帳戶功能，無論是日常使用還是進階 IOTA 操作，都能輕鬆勝任。",
 
     // Batch Send Demo
     batch_title: "即時批量發送",
@@ -224,6 +244,10 @@ export const translations = {
     feedback_success_desc: "我們會認真評估您的反饋，並在必要時與您聯絡。",
     feedback_error: "發生錯誤，請稍後再試。",
 
+    feedback_category_bug: "報告錯誤",
+    feedback_category_feature: "功能建議",
+    feedback_category_general: "一般反饋",
+
     // Theme Switcher Labels
     theme_light: "淺色",
     theme_dark: "深色",
@@ -237,6 +261,9 @@ export const translations = {
     
     faq_meta_title: "자주 묻는 질문 — IOTA Wallet Pro",
     faq_meta_desc: "IOTA Wallet Pro에 대한 자주 묻는 질문입니다. 설치, 보안, 기능 및 문제 해결에 대해 알아보세요.",
+    faq_page_title: "자주 묻는 질문",
+    faq_intro: "IOTA Wallet Pro에 대한 가장 흔한 질문들의 해답을 확인해 보세요. 원하시는 답변이 없나요? {link}를 방문해 보세요.",
+    faq_intro_link: "지원 페이지",
     
     support_meta_title: "고객 지원 — IOTA Wallet Pro",
     support_meta_desc: "IOTA Wallet Pro 도움말 센터. 공식 문서 검색, FAQ 확인 또는 피드백 전송.",
@@ -272,6 +299,11 @@ export const translations = {
     feature_2_desc: "단일 지갑에서 IOTA L1(Move / Ed25519) 및 IOTA EVM(chainId 8822) 계정을 원활하게 관리합니다. 원클릭 네트워크 전환.",
     feature_3_title: "L1 ↔ EVM 브리지",
     feature_3_desc: "내장된 크로스체인 브리지. 지갑을 나가지 않고 L1에서 EVM으로 입금하거나 L1로 출금할 수 있습니다.",
+
+    // About Section
+    about_title: "IOTA Wallet Pro 소개",
+    about_p1: "IOTA Wallet Pro는 IOTA 생태계를 위해 구축된 셀프 커스터디 크롬 확장 지갑입니다. 하나의 인터페이스에서 IOTA L1과 IOTA EVM 계정을 모두 관리할 수 있으며, 로컬 키 암호화를 제공하고 호스팅 지갑 계정 시스템이 필요 없습니다.",
+    about_p2: "이 지갑은 기본 전송 이상의 기능이 필요한 사용자를 위해 설계되었습니다. 크로스체인 브리지 플로우, 배치 송금, 주소록 관리 및 여러 계정을 지원하여 일상적인 사용과 고급 IOTA 워크플로우 모두에 적합합니다.",
 
     // Batch Send Demo
     batch_title: "인스턴트 배치 송금",
@@ -338,6 +370,10 @@ export const translations = {
     feedback_success_title: "피드백을 보내주셔서 감사합니다!",
     feedback_success_desc: "보내주신 피드백을 신속히 검토하고 필요한 경우 연락드리겠습니다.",
     feedback_error: "오류가 발생했습니다. 잠시 후 다시 시도해 주세요.",
+
+    feedback_category_bug: "버그 보고",
+    feedback_category_feature: "기능 요청",
+    feedback_category_general: "일반 피드백",
 
     // Theme Switcher Labels
     theme_light: "라이트 모드",
