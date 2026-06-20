@@ -1,8 +1,7 @@
 const RATE_LIMIT_WINDOW_MS = 60 * 1000; // 1 minute
 const RATE_LIMIT_MAX = 3; // max requests per window
 
-async function checkRateLimit(ip) {
-  const kv = context.env.RATE_LIMIT;
+async function checkRateLimit(kv, ip) {
   if (!kv) return true; // KV not bound yet — allow request
   const key = `feedback:${ip}`;
   const raw = await kv.get(key);
@@ -22,7 +21,7 @@ async function checkRateLimit(ip) {
 export async function onRequestPost(context) {
   try {
     const ip = context.request.headers.get('CF-Connecting-IP') || 'unknown';
-    if (!(await checkRateLimit(ip))) {
+    if (!(await checkRateLimit(context.env.RATE_LIMIT, ip))) {
       return Response.json({ success: false, error: 'Too many requests. Please wait a moment before trying again.' }, { status: 429 });
     }
 
