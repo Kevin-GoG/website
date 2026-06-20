@@ -2,7 +2,7 @@ name = "iota-wallet-website"
 
 [[kv_namespaces]]
 binding = "RATE_LIMIT"
-id = ""
+id = "50b1d8927fd141c8a286926deb5d5694"
 
 [[d1_databases]]
 binding = "DB"
