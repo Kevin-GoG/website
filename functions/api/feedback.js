@@ -2,8 +2,10 @@ const RATE_LIMIT_WINDOW_MS = 60 * 1000; // 1 minute
 const RATE_LIMIT_MAX = 3; // max requests per window
 
 async function checkRateLimit(ip) {
+  const kv = context.env.RATE_LIMIT;
+  if (!kv) return true; // KV not bound yet — allow request
   const key = `feedback:${ip}`;
-  const raw = await context.env.RATE_LIMIT.get(key);
+  const raw = await kv.get(key);
   let timestamps = raw ? JSON.parse(raw) : [];
   const now = Date.now();
   timestamps = timestamps.filter(t => now - t < RATE_LIMIT_WINDOW_MS);
@@ -11,7 +13,7 @@ async function checkRateLimit(ip) {
     return false;
   }
   timestamps.push(now);
-  await context.env.RATE_LIMIT.put(key, JSON.stringify(timestamps), {
+  await kv.put(key, JSON.stringify(timestamps), {
     expirationTtl: Math.ceil(RATE_LIMIT_WINDOW_MS / 1000),
   });
   return true;
