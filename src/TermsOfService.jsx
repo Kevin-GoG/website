@@ -165,28 +165,28 @@ const TermsOfService = ({ onBack, theme, setTheme }) => {
         <html lang={lang === 'zh' ? 'zh-Hant' : lang === 'ko' ? 'ko' : 'en'} />
         <title>{t('terms_meta_title')}</title>
         <meta name="description" content={t('terms_meta_desc')} />
-        <link rel="canonical" href={lang === 'en' ? 'https://iotawallet.8787887.xyz/terms' : `https://iotawallet.8787887.xyz/${lang}/terms`} />
-        <link rel="alternate" hreflang="x-default" href="https://iotawallet.8787887.xyz/terms" />
-        <link rel="alternate" hreflang="en" href="https://iotawallet.8787887.xyz/terms" />
-        <link rel="alternate" hreflang="zh-Hant" href="https://iotawallet.8787887.xyz/zh/terms" />
-        <link rel="alternate" hreflang="ko" href="https://iotawallet.8787887.xyz/ko/terms" />
+        <link rel="canonical" href={lang === 'en' ? 'https://info.web3wallet.qzz.io/terms' : `https://info.web3wallet.qzz.io/${lang}/terms`} />
+        <link rel="alternate" hreflang="x-default" href="https://info.web3wallet.qzz.io/terms" />
+        <link rel="alternate" hreflang="en" href="https://info.web3wallet.qzz.io/terms" />
+        <link rel="alternate" hreflang="zh-Hant" href="https://info.web3wallet.qzz.io/zh/terms" />
+        <link rel="alternate" hreflang="ko" href="https://info.web3wallet.qzz.io/ko/terms" />
         <meta property="og:title" content={t('terms_meta_title')} />
         <meta property="og:description" content={t('terms_meta_desc')} />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content={lang === 'en' ? 'https://iotawallet.8787887.xyz/terms' : `https://iotawallet.8787887.xyz/${lang}/terms`} />
+        <meta property="og:url" content={lang === 'en' ? 'https://info.web3wallet.qzz.io/terms' : `https://info.web3wallet.qzz.io/${lang}/terms`} />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={t('terms_meta_title')} />
         <meta name="twitter:description" content={t('terms_meta_desc')} />
-        <meta property="og:image" content="https://iotawallet.8787887.xyz/assets/og-image.png" />
+        <meta property="og:image" content="https://info.web3wallet.qzz.io/assets/og-image.png" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
-        <meta name="twitter:image" content="https://iotawallet.8787887.xyz/assets/og-image.png" />
+        <meta name="twitter:image" content="https://info.web3wallet.qzz.io/assets/og-image.png" />
         <script type="application/ld+json">{JSON.stringify({
           "@context": "https://schema.org",
           "@type": "BreadcrumbList",
           "itemListElement": [
-            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://iotawallet.8787887.xyz/" },
-            { "@type": "ListItem", "position": 2, "name": "Terms of Service", "item": "https://iotawallet.8787887.xyz/terms" }
+            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://info.web3wallet.qzz.io/" },
+            { "@type": "ListItem", "position": 2, "name": "Terms of Service", "item": "https://info.web3wallet.qzz.io/terms" }
           ]
         })}</script>
       </Helmet>

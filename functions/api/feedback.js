@@ -1,5 +1,29 @@
+const RATE_LIMIT_WINDOW_MS = 60 * 1000; // 1 minute
+const RATE_LIMIT_MAX = 3; // max requests per window
+
+async function checkRateLimit(ip) {
+  const key = `feedback:${ip}`;
+  const raw = await context.env.RATE_LIMIT.get(key);
+  let timestamps = raw ? JSON.parse(raw) : [];
+  const now = Date.now();
+  timestamps = timestamps.filter(t => now - t < RATE_LIMIT_WINDOW_MS);
+  if (timestamps.length >= RATE_LIMIT_MAX) {
+    return false;
+  }
+  timestamps.push(now);
+  await context.env.RATE_LIMIT.put(key, JSON.stringify(timestamps), {
+    expirationTtl: Math.ceil(RATE_LIMIT_WINDOW_MS / 1000),
+  });
+  return true;
+}
+
 export async function onRequestPost(context) {
   try {
+    const ip = context.request.headers.get('CF-Connecting-IP') || 'unknown';
+    if (!(await checkRateLimit(ip))) {
+      return Response.json({ success: false, error: 'Too many requests. Please wait a moment before trying again.' }, { status: 429 });
+    }
+
     const body = await context.request.json();
     const { name, email, category, message } = body;
 

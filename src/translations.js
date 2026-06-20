@@ -3,12 +3,12 @@ export const translations = {
     // Metadata
     meta_title: "IOTA Wallet Pro — Professional Chrome Extension Wallet for IOTA",
     meta_desc: "The high-performance Chrome extension wallet for IOTA L1 (Move) and IOTA EVM. Bank-grade encryption, cross-chain bridge, batch sending, and self-custodial security.",
-    meta_canonical: "https://iotawallet.8787887.xyz/",
+    meta_canonical: "https://info.web3wallet.qzz.io/",
     
     faq_meta_title: "FAQ — IOTA Wallet Pro",
     faq_meta_desc: "Frequently asked questions about IOTA Wallet Pro. Learn about installation, security, features, and troubleshooting.",
     faq_page_title: "Frequently Asked Questions",
-    faq_intro: "Find answers to the most common questions about IOTA Wallet Pro. Can't find what you're looking for? Visit our {link}.",
+    faq_intro_prefix: "Find answers to the most common questions about IOTA Wallet Pro. Can't find what you're looking for? Visit our",
     faq_intro_link: "Support page",
     
     support_meta_title: "Support — IOTA Wallet Pro",
@@ -130,12 +130,12 @@ export const translations = {
     // Metadata
     meta_title: "IOTA Wallet Pro — 專業的 IOTA 瀏覽器擴充功能錢包",
     meta_desc: "專為 IOTA L1 (Move) 和 IOTA EVM 打造的高效能瀏覽器擴充功能錢包。具備銀行級加密、跨鏈橋、批量發送和自託管安全保障。",
-    meta_canonical: "https://iotawallet.8787887.xyz/zh",
+    meta_canonical: "https://info.web3wallet.qzz.io/zh",
     
     faq_meta_title: "常見問題 — IOTA Wallet Pro",
     faq_meta_desc: "關於 IOTA Wallet Pro 的常見問題解答。了解安裝、安全性、功能和疑難排解。",
     faq_page_title: "常見問題解答",
-    faq_intro: "尋找有關 IOTA Wallet Pro 最常見問題的解答。找不到您需要的？請訪問我們的{link}。",
+    faq_intro_prefix: "尋找有關 IOTA Wallet Pro 最常見問題的解答。找不到您需要的？請訪問我們的",
     faq_intro_link: "支援頁面",
     
     support_meta_title: "客戶支援 — IOTA Wallet Pro",
@@ -257,12 +257,12 @@ export const translations = {
     // Metadata
     meta_title: "IOTA Wallet Pro — 전문적인 IOTA 크롬 확장 프로그램 지갑",
     meta_desc: "IOTA L1(Move) 및 IOTA EVM 전용 고성능 크롬 확장 프로그램 지갑입니다. 은행 등급의 암호화, 크로스체인 브리지, 배치 송금 및 셀프 커스터디 지갑 보안을 제공합니다.",
-    meta_canonical: "https://iotawallet.8787887.xyz/ko",
+    meta_canonical: "https://info.web3wallet.qzz.io/ko",
     
     faq_meta_title: "자주 묻는 질문 — IOTA Wallet Pro",
     faq_meta_desc: "IOTA Wallet Pro에 대한 자주 묻는 질문입니다. 설치, 보안, 기능 및 문제 해결에 대해 알아보세요.",
     faq_page_title: "자주 묻는 질문",
-    faq_intro: "IOTA Wallet Pro에 대한 가장 흔한 질문들의 해답을 확인해 보세요. 원하시는 답변이 없나요? {link}를 방문해 보세요.",
+    faq_intro_prefix: "IOTA Wallet Pro에 대한 가장 흔한 질문들의 해답을 확인해 보세요. 원하시는 답변이 없나요?",
     faq_intro_link: "지원 페이지",
     
     support_meta_title: "고객 지원 — IOTA Wallet Pro",

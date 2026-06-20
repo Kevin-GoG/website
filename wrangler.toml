@@ -1,5 +1,9 @@
 name = "iota-wallet-website"
 
+[[kv_namespaces]]
+binding = "RATE_LIMIT"
+id = ""
+
 [[d1_databases]]
 binding = "DB"
 database_name = "feedback_db"
