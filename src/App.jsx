@@ -8,7 +8,6 @@ import {
   Layers,
   Download,
   Upload,
-  FileText,
   CheckCircle,
   AlertCircle,
   X
@@ -36,10 +35,6 @@ const FeatureCard = ({ icon: Icon, title, description, delay }) => (
     <p className="feature-description">{description}</p>
   </motion.div>
 );
-
-const EXAMPLE_CSV = `0x1a2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a2b,10.5
-0x2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a2b3c,25.0
-0x3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a2b3c4d,5.75`;
 
 export function LanguageThemeSelector({ theme, setTheme }) {
   const { lang, changeLanguage, t } = useTranslation();
@@ -152,6 +147,45 @@ function BatchSendDemo() {
               <img src="/assets/batch.webp" alt="IOTA Wallet Pro batch send interface — upload CSV to send IOTA to multiple addresses" className="feature-screenshot" width="516" height="890" loading="lazy" />
             </motion.div>
 
+            {/* Example table (preview of the expected CSV format) */}
+            <div className="csv-preview" style={{ marginBottom: '1rem' }}>
+              <div className="csv-preview-header">
+                <CheckCircle size={16} style={{ color: '#22c55e' }} />
+                <span>{t('batch_btn_example')}</span>
+              </div>
+              <div className="csv-table-wrap">
+                <table className="csv-table">
+                  <thead>
+                    <tr>
+                      <th>{t('batch_tbl_hash')}</th>
+                      <th>{t('batch_tbl_address')}</th>
+                      <th>{t('batch_tbl_amount')}</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td style={{ color: 'var(--text-muted)' }}>1</td>
+                      <td className="csv-addr">0x1a2b3c4d5e…0f1a2b</td>
+                      <td>10.5</td>
+                    </tr>
+                    <tr>
+                      <td style={{ color: 'var(--text-muted)' }}>2</td>
+                      <td className="csv-addr">0x2b3c4d5e6f…0f1a2b3c</td>
+                      <td>25.0</td>
+                    </tr>
+                    <tr>
+                      <td style={{ color: 'var(--text-muted)' }}>3</td>
+                      <td className="csv-addr">0x3c4d5e6f7a…0f1a2b3c4d</td>
+                      <td>5.75</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <p style={{ color: 'var(--text-muted)', fontSize: '0.8rem', marginTop: '0.75rem', textAlign: 'center' }}>
+                {t('batch_dropzone_sub')}
+              </p>
+            </div>
+
             {/* Upload Area */}
             <div
               className={`csv-drop-zone ${dragging ? 'dragging' : ''}`}
@@ -170,23 +204,6 @@ function BatchSendDemo() {
               <Upload size={32} style={{ marginBottom: '0.75rem', color: 'var(--primary)' }} />
               <p style={{ fontWeight: 600, marginBottom: '0.25rem' }}>{t('batch_dropzone_main')}</p>
               <p style={{ color: 'var(--text-muted)', fontSize: '0.875rem' }}>{t('batch_dropzone_sub')}</p>
-            </div>
-
-            {/* Example download */}
-            <div style={{ textAlign: 'center', margin: '1rem 0' }}>
-              <button
-                className="btn-outline"
-                onClick={() => {
-                  const blob = new Blob([EXAMPLE_CSV], { type: 'text/csv' });
-                  const url = URL.createObjectURL(blob);
-                  const a = document.createElement('a');
-                  a.href = url; a.download = 'example-batch.csv'; a.click();
-                  URL.revokeObjectURL(url);
-                }}
-              >
-                <FileText size={15} style={{ marginRight: '6px', verticalAlign: 'middle' }} />
-                {t('batch_btn_example')}
-              </button>
             </div>
 
             {/* Error */}
