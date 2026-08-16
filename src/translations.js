@@ -3,7 +3,7 @@ export const translations = {
     // Metadata
     meta_title: "IOTA Wallet Pro — Professional Chrome Extension Wallet for IOTA",
     meta_desc: "The high-performance Chrome extension wallet for IOTA L1 (Move) and IOTA EVM. Bank-grade encryption, cross-chain bridge, batch sending, and self-custodial security.",
-    meta_canonical: "https://info.web3wallet.qzz.io/",
+    meta_canonical: "https://walletpro.agentsblockchains.com/",
     
     faq_meta_title: "FAQ — IOTA Wallet Pro",
     faq_meta_desc: "Frequently asked questions about IOTA Wallet Pro. Learn about installation, security, features, and troubleshooting.",
@@ -130,7 +130,7 @@ export const translations = {
     // Metadata
     meta_title: "IOTA Wallet Pro — 專業的 IOTA 瀏覽器擴充功能錢包",
     meta_desc: "專為 IOTA L1 (Move) 和 IOTA EVM 打造的高效能瀏覽器擴充功能錢包。具備銀行級加密、跨鏈橋、批量發送和自託管安全保障。",
-    meta_canonical: "https://info.web3wallet.qzz.io/zh",
+    meta_canonical: "https://walletpro.agentsblockchains.com/zh",
     
     faq_meta_title: "常見問題 — IOTA Wallet Pro",
     faq_meta_desc: "關於 IOTA Wallet Pro 的常見問題解答。了解安裝、安全性、功能和疑難排解。",
@@ -257,7 +257,7 @@ export const translations = {
     // Metadata
     meta_title: "IOTA Wallet Pro — 전문적인 IOTA 크롬 확장 프로그램 지갑",
     meta_desc: "IOTA L1(Move) 및 IOTA EVM 전용 고성능 크롬 확장 프로그램 지갑입니다. 은행 등급의 암호화, 크로스체인 브리지, 배치 송금 및 셀프 커스터디 지갑 보안을 제공합니다.",
-    meta_canonical: "https://info.web3wallet.qzz.io/ko",
+    meta_canonical: "https://walletpro.agentsblockchains.com/ko",
     
     faq_meta_title: "자주 묻는 질문 — IOTA Wallet Pro",
     faq_meta_desc: "IOTA Wallet Pro에 대한 자주 묻는 질문입니다. 설치, 보안, 기능 및 문제 해결에 대해 알아보세요.",

@@ -86,28 +86,28 @@ const Support = ({ onBack, theme, setTheme }) => {
         <html lang={lang === 'zh' ? 'zh-Hant' : lang === 'ko' ? 'ko' : 'en'} />
         <title>{t('support_meta_title')}</title>
         <meta name="description" content={t('support_meta_desc')} />
-        <link rel="canonical" href={lang === 'en' ? 'https://info.web3wallet.qzz.io/support' : `https://info.web3wallet.qzz.io/${lang}/support`} />
-        <link rel="alternate" hreflang="x-default" href="https://info.web3wallet.qzz.io/support" />
-        <link rel="alternate" hreflang="en" href="https://info.web3wallet.qzz.io/support" />
-        <link rel="alternate" hreflang="zh-Hant" href="https://info.web3wallet.qzz.io/zh/support" />
-        <link rel="alternate" hreflang="ko" href="https://info.web3wallet.qzz.io/ko/support" />
+        <link rel="canonical" href={lang === 'en' ? 'https://walletpro.agentsblockchains.com/support' : `https://walletpro.agentsblockchains.com/${lang}/support`} />
+        <link rel="alternate" hreflang="x-default" href="https://walletpro.agentsblockchains.com/support" />
+        <link rel="alternate" hreflang="en" href="https://walletpro.agentsblockchains.com/support" />
+        <link rel="alternate" hreflang="zh-Hant" href="https://walletpro.agentsblockchains.com/zh/support" />
+        <link rel="alternate" hreflang="ko" href="https://walletpro.agentsblockchains.com/ko/support" />
         <meta property="og:title" content={t('support_meta_title')} />
         <meta property="og:description" content={t('support_meta_desc')} />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content={lang === 'en' ? 'https://info.web3wallet.qzz.io/support' : `https://info.web3wallet.qzz.io/${lang}/support`} />
+        <meta property="og:url" content={lang === 'en' ? 'https://walletpro.agentsblockchains.com/support' : `https://walletpro.agentsblockchains.com/${lang}/support`} />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={t('support_meta_title')} />
         <meta name="twitter:description" content={t('support_meta_desc')} />
-        <meta property="og:image" content="https://info.web3wallet.qzz.io/assets/og-image.png" />
+        <meta property="og:image" content="https://walletpro.agentsblockchains.com/assets/og-image.png" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
-        <meta name="twitter:image" content="https://info.web3wallet.qzz.io/assets/og-image.png" />
+        <meta name="twitter:image" content="https://walletpro.agentsblockchains.com/assets/og-image.png" />
         <script type="application/ld+json">{JSON.stringify({
           "@context": "https://schema.org",
           "@type": "BreadcrumbList",
           "itemListElement": [
-            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://info.web3wallet.qzz.io/" },
-            { "@type": "ListItem", "position": 2, "name": "Support", "item": "https://info.web3wallet.qzz.io/support" }
+            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://walletpro.agentsblockchains.com/" },
+            { "@type": "ListItem", "position": 2, "name": "Support", "item": "https://walletpro.agentsblockchains.com/support" }
           ]
         })}</script>
       </Helmet>

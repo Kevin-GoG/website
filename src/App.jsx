@@ -250,22 +250,22 @@ function HomePage({ theme, setTheme }) {
         <html lang={lang === 'zh' ? 'zh-Hant' : lang === 'ko' ? 'ko' : 'en'} />
         <title>{t('meta_title')}</title>
         <meta name="description" content={t('meta_desc')} />
-        <link rel="canonical" href={lang === 'en' ? 'https://info.web3wallet.qzz.io/' : `https://info.web3wallet.qzz.io/${lang}`} />
-        <link rel="alternate" hreflang="x-default" href="https://info.web3wallet.qzz.io/" />
-        <link rel="alternate" hreflang="en" href="https://info.web3wallet.qzz.io/" />
-        <link rel="alternate" hreflang="zh-Hant" href="https://info.web3wallet.qzz.io/zh" />
-        <link rel="alternate" hreflang="ko" href="https://info.web3wallet.qzz.io/ko" />
+        <link rel="canonical" href={lang === 'en' ? 'https://walletpro.agentsblockchains.com/' : `https://walletpro.agentsblockchains.com/${lang}`} />
+        <link rel="alternate" hreflang="x-default" href="https://walletpro.agentsblockchains.com/" />
+        <link rel="alternate" hreflang="en" href="https://walletpro.agentsblockchains.com/" />
+        <link rel="alternate" hreflang="zh-Hant" href="https://walletpro.agentsblockchains.com/zh" />
+        <link rel="alternate" hreflang="ko" href="https://walletpro.agentsblockchains.com/ko" />
         <meta property="og:title" content={t('meta_title')} />
         <meta property="og:description" content={t('meta_desc')} />
-        <meta property="og:url" content={lang === 'en' ? 'https://info.web3wallet.qzz.io/' : `https://info.web3wallet.qzz.io/${lang}`} />
+        <meta property="og:url" content={lang === 'en' ? 'https://walletpro.agentsblockchains.com/' : `https://walletpro.agentsblockchains.com/${lang}`} />
         <meta property="og:type" content="website" />
-        <meta property="og:image" content="https://info.web3wallet.qzz.io/assets/og-image.png" />
+        <meta property="og:image" content="https://walletpro.agentsblockchains.com/assets/og-image.png" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={t('meta_title')} />
         <meta name="twitter:description" content={t('meta_desc')} />
-        <meta name="twitter:image" content="https://info.web3wallet.qzz.io/assets/og-image.png" />
+        <meta name="twitter:image" content="https://walletpro.agentsblockchains.com/assets/og-image.png" />
         <script type="application/ld+json">{JSON.stringify({
           "@context": "https://schema.org",
           "@type": "SoftwareApplication",
@@ -274,7 +274,7 @@ function HomePage({ theme, setTheme }) {
           "operatingSystem": "Chrome",
           "softwareVersion": "1.0",
           "description": t('meta_desc'),
-          "url": "https://info.web3wallet.qzz.io",
+          "url": "https://walletpro.agentsblockchains.com",
           "offers": {
             "@type": "Offer",
             "price": "0",
@@ -283,20 +283,20 @@ function HomePage({ theme, setTheme }) {
           "publisher": {
             "@type": "Organization",
             "name": "IOTA Wallet Pro",
-            "url": "https://info.web3wallet.qzz.io"
+            "url": "https://walletpro.agentsblockchains.com"
           }
         })}</script>
         <script type="application/ld+json">{JSON.stringify({
           "@context": "https://schema.org",
           "@type": "WebSite",
           "name": "IOTA Wallet Pro",
-          "url": "https://info.web3wallet.qzz.io"
+          "url": "https://walletpro.agentsblockchains.com"
         })}</script>
         <script type="application/ld+json">{JSON.stringify({
           "@context": "https://schema.org",
           "@type": "Organization",
           "name": "IOTA Wallet Pro",
-          "url": "https://info.web3wallet.qzz.io"
+          "url": "https://walletpro.agentsblockchains.com"
         })}</script>
       </Helmet>
       <div className="gradient-bg"></div>

@@ -56,28 +56,28 @@ const Feedback = ({ onBack, theme, setTheme }) => {
         <html lang={lang === 'zh' ? 'zh-Hant' : lang === 'ko' ? 'ko' : 'en'} />
         <title>{t('feedback_meta_title')}</title>
         <meta name="description" content={t('feedback_meta_desc')} />
-        <link rel="canonical" href={lang === 'en' ? 'https://info.web3wallet.qzz.io/feedback' : `https://info.web3wallet.qzz.io/${lang}/feedback`} />
-        <link rel="alternate" hreflang="x-default" href="https://info.web3wallet.qzz.io/feedback" />
-        <link rel="alternate" hreflang="en" href="https://info.web3wallet.qzz.io/feedback" />
-        <link rel="alternate" hreflang="zh-Hant" href="https://info.web3wallet.qzz.io/zh/feedback" />
-        <link rel="alternate" hreflang="ko" href="https://info.web3wallet.qzz.io/ko/feedback" />
+        <link rel="canonical" href={lang === 'en' ? 'https://walletpro.agentsblockchains.com/feedback' : `https://walletpro.agentsblockchains.com/${lang}/feedback`} />
+        <link rel="alternate" hreflang="x-default" href="https://walletpro.agentsblockchains.com/feedback" />
+        <link rel="alternate" hreflang="en" href="https://walletpro.agentsblockchains.com/feedback" />
+        <link rel="alternate" hreflang="zh-Hant" href="https://walletpro.agentsblockchains.com/zh/feedback" />
+        <link rel="alternate" hreflang="ko" href="https://walletpro.agentsblockchains.com/ko/feedback" />
         <meta property="og:title" content={t('feedback_meta_title')} />
         <meta property="og:description" content={t('feedback_meta_desc')} />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content={lang === 'en' ? 'https://info.web3wallet.qzz.io/feedback' : `https://info.web3wallet.qzz.io/${lang}/feedback`} />
+        <meta property="og:url" content={lang === 'en' ? 'https://walletpro.agentsblockchains.com/feedback' : `https://walletpro.agentsblockchains.com/${lang}/feedback`} />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={t('feedback_meta_title')} />
         <meta name="twitter:description" content={t('feedback_meta_desc')} />
-        <meta property="og:image" content="https://info.web3wallet.qzz.io/assets/og-image.png" />
+        <meta property="og:image" content="https://walletpro.agentsblockchains.com/assets/og-image.png" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
-        <meta name="twitter:image" content="https://info.web3wallet.qzz.io/assets/og-image.png" />
+        <meta name="twitter:image" content="https://walletpro.agentsblockchains.com/assets/og-image.png" />
         <script type="application/ld+json">{JSON.stringify({
           "@context": "https://schema.org",
           "@type": "BreadcrumbList",
           "itemListElement": [
-            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://info.web3wallet.qzz.io/" },
-            { "@type": "ListItem", "position": 2, "name": "Feedback", "item": "https://info.web3wallet.qzz.io/feedback" }
+            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://walletpro.agentsblockchains.com/" },
+            { "@type": "ListItem", "position": 2, "name": "Feedback", "item": "https://walletpro.agentsblockchains.com/feedback" }
           ]
         })}</script>
       </Helmet>

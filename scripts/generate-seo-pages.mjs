@@ -8,7 +8,7 @@ const __dirname = dirname(__filename);
 const projectRoot = join(__dirname, '..');
 const distDir = join(projectRoot, 'dist');
 
-const SITE_URL = 'https://info.web3wallet.qzz.io';
+const SITE_URL = 'https://walletpro.agentsblockchains.com';
 const OG_IMAGE = `${SITE_URL}/assets/og-image.png`;
 
 const languages = [

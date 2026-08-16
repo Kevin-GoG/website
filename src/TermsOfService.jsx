@@ -9,7 +9,7 @@ const CONTENT = {
   en: {
     title: "Terms of Service",
     lastUpdated: "Last Updated: 8/16/2026",
-    intro: "Please read these Terms of Service carefully before using the IOTA Wallet Pro website (https://info.web3wallet.qzz.io) and the IOTA Wallet Pro browser extension (collectively, the “Service”). By accessing or using the Service, you agree to be bound by these Terms and our Privacy Policy. If you do not agree to these Terms, you may not access or use the Service.",
+    intro: "Please read these Terms of Service carefully before using the IOTA Wallet Pro website (https://walletpro.agentsblockchains.com) and the IOTA Wallet Pro browser extension (collectively, the “Service”). By accessing or using the Service, you agree to be bound by these Terms and our Privacy Policy. If you do not agree to these Terms, you may not access or use the Service.",
     sections: [
       {
         heading: "1. Introduction & Acceptance",
@@ -97,7 +97,7 @@ const CONTENT = {
       {
         heading: "11. Data, Privacy & Security",
         paras: [
-          "Your use of the Service is also governed by our Privacy Policy, available at https://info.web3wallet.qzz.io/privacy, which is incorporated here by reference. Payment card data is processed exclusively by our payment processor, Waffo Pancake (PCI-DSS certified); the Operator does not store, process, or transmit full card numbers on its own servers.",
+          "Your use of the Service is also governed by our Privacy Policy, available at https://walletpro.agentsblockchains.com/privacy, which is incorporated here by reference. Payment card data is processed exclusively by our payment processor, Waffo Pancake (PCI-DSS certified); the Operator does not store, process, or transmit full card numbers on its own servers.",
           "Self-custodial wallet secrets (recovery phrases, private keys) are encrypted locally on your device and never transmitted to the Operator. Optional cloud account data (email, hashed password, subscription tier, and payment order history) is retained for 90 days after subscription cancellation and then deleted, except where retention is required by law."
         ]
       },
@@ -136,7 +136,7 @@ const CONTENT = {
           "For questions about these Terms, contact the Operator using the channels below. All email channels are monitored and route to support@agentsblockchains.com."
         ],
         list: [
-          "General Support: support@agentsblockchains.com / https://info.web3wallet.qzz.io/support",
+          "General Support: support@agentsblockchains.com / https://walletpro.agentsblockchains.com/support",
           "Billing: support@agentsblockchains.com",
           "Refunds: support@agentsblockchains.com",
           "Cancel Subscription: in-product account settings, or support@agentsblockchains.com",
@@ -150,7 +150,7 @@ const CONTENT = {
   zh: {
     title: "服務條款",
     lastUpdated: "上次更新日期：2026年8月16日",
-    intro: "在使用 IOTA Wallet Pro 網站（https://info.web3wallet.qzz.io）及 IOTA Wallet Pro 瀏覽器擴充功能（合稱「服務」）之前，請仔細閱讀本服務條款。存取或使用本服務，即表示您同意受本條款及我們的《隱私政策》約束。若您不同意本條款，則不得存取或使用本服務。",
+    intro: "在使用 IOTA Wallet Pro 網站（https://walletpro.agentsblockchains.com）及 IOTA Wallet Pro 瀏覽器擴充功能（合稱「服務」）之前，請仔細閱讀本服務條款。存取或使用本服務，即表示您同意受本條款及我們的《隱私政策》約束。若您不同意本條款，則不得存取或使用本服務。",
     sections: [
       {
         heading: "1. 簡介與接受",
@@ -238,7 +238,7 @@ const CONTENT = {
       {
         heading: "11. 數據、隱私與安全",
         paras: [
-          "您對本服務的使用亦受我們《隱私政策》規範，該政策位於 https://info.web3wallet.qzz.io/privacy，並以此引用納入本條款。支付卡數據由我們的支付處理商 Waffo Pancake（通過 PCI-DSS 認證）專門處理；營運方不會在其自有伺服器上儲存、處理或傳輸完整的卡號。",
+          "您對本服務的使用亦受我們《隱私政策》規範，該政策位於 https://walletpro.agentsblockchains.com/privacy，並以此引用納入本條款。支付卡數據由我們的支付處理商 Waffo Pancake（通過 PCI-DSS 認證）專門處理；營運方不會在其自有伺服器上儲存、處理或傳輸完整的卡號。",
           "自託管錢包機密（助記詞、私鑰）在您的裝置上加密且絕不會傳輸給營運方。可選的雲端帳戶數據（電子郵件、雜湊密碼、訂閱層級及付款訂單歷史）於訂閱取消後保留 90 天，隨後刪除，但法律要求保留者除外。"
         ]
       },
@@ -277,7 +277,7 @@ const CONTENT = {
           "有關本條款的問題，請使用以下管道聯絡營運方。所有電子郵件管道均受監控並導向 support@agentsblockchains.com。"
         ],
         list: [
-          "一般支援：support@agentsblockchains.com / https://info.web3wallet.qzz.io/support",
+          "一般支援：support@agentsblockchains.com / https://walletpro.agentsblockchains.com/support",
           "帳單：support@agentsblockchains.com",
           "退款：support@agentsblockchains.com",
           "取消訂閱：應用程式內帳戶設定，或 support@agentsblockchains.com",
@@ -291,7 +291,7 @@ const CONTENT = {
   ko: {
     title: "이용 약관",
     lastUpdated: "최종 수정일: 2026년 8월 16일",
-    intro: "IOTA Wallet Pro 웹사이트(https://info.web3wallet.qzz.io) 및 IOTA Wallet Pro 브라우저 확장 프로그램(통칭하여 “서비스”)을 사용하기 전에 본 이용 약관을 주의 깊게 읽어 주십시오. 서비스에 접근하거나 이용함으로써 귀하는 본 약관 및 개인정보 처리방침에 구속되는 것에 동의합니다. 본 약관에 동의하지 않는 경우 서비스에 접근하거나 이용할 수 없습니다.",
+    intro: "IOTA Wallet Pro 웹사이트(https://walletpro.agentsblockchains.com) 및 IOTA Wallet Pro 브라우저 확장 프로그램(통칭하여 “서비스”)을 사용하기 전에 본 이용 약관을 주의 깊게 읽어 주십시오. 서비스에 접근하거나 이용함으로써 귀하는 본 약관 및 개인정보 처리방침에 구속되는 것에 동의합니다. 본 약관에 동의하지 않는 경우 서비스에 접근하거나 이용할 수 없습니다.",
     sections: [
       {
         heading: "1. 소개 및 동의",
@@ -379,7 +379,7 @@ const CONTENT = {
       {
         heading: "11. 데이터, 개인정보 및 보안",
         paras: [
-          "서비스 이용은 https://info.web3wallet.qzz.io/privacy에서 확인할 수 있는 개인정보 처리방침의 적용을 받으며, 이는 본 약관에 참조로 편입됩니다. 결제 카드 데이터는 결제 처리사인 Waffo Pancake(PCI-DSS 인증)가 전적으로 처리하며, 운영자는 자체 서버에 전체 카드 번호를 저장, 처리 또는 전송하지 않습니다.",
+          "서비스 이용은 https://walletpro.agentsblockchains.com/privacy에서 확인할 수 있는 개인정보 처리방침의 적용을 받으며, 이는 본 약관에 참조로 편입됩니다. 결제 카드 데이터는 결제 처리사인 Waffo Pancake(PCI-DSS 인증)가 전적으로 처리하며, 운영자는 자체 서버에 전체 카드 번호를 저장, 처리 또는 전송하지 않습니다.",
           "셀프 커스터디 지갑 기밀(복구 문구, 개인키)은 귀하의 기기에서 암호화되며 운영자에게 전송되지 않습니다. 선택적 클라우드 계정 데이터(이메일, 해시된 비밀번호, 구독 등급 및 결제 주문 내역)는 구독 취소 후 90일간 보관된 후 삭제되며, 법령으로 보존이 요구되는 경우는 예외로 합니다."
         ]
       },
@@ -418,7 +418,7 @@ const CONTENT = {
           "본 약관에 관한 문의는 아래 채널을 통해 운영자에게 연락해 주십시오. 모든 이메일 채널은 모니터링되며 support@agentsblockchains.com로 연결됩니다."
         ],
         list: [
-          "일반 지원: support@agentsblockchains.com / https://info.web3wallet.qzz.io/support",
+          "일반 지원: support@agentsblockchains.com / https://walletpro.agentsblockchains.com/support",
           "결제: support@agentsblockchains.com",
           "환불: support@agentsblockchains.com",
           "구독 취소: 앱 내 계정 설정 또는 support@agentsblockchains.com",
@@ -441,28 +441,28 @@ const TermsOfService = ({ onBack, theme, setTheme }) => {
         <html lang={lang === 'zh' ? 'zh-Hant' : lang === 'ko' ? 'ko' : 'en'} />
         <title>{t('terms_meta_title')}</title>
         <meta name="description" content={t('terms_meta_desc')} />
-        <link rel="canonical" href={lang === 'en' ? 'https://info.web3wallet.qzz.io/terms' : `https://info.web3wallet.qzz.io/${lang}/terms`} />
-        <link rel="alternate" hreflang="x-default" href="https://info.web3wallet.qzz.io/terms" />
-        <link rel="alternate" hreflang="en" href="https://info.web3wallet.qzz.io/terms" />
-        <link rel="alternate" hreflang="zh-Hant" href="https://info.web3wallet.qzz.io/zh/terms" />
-        <link rel="alternate" hreflang="ko" href="https://info.web3wallet.qzz.io/ko/terms" />
+        <link rel="canonical" href={lang === 'en' ? 'https://walletpro.agentsblockchains.com/terms' : `https://walletpro.agentsblockchains.com/${lang}/terms`} />
+        <link rel="alternate" hreflang="x-default" href="https://walletpro.agentsblockchains.com/terms" />
+        <link rel="alternate" hreflang="en" href="https://walletpro.agentsblockchains.com/terms" />
+        <link rel="alternate" hreflang="zh-Hant" href="https://walletpro.agentsblockchains.com/zh/terms" />
+        <link rel="alternate" hreflang="ko" href="https://walletpro.agentsblockchains.com/ko/terms" />
         <meta property="og:title" content={t('terms_meta_title')} />
         <meta property="og:description" content={t('terms_meta_desc')} />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content={lang === 'en' ? 'https://info.web3wallet.qzz.io/terms' : `https://info.web3wallet.qzz.io/${lang}/terms`} />
+        <meta property="og:url" content={lang === 'en' ? 'https://walletpro.agentsblockchains.com/terms' : `https://walletpro.agentsblockchains.com/${lang}/terms`} />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={t('terms_meta_title')} />
         <meta name="twitter:description" content={t('terms_meta_desc')} />
-        <meta property="og:image" content="https://info.web3wallet.qzz.io/assets/og-image.png" />
+        <meta property="og:image" content="https://walletpro.agentsblockchains.com/assets/og-image.png" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
-        <meta name="twitter:image" content="https://info.web3wallet.qzz.io/assets/og-image.png" />
+        <meta name="twitter:image" content="https://walletpro.agentsblockchains.com/assets/og-image.png" />
         <script type="application/ld+json">{JSON.stringify({
           "@context": "https://schema.org",
           "@type": "BreadcrumbList",
           "itemListElement": [
-            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://info.web3wallet.qzz.io/" },
-            { "@type": "ListItem", "position": 2, "name": "Terms of Service", "item": "https://info.web3wallet.qzz.io/terms" }
+            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://walletpro.agentsblockchains.com/" },
+            { "@type": "ListItem", "position": 2, "name": "Terms of Service", "item": "https://walletpro.agentsblockchains.com/terms" }
           ]
         })}</script>
       </Helmet>

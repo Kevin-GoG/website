@@ -2,4 +2,4 @@ User-agent: *
 Allow: /
 Disallow: /api/
 
-Sitemap: https://info.web3wallet.qzz.io/sitemap.xml
+Sitemap: https://walletpro.agentsblockchains.com/sitemap.xml

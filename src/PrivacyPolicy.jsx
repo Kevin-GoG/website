@@ -10,7 +10,7 @@ const CONTENT = {
   en: {
     title: "Privacy Policy",
     lastUpdated: "Last Updated: 8/16/2026",
-    intro: "This Privacy Policy explains how Liu Yun (an individual, the “Operator”, “we”, “us”) collects, uses, and protects information when you use the IOTA Wallet Pro website (https://info.web3wallet.qzz.io) and the IOTA Wallet Pro browser extension (the “Service”). The extension is designed as a self-custodial wallet, which means your keys and recovery phrases remain under your control. Optional paid features require a cloud account; these are separate services and are not required for basic wallet functionality. This policy is for general reference only and does not constitute legal advice.",
+    intro: "This Privacy Policy explains how Liu Yun (an individual, the “Operator”, “we”, “us”) collects, uses, and protects information when you use the IOTA Wallet Pro website (https://walletpro.agentsblockchains.com) and the IOTA Wallet Pro browser extension (the “Service”). The extension is designed as a self-custodial wallet, which means your keys and recovery phrases remain under your control. Optional paid features require a cloud account; these are separate services and are not required for basic wallet functionality. This policy is for general reference only and does not constitute legal advice.",
     sections: [
       {
         heading: "1. Data Controller",
@@ -126,7 +126,7 @@ const CONTENT = {
   zh: {
     title: "隱私政策",
     lastUpdated: "上次更新日期：2026年8月16日",
-    intro: "本隱私政策說明了個人經營者 Liu Yun（以下簡稱「營運方」、「我們」）在您使用 IOTA Wallet Pro 網站（https://info.web3wallet.qzz.io）及 IOTA Wallet Pro 瀏覽器擴充功能（「服務」）時如何收集、使用及保護資訊。本擴充功能旨在作為自託管錢包運作，這意味著您的金鑰和助記詞將完全保留在您的控制之下。可選的付費功能需要雲端帳戶，這類功能屬於獨立服務，並非基本錢包功能的必要條件。本政策僅供一般參考，不構成法律意見。",
+    intro: "本隱私政策說明了個人經營者 Liu Yun（以下簡稱「營運方」、「我們」）在您使用 IOTA Wallet Pro 網站（https://walletpro.agentsblockchains.com）及 IOTA Wallet Pro 瀏覽器擴充功能（「服務」）時如何收集、使用及保護資訊。本擴充功能旨在作為自託管錢包運作，這意味著您的金鑰和助記詞將完全保留在您的控制之下。可選的付費功能需要雲端帳戶，這類功能屬於獨立服務，並非基本錢包功能的必要條件。本政策僅供一般參考，不構成法律意見。",
     sections: [
       {
         heading: "1. 資料控制者",
@@ -242,7 +242,7 @@ const CONTENT = {
   ko: {
     title: "개인정보 처리방침",
     lastUpdated: "최종 수정일: 2026년 8월 16일",
-    intro: "본 개인정보 처리방침은 개인 운영자 Liu Yun(이하 “운영자”, “당사”, “저희”)가 귀하가 IOTA Wallet Pro 웹사이트(https://info.web3wallet.qzz.io) 및 IOTA Wallet Pro 브라우저 확장 프로그램(“서비스”)을 사용할 때 정보를 어떻게 수집, 사용 및 보호하는지 설명합니다. 본 확장 프로그램은 셀프 커스터디(비수탁형) 지갑으로 설계되었으므로 개인키와 복구 문구는 귀하의 제어 하에 유지됩니다. 선택적 유료 기능에는 클라우드 계정이 필요하며 이는 별도의 서비스로 기본 지갑 기능에는 필요하지 않습니다. 본 방침은 일반적인 참조용일 뿐 법률 자문을 구성하지 않습니다.",
+    intro: "본 개인정보 처리방침은 개인 운영자 Liu Yun(이하 “운영자”, “당사”, “저희”)가 귀하가 IOTA Wallet Pro 웹사이트(https://walletpro.agentsblockchains.com) 및 IOTA Wallet Pro 브라우저 확장 프로그램(“서비스”)을 사용할 때 정보를 어떻게 수집, 사용 및 보호하는지 설명합니다. 본 확장 프로그램은 셀프 커스터디(비수탁형) 지갑으로 설계되었으므로 개인키와 복구 문구는 귀하의 제어 하에 유지됩니다. 선택적 유료 기능에는 클라우드 계정이 필요하며 이는 별도의 서비스로 기본 지갑 기능에는 필요하지 않습니다. 본 방침은 일반적인 참조용일 뿐 법률 자문을 구성하지 않습니다.",
     sections: [
       {
         heading: "1. 개인정보 책임자",
@@ -367,28 +367,28 @@ const PrivacyPolicy = ({ onBack, theme, setTheme }) => {
         <html lang={lang === 'zh' ? 'zh-Hant' : lang === 'ko' ? 'ko' : 'en'} />
         <title>{t('privacy_meta_title')}</title>
         <meta name="description" content={t('privacy_meta_desc')} />
-        <link rel="canonical" href={lang === 'en' ? 'https://info.web3wallet.qzz.io/privacy' : `https://info.web3wallet.qzz.io/${lang}/privacy`} />
-        <link rel="alternate" hreflang="x-default" href="https://info.web3wallet.qzz.io/privacy" />
-        <link rel="alternate" hreflang="en" href="https://info.web3wallet.qzz.io/privacy" />
-        <link rel="alternate" hreflang="zh-Hant" href="https://info.web3wallet.qzz.io/zh/privacy" />
-        <link rel="alternate" hreflang="ko" href="https://info.web3wallet.qzz.io/ko/privacy" />
+        <link rel="canonical" href={lang === 'en' ? 'https://walletpro.agentsblockchains.com/privacy' : `https://walletpro.agentsblockchains.com/${lang}/privacy`} />
+        <link rel="alternate" hreflang="x-default" href="https://walletpro.agentsblockchains.com/privacy" />
+        <link rel="alternate" hreflang="en" href="https://walletpro.agentsblockchains.com/privacy" />
+        <link rel="alternate" hreflang="zh-Hant" href="https://walletpro.agentsblockchains.com/zh/privacy" />
+        <link rel="alternate" hreflang="ko" href="https://walletpro.agentsblockchains.com/ko/privacy" />
         <meta property="og:title" content={t('privacy_meta_title')} />
         <meta property="og:description" content={t('privacy_meta_desc')} />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content={lang === 'en' ? 'https://info.web3wallet.qzz.io/privacy' : `https://info.web3wallet.qzz.io/${lang}/privacy`} />
+        <meta property="og:url" content={lang === 'en' ? 'https://walletpro.agentsblockchains.com/privacy' : `https://walletpro.agentsblockchains.com/${lang}/privacy`} />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={t('privacy_meta_title')} />
         <meta name="twitter:description" content={t('privacy_meta_desc')} />
-        <meta property="og:image" content="https://info.web3wallet.qzz.io/assets/og-image.png" />
+        <meta property="og:image" content="https://walletpro.agentsblockchains.com/assets/og-image.png" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
-        <meta name="twitter:image" content="https://info.web3wallet.qzz.io/assets/og-image.png" />
+        <meta name="twitter:image" content="https://walletpro.agentsblockchains.com/assets/og-image.png" />
         <script type="application/ld+json">{JSON.stringify({
           "@context": "https://schema.org",
           "@type": "BreadcrumbList",
           "itemListElement": [
-            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://info.web3wallet.qzz.io/" },
-            { "@type": "ListItem", "position": 2, "name": "Privacy Policy", "item": "https://info.web3wallet.qzz.io/privacy" }
+            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://walletpro.agentsblockchains.com/" },
+            { "@type": "ListItem", "position": 2, "name": "Privacy Policy", "item": "https://walletpro.agentsblockchains.com/privacy" }
           ]
         })}</script>
       </Helmet>

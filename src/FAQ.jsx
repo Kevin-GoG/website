@@ -73,29 +73,29 @@ const FAQ = ({ theme, setTheme }) => {
         <html lang={lang === 'zh' ? 'zh-Hant' : lang === 'ko' ? 'ko' : 'en'} />
         <title>{t('faq_meta_title')}</title>
         <meta name="description" content={t('faq_meta_desc')} />
-        <link rel="canonical" href={lang === 'en' ? 'https://info.web3wallet.qzz.io/faq' : `https://info.web3wallet.qzz.io/${lang}/faq`} />
-        <link rel="alternate" hreflang="x-default" href="https://info.web3wallet.qzz.io/faq" />
-        <link rel="alternate" hreflang="en" href="https://info.web3wallet.qzz.io/faq" />
-        <link rel="alternate" hreflang="zh-Hant" href="https://info.web3wallet.qzz.io/zh/faq" />
-        <link rel="alternate" hreflang="ko" href="https://info.web3wallet.qzz.io/ko/faq" />
+        <link rel="canonical" href={lang === 'en' ? 'https://walletpro.agentsblockchains.com/faq' : `https://walletpro.agentsblockchains.com/${lang}/faq`} />
+        <link rel="alternate" hreflang="x-default" href="https://walletpro.agentsblockchains.com/faq" />
+        <link rel="alternate" hreflang="en" href="https://walletpro.agentsblockchains.com/faq" />
+        <link rel="alternate" hreflang="zh-Hant" href="https://walletpro.agentsblockchains.com/zh/faq" />
+        <link rel="alternate" hreflang="ko" href="https://walletpro.agentsblockchains.com/ko/faq" />
         <meta property="og:title" content={t('faq_meta_title')} />
         <meta property="og:description" content={t('faq_meta_desc')} />
-        <meta property="og:url" content={lang === 'en' ? 'https://info.web3wallet.qzz.io/faq' : `https://info.web3wallet.qzz.io/${lang}/faq`} />
+        <meta property="og:url" content={lang === 'en' ? 'https://walletpro.agentsblockchains.com/faq' : `https://walletpro.agentsblockchains.com/${lang}/faq`} />
         <meta property="og:type" content="website" />
-        <meta property="og:image" content="https://info.web3wallet.qzz.io/assets/og-image.png" />
+        <meta property="og:image" content="https://walletpro.agentsblockchains.com/assets/og-image.png" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={t('faq_meta_title')} />
         <meta name="twitter:description" content={t('faq_meta_desc')} />
-        <meta name="twitter:image" content="https://info.web3wallet.qzz.io/assets/og-image.png" />
+        <meta name="twitter:image" content="https://walletpro.agentsblockchains.com/assets/og-image.png" />
         <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
         <script type="application/ld+json">{JSON.stringify({
           "@context": "https://schema.org",
           "@type": "BreadcrumbList",
           "itemListElement": [
-            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://info.web3wallet.qzz.io/" },
-            { "@type": "ListItem", "position": 2, "name": "FAQ", "item": "https://info.web3wallet.qzz.io/faq" }
+            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://walletpro.agentsblockchains.com/" },
+            { "@type": "ListItem", "position": 2, "name": "FAQ", "item": "https://walletpro.agentsblockchains.com/faq" }
           ]
         })}</script>
       </Helmet>
