@@ -397,7 +397,7 @@ export const faqTranslations = {
         },
         {
           question: 'Is IOTA Wallet Pro free to use?',
-          answer: 'Yes, IOTA Wallet Pro is completely free. There are no subscription fees or hidden charges. You only pay standard IOTA network transaction fees when sending tokens or interacting with smart contracts.',
+          answer: 'IOTA Wallet Pro offers a free tier covering all basic wallet features, with no subscription required. New users also receive a free trial of the premium features. After the trial ends, premium features (such as side-panel mode and advanced account management) require a paid subscription. You only pay standard IOTA network transaction fees when sending tokens or interacting with smart contracts.',
         },
       ],
     },
@@ -471,7 +471,7 @@ export const faqTranslations = {
         },
         {
           question: 'IOTA Wallet Pro 是免費的嗎？',
-          answer: '是的，IOTA Wallet Pro 完全免費。沒有任何訂閱費用或隱藏收費。您只需在發送代幣或與智能合約互動時支付標準的 IOTA 網路交易燃料費（Gas）。',
+          answer: 'IOTA Wallet Pro 提供免費方案，涵蓋所有基本錢包功能，無需訂閱。新用戶另享有高級功能的免費試用期。試用期結束後，高級功能（例如側邊欄模式與進階帳戶管理）需付費訂閱才能使用。您只需在發送代幣或與智能合約互動時支付標準的 IOTA 網路交易燃料費（Gas）。',
         },
       ],
     },
@@ -545,7 +545,7 @@ export const faqTranslations = {
         },
         {
           question: 'IOTA Wallet Pro는 무료로 사용할 수 있나요?',
-          answer: '네, IOTA Wallet Pro는 완전 무료입니다. 정기 구독료나 숨겨진 수수료가 없습니다. 토큰 전송이나 스마트 계약 상호 작용 시 발생하는 표준 IOTA 네트워크 가스 수수료만 지불하면 됩니다.',
+          answer: 'IOTA Wallet Pro는 모든 기본 지갑 기능을 포함한 무료 요금제를 제공하며 구독이 필요하지 않습니다. 신규 사용자는 프리미엄 기능의 무료 평가판도 받을 수 있습니다. 평가판이 종료된 후에는 프리미엄 기능(예: 사이드 패널 모드 및 고급 계정 관리)을 이용하려면 유료 구독이 필요합니다. 토큰 전송이나 스마트 계약 상호 작용 시 발생하는 표준 IOTA 네트워크 가스 수수료만 지불하면 됩니다.',
         },
       ],
     },

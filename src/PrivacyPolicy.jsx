@@ -29,7 +29,7 @@ const CONTENT = {
           ["Category", "What we collect & why"],
           ["Local wallet data", "Encrypted wallet state, preferences, and network settings stored locally on your device. Never transmitted to us."],
           ["Blockchain data", "Public network information (balances, transactions, validator data) retrieved from IOTA RPC endpoints."],
-          ["Account information (paid features)", "Email address, hashed password, subscription tier, and payment order history. Stored in our Cloudflare Workers backend (D1 database + KV)."],
+          ["Account information (paid features)", "Email address, hashed password, subscription tier, and payment order history. Stored in our backend."],
           ["Payment data", "Processed exclusively by our payment processor (Waffo Pancake). We never see or store full card numbers."],
           ["Support & feedback", "Information you voluntarily send via our feedback form or email (support@agentsblockchains.com)."],
           ["Technical website data", "Limited operational data such as standard server logs when the website is hosted."]
@@ -145,7 +145,7 @@ const CONTENT = {
           ["類別", "我們收集的內容與原因"],
           ["本機錢包數據", "於您裝置上本機儲存的加密錢包狀態、偏好設定及網路設置，絕不會傳輸給我們。"],
           ["區塊鏈數據", "從 IOTA RPC 節點取得的公開網路資訊（餘額、交易、驗證者數據）。"],
-          ["帳戶資訊（付費功能）", "電子郵件地址、雜湊密碼、訂閱層級與付款訂單歷史，儲存於我們的 Cloudflare Workers 後端（D1 資料庫 + KV）。"],
+          ["帳戶資訊（付費功能）", "電子郵件地址、雜湊密碼、訂閱層級與付款訂單歷史。儲存於我們的後端系統。"],
           ["付款數據", "僅由我們的支付處理商（Waffo Pancake）處理，我們絕不會看到或儲存完整的卡號。"],
           ["支援與反饋", "您自願透過我們的反饋表單或電子郵件（support@agentsblockchains.com）發送的資訊。"],
           ["網站技術數據", "網站託管時產生的有限營運數據，例如標準伺服器日誌。"]
@@ -261,7 +261,7 @@ const CONTENT = {
           ["유형", "수집 내용 및 이유"],
           ["로컬 지갑 데이터", "기기에 로컬로 저장되는 암호화된 지갑 상태, 기본 설정 및 네트워크 설정. 당사에 전송되지 않습니다."],
           ["블록체인 데이터", "IOTA RPC 엔드포인트에서 검색된 공개 네트워크 정보(잔액, 거래, 검증자 데이터)."],
-          ["계정 정보(유료 기능)", "이메일 주소, 해시된 비밀번호, 구독 등급 및 결제 주문 내역. Cloudflare Workers 백엔드(D1 데이터베이스 + KV)에 저장됩니다."],
+          ["계정 정보(유료 기능)", "이메일 주소, 해시된 비밀번호, 구독 등급 및 결제 주문 내역. 저희 백엔드에 저장됩니다."],
           ["결제 데이터", "결제 처리사(Waffo Pancake)만 처리하며, 당사는 전체 카드 번호를 볼 수 없거나 저장하지 않습니다."],
           ["고객 지원 및 피드백", "귀하가 지원 양식 또는 이메일(support@agentsblockchains.com)을 통해 자발적으로 보낸 정보."],
           ["기술적 웹사이트 데이터", "웹사이트 호스팅 시 발생하는 표준 서버 로그 등 제한된 운영 데이터."]
