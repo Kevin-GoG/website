@@ -88,7 +88,7 @@ const Support = ({ onBack, theme, setTheme }) => {
   ];
 
   return (
-    <div className="app-container" style={{ minHeight: '100vh', padding: '2rem 5%' }}>
+    <div className="app-container subpage-container">
       <Helmet>
         <html lang={lang === 'zh' ? 'zh-Hant' : lang === 'ko' ? 'ko' : 'en'} />
         <title>{t('support_meta_title')}</title>
@@ -120,12 +120,21 @@ const Support = ({ onBack, theme, setTheme }) => {
       </Helmet>
       <div className="gradient-bg"></div>
 
-      <nav className="nav" style={{ marginBottom: '3rem' }}>
+      <nav className="nav">
         <div className="logo cursor-pointer flex items-center gap-2" onClick={onBack}>
           <ArrowLeft size={20} /> {t('nav_back')}
         </div>
-        <div style={{ display: 'flex', alignItems: 'center' }}>
+        <div className="nav-links">
+          <a href={getLocalizedLink('/pricing')} style={{ color: 'var(--text-muted)', textDecoration: 'none', fontSize: '0.9rem', fontWeight: 500 }}>
+            {t('nav_pricing')}
+          </a>
+          <a href={getLocalizedLink('/faq')} style={{ color: 'var(--text-muted)', textDecoration: 'none', fontSize: '0.9rem', fontWeight: 500 }}>
+            {t('nav_faq')}
+          </a>
           <LanguageThemeSelector theme={theme} setTheme={setTheme} />
+          <a href="https://chromewebstore.google.com/detail/iota-wallet-pro/ooaplbpbboopmimeiojphgcmohfghfea" target="_blank" rel="noopener noreferrer" className="btn-primary" style={{ padding: '0.5rem 1.25rem', fontSize: '0.85rem' }}>
+            {t('nav_install')}
+          </a>
         </div>
       </nav>
 

@@ -159,7 +159,7 @@ export default function Pricing({ theme, setTheme }) {
   ];
 
   return (
-    <div className="app-container" style={{ minHeight: '100vh', padding: '2rem 5%' }}>
+    <div className="app-container subpage-container">
       <Helmet>
         <html lang={lang === 'zh' ? 'zh-Hant' : lang === 'ko' ? 'ko' : 'en'} />
         <title>{t('pricing_meta_title')}</title>
@@ -186,7 +186,7 @@ export default function Pricing({ theme, setTheme }) {
       <div className="gradient-bg"></div>
 
       {/* Nav */}
-      <nav className="nav" style={{ marginBottom: '3rem' }}>
+      <nav className="nav">
         <div className="logo cursor-pointer flex items-center gap-2" onClick={() => navigate(getLocalizedLink('/'))}>
           <ArrowLeft size={20} /> {t('nav_back')}
         </div>

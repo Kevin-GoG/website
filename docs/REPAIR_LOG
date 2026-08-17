@@ -37,3 +37,11 @@ This document tracks code fixes, repairs, and security remediations applied to t
   - Added multi-language support (EN, ZH, KO) across all translations.
   - Integrated navigation and footer links across the website.
   - Updated prerender configuration, static SEO generator, and sitemap.
+
+## [Completed] August 17, 2026: Fixed Subpage Navigation Bounds and Overflow
+- **Target Files:** [src/index.css](file:///H:/web3/iota-wallet/website/src/index.css), [src/Pricing.jsx](file:///H:/web3/iota-wallet/website/src/Pricing.jsx), [src/FAQ.jsx](file:///H:/web3/iota-wallet/website/src/FAQ.jsx), [src/Support.jsx](file:///H:/web3/iota-wallet/website/src/Support.jsx), [src/Feedback.jsx](file:///H:/web3/iota-wallet/website/src/Feedback.jsx), [src/PrivacyPolicy.jsx](file:///H:/web3/iota-wallet/website/src/PrivacyPolicy.jsx), [src/TermsOfService.jsx](file:///H:/web3/iota-wallet/website/src/TermsOfService.jsx)
+- **Problem:** On subpages, the fixed navbar lacked explicit `left: 0; right: 0; box-sizing: border-box;`, causing the navbar to inherit container padding and push the right-side elements (including the Install button) outside the right edge of the viewport.
+- **Remediation:**
+  - Pinned `.nav` strictly with `position: fixed; top: 0; left: 0; right: 0; width: 100%; box-sizing: border-box;`.
+  - Added `.subpage-container` class with proper top clearance (`padding-top: 6.5rem`) across all subpages, removing container padding interference.
+  - Added responsive media queries for `.nav`, `.nav-links`, and `.subpage-container` so the Install button and theme/language selectors are always visible and properly padded on all screen sizes.
