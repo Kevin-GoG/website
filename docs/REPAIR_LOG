@@ -49,9 +49,9 @@ This document tracks code fixes, repairs, and security remediations applied to t
 ## [Completed] August 17, 2026: Updated Support Options & Replaced Extension Links with Coming Soon
 - **Target Files:** [src/Support.jsx](file:///H:/web3/iota-wallet/website/src/Support.jsx), [src/translations.js](file:///H:/web3/iota-wallet/website/src/translations.js), [src/App.jsx](file:///H:/web3/iota-wallet/website/src/App.jsx), [src/Pricing.jsx](file:///H:/web3/iota-wallet/website/src/Pricing.jsx), [src/FAQ.jsx](file:///H:/web3/iota-wallet/website/src/FAQ.jsx), [src/Feedback.jsx](file:///H:/web3/iota-wallet/website/src/Feedback.jsx), [src/PrivacyPolicy.jsx](file:///H:/web3/iota-wallet/website/src/PrivacyPolicy.jsx), [src/TermsOfService.jsx](file:///H:/web3/iota-wallet/website/src/TermsOfService.jsx)
 - **Problem:**
-  - Need to remove the external documentation card from the Support page and add a direct email contact option for `support@agentsblockchains.com`.
+  - Need to remove the external documentation card from the Support page, streamline the cards (Pricing, FAQ, Feedback), and add a dedicated official email contact highlight area for `support@agentsblockchains.com`.
   - Extension download links to the Chrome Web Store need to be decoupled and marked as "Coming Soon" across all pages prior to official release.
 - **Remediation:**
-  - In `src/Support.jsx`, replaced the "Documentation" section with an "Email Support" card pointing to `mailto:support@agentsblockchains.com`, and added a direct contact email highlight card.
+  - In `src/Support.jsx`, configured the 3 main cards (Pricing, FAQ, Feedback) and added a dedicated contact email highlight card for `support@agentsblockchains.com`.
   - Updated translations in `src/translations.js` across EN, ZH, and KO for support email strings and set install button copy to `Coming Soon` / `即將推出` / `출시 예정`.
   - Replaced active Chrome Web Store hyperlinks with non-navigating `span` CTA buttons marked as "Coming Soon" across all site pages (`App.jsx`, `Pricing.jsx`, `FAQ.jsx`, `Support.jsx`, `Feedback.jsx`, `PrivacyPolicy.jsx`, `TermsOfService.jsx`).

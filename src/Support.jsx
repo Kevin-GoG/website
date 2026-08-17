@@ -54,14 +54,6 @@ const Support = ({ onBack, theme, setTheme }) => {
 
   const supportItems = [
     {
-      icon: Mail,
-      title: t('support_email_title'),
-      description: t('support_email_desc'),
-      label: t('support_email_label'),
-      href: 'mailto:support@agentsblockchains.com',
-      external: true,
-    },
-    {
       icon: CreditCard,
       title: t('nav_pricing'),
       description: t('pricing_subtitle'),
