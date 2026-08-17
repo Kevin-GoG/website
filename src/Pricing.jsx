@@ -58,9 +58,11 @@ export default function Pricing({ theme, setTheme }) {
   const navigate = useNavigate();
   const { lang, t, getLocalizedLink } = useTranslation();
   const [billingCycle, setBillingCycle] = useState('annual'); // 'monthly' | 'annual' | 'lifetime'
-  const [openFaq, setOpenFaq] = useState(null);
+  const [openFaqIndex, setOpenFaqIndex] = useState(null);
 
-  const CHROME_STORE_URL = "https://chromewebstore.google.com/detail/iota-wallet-pro/ooaplbpbboopmimeiojphgcmohfghfea";
+  const toggleFaq = (idx) => {
+    setOpenFaqIndex(openFaqIndex === idx ? null : idx);
+  };
 
   // Schema.org Structured Data
   const pricingSchema = {
@@ -198,9 +200,9 @@ export default function Pricing({ theme, setTheme }) {
             {t('nav_support')}
           </a>
           <LanguageThemeSelector theme={theme} setTheme={setTheme} />
-          <a href={CHROME_STORE_URL} target="_blank" rel="noopener noreferrer" className="btn-primary" style={{ padding: '0.5rem 1.25rem', fontSize: '0.85rem' }}>
+          <span className="btn-primary" style={{ padding: '0.5rem 1.25rem', fontSize: '0.85rem', cursor: 'default', opacity: 0.9 }}>
             {t('nav_install')}
-          </a>
+          </span>
         </div>
       </nav>
 
@@ -314,15 +316,12 @@ export default function Pricing({ theme, setTheme }) {
             </ul>
 
             <div className="pricing-card-footer">
-              <a
-                href={CHROME_STORE_URL}
-                target="_blank"
-                rel="noopener noreferrer"
+              <span
                 className="btn-outline"
-                style={{ width: '100%', textAlign: 'center', padding: '0.85rem', display: 'block', fontWeight: 600 }}
+                style={{ width: '100%', textAlign: 'center', padding: '0.85rem', display: 'block', fontWeight: 600, cursor: 'default', opacity: 0.9 }}
               >
                 {t('pricing_free_btn')}
-              </a>
+              </span>
             </div>
           </motion.div>
 
@@ -435,15 +434,12 @@ export default function Pricing({ theme, setTheme }) {
             </ul>
 
             <div className="pricing-card-footer">
-              <a
-                href={CHROME_STORE_URL}
-                target="_blank"
-                rel="noopener noreferrer"
+              <span
                 className="btn-primary"
-                style={{ width: '100%', textAlign: 'center', padding: '0.85rem', display: 'block', fontWeight: 600 }}
+                style={{ width: '100%', textAlign: 'center', padding: '0.85rem', display: 'block', fontWeight: 600, cursor: 'default', opacity: 0.95 }}
               >
                 {t('pricing_pro_btn')}
-              </a>
+              </span>
             </div>
           </motion.div>
         </div>
@@ -584,8 +580,8 @@ export default function Pricing({ theme, setTheme }) {
                 key={idx}
                 question={item.q}
                 answer={item.a}
-                isOpen={openFaq === idx}
-                onClick={() => setOpenFaq(openFaq === idx ? null : idx)}
+                isOpen={openFaqIndex === idx}
+                onClick={() => toggleFaq(idx)}
               />
             ))}
           </div>
@@ -599,15 +595,12 @@ export default function Pricing({ theme, setTheme }) {
           <p style={{ color: 'var(--text-muted)', fontSize: '1.1rem', maxWidth: '580px', margin: '0 auto 2rem' }}>
             Install the extension in seconds. Enjoy free access immediately or upgrade to Pro for unlimited power features.
           </p>
-          <a
-            href={CHROME_STORE_URL}
-            target="_blank"
-            rel="noopener noreferrer"
+          <span
             className="btn-primary"
-            style={{ fontSize: '1.1rem', padding: '0.85rem 2rem' }}
+            style={{ fontSize: '1.1rem', padding: '0.85rem 2rem', cursor: 'default', opacity: 0.95 }}
           >
             {t('hero_btn_install')}
-          </a>
+          </span>
         </section>
       </main>
 

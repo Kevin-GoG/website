@@ -474,9 +474,9 @@ const TermsOfService = ({ onBack, theme, setTheme }) => {
         </div>
         <div className="nav-links">
           <LanguageThemeSelector theme={theme} setTheme={setTheme} />
-          <a href="https://chromewebstore.google.com/detail/iota-wallet-pro/ooaplbpbboopmimeiojphgcmohfghfea" target="_blank" rel="noopener noreferrer" className="btn-primary" style={{ padding: '0.5rem 1.25rem', fontSize: '0.85rem' }}>
+          <span className="btn-primary" style={{ padding: '0.5rem 1.25rem', fontSize: '0.85rem', cursor: 'default', opacity: 0.9 }}>
             {t('nav_install')}
-          </a>
+          </span>
         </div>
       </nav>
 

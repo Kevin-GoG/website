@@ -1,6 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { BookOpen, HelpCircle, MessageSquare, ArrowLeft, CreditCard } from 'lucide-react';
+import { Mail, HelpCircle, MessageSquare, ArrowLeft, CreditCard } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { useTranslation } from './useTranslation';
@@ -54,11 +54,11 @@ const Support = ({ onBack, theme, setTheme }) => {
 
   const supportItems = [
     {
-      icon: BookOpen,
-      title: t('support_doc_title'),
-      description: t('support_doc_desc'),
-      label: t('support_doc_label'),
-      href: 'https://docs.iota.org',
+      icon: Mail,
+      title: t('support_email_title'),
+      description: t('support_email_desc'),
+      label: t('support_email_label'),
+      href: 'mailto:support@agentsblockchains.com',
       external: true,
     },
     {
@@ -132,9 +132,9 @@ const Support = ({ onBack, theme, setTheme }) => {
             {t('nav_faq')}
           </a>
           <LanguageThemeSelector theme={theme} setTheme={setTheme} />
-          <a href="https://chromewebstore.google.com/detail/iota-wallet-pro/ooaplbpbboopmimeiojphgcmohfghfea" target="_blank" rel="noopener noreferrer" className="btn-primary" style={{ padding: '0.5rem 1.25rem', fontSize: '0.85rem' }}>
+          <span className="btn-primary" style={{ padding: '0.5rem 1.25rem', fontSize: '0.85rem', cursor: 'default', opacity: 0.9 }}>
             {t('nav_install')}
-          </a>
+          </span>
         </div>
       </nav>
 
@@ -159,6 +159,23 @@ const Support = ({ onBack, theme, setTheme }) => {
             {supportItems.map((item, i) => (
               <SupportCard key={item.title} {...item} delay={i * 0.1} />
             ))}
+          </div>
+
+          <div className="glass-card" style={{ marginTop: '2.5rem', padding: '1.75rem 2rem', display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: '1rem', border: '1px solid rgba(59, 130, 246, 0.3)' }}>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
+              <div className="feature-icon" style={{ marginBottom: 0 }}>
+                <Mail size={24} style={{ color: 'var(--primary)' }} />
+              </div>
+              <div>
+                <h4 style={{ margin: '0 0 0.25rem', fontSize: '1.05rem', fontWeight: 600, color: 'var(--text-main)' }}>{t('support_contact_direct')}</h4>
+                <a href="mailto:support@agentsblockchains.com" style={{ color: 'var(--primary)', textDecoration: 'none', fontSize: '1rem', fontWeight: 500 }}>
+                  support@agentsblockchains.com
+                </a>
+              </div>
+            </div>
+            <a href="mailto:support@agentsblockchains.com" className="btn-outline" style={{ fontSize: '0.875rem' }}>
+              support@agentsblockchains.com
+            </a>
           </div>
         </motion.div>
       </main>
