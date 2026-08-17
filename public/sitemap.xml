@@ -32,6 +32,37 @@
   </url>
 
   <url>
+    <loc>https://walletpro.agentsblockchains.com/pricing</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://walletpro.agentsblockchains.com/pricing" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://walletpro.agentsblockchains.com/pricing" />
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://walletpro.agentsblockchains.com/zh/pricing" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://walletpro.agentsblockchains.com/ko/pricing" />
+    <lastmod>2026-08-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://walletpro.agentsblockchains.com/zh/pricing</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://walletpro.agentsblockchains.com/pricing" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://walletpro.agentsblockchains.com/pricing" />
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://walletpro.agentsblockchains.com/zh/pricing" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://walletpro.agentsblockchains.com/ko/pricing" />
+    <lastmod>2026-08-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://walletpro.agentsblockchains.com/ko/pricing</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://walletpro.agentsblockchains.com/pricing" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://walletpro.agentsblockchains.com/pricing" />
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://walletpro.agentsblockchains.com/zh/pricing" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://walletpro.agentsblockchains.com/ko/pricing" />
+    <lastmod>2026-08-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
     <loc>https://walletpro.agentsblockchains.com/faq</loc>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://walletpro.agentsblockchains.com/faq" />
     <xhtml:link rel="alternate" hreflang="en" href="https://walletpro.agentsblockchains.com/faq" />

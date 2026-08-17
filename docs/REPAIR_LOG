@@ -21,3 +21,19 @@ This document tracks code fixes, repairs, and security remediations applied to t
   - Converted all primary product screenshots to WebP using `sharp-cli`.
   - Updated `src/App.jsx` to use WebP versions with explicit `width`, `height`, and SEO attributes (`loading="lazy"` or `fetchpriority="high"` for hero).
   - Deleted original PNG files to reduce project size.
+
+## [Completed] August 17, 2026: Transparent Pricing Page & Plan Disclosure
+- **Target Files:** [src/Pricing.jsx](file:///H:/web3/iota-wallet/website/src/Pricing.jsx), [src/App.jsx](file:///H:/web3/iota-wallet/website/src/App.jsx), [src/translations.js](file:///H:/web3/iota-wallet/website/src/translations.js), [src/index.css](file:///H:/web3/iota-wallet/website/src/index.css), [src/Support.jsx](file:///H:/web3/iota-wallet/website/src/Support.jsx), [scripts/generate-seo-pages.mjs](file:///H:/web3/iota-wallet/website/scripts/generate-seo-pages.mjs), [vite.config.js](file:///H:/web3/iota-wallet/website/vite.config.js), [public/sitemap.xml](file:///H:/web3/iota-wallet/website/public/sitemap.xml)
+- **Problem:** Reviewer audit identified missing dedicated pricing page and absence of publicly disclosed subscription pricing, billing cycles, and detailed tier quota breakdown.
+- **Remediation:**
+  - Added dedicated, publicly accessible, responsive `/pricing` (and `/zh/pricing`, `/ko/pricing`) page.
+  - Publicly disclosed exact pricing and billing terms:
+    - **Free Tier ($0/forever)**: Unlimited accounts, unlimited dApps, full transaction history, basic address book (up to 10 entries), monthly quotas for power tools (3 bridges/mo, 3 batch transfers/mo, 3 swaps/mo), Balance Finder, Chrome Side Panel mode.
+    - **Pro Monthly ($5.99/mo)**: Unlimited bridge, unlimited batch transfers (CSV bulk import), unlimited address book, unlimited swaps, Balance Finder, persistent side panel, and priority feature access.
+    - **Pro Annual ($45.99/yr)**: ~36% savings ($3.83/mo equivalent), all Pro features with annual discount.
+    - **Pro Lifetime ($125.99 one-time)**: Permanent unrestricted access to all current and future Pro features.
+  - Implemented interactive billing cycle selector, tier overview cards, complete feature-by-feature comparison matrix, guarantees (100% self-custody, transparent flat fees, cancel anytime), and billing FAQ accordion.
+  - Embedded Schema.org structured data (`SoftwareApplication` with `Offer`s for Free, Monthly, Annual, Lifetime, `BreadcrumbList`, `FAQPage`).
+  - Added multi-language support (EN, ZH, KO) across all translations.
+  - Integrated navigation and footer links across the website.
+  - Updated prerender configuration, static SEO generator, and sitemap.

@@ -19,6 +19,7 @@ const languages = [
 
 const pages = [
   { slug: '', titleKey: 'meta_title', descKey: 'meta_desc', breadcrumb: null },
+  { slug: '/pricing', titleKey: 'pricing_meta_title', descKey: 'pricing_meta_desc', breadcrumb: 'Pricing' },
   { slug: '/faq', titleKey: 'faq_meta_title', descKey: 'faq_meta_desc', breadcrumb: 'FAQ', faq: true },
   { slug: '/support', titleKey: 'support_meta_title', descKey: 'support_meta_desc', breadcrumb: 'Support' },
   { slug: '/feedback', titleKey: 'feedback_meta_title', descKey: 'feedback_meta_desc', breadcrumb: 'Feedback' },

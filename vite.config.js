@@ -11,9 +11,9 @@ export default defineConfig({
     react(),
     !isCI && prerender({
       routes: [
-        '/', '/privacy', '/terms', '/support', '/feedback', '/faq',
-        '/zh', '/zh/privacy', '/zh/terms', '/zh/support', '/zh/feedback', '/zh/faq',
-        '/ko', '/ko/privacy', '/ko/terms', '/ko/support', '/ko/feedback', '/ko/faq'
+        '/', '/pricing', '/privacy', '/terms', '/support', '/feedback', '/faq',
+        '/zh', '/zh/pricing', '/zh/privacy', '/zh/terms', '/zh/support', '/zh/feedback', '/zh/faq',
+        '/ko', '/ko/pricing', '/ko/privacy', '/ko/terms', '/ko/support', '/ko/feedback', '/ko/faq'
       ],
       renderer: '@prerenderer/renderer-puppeteer',
       rendererOptions: {

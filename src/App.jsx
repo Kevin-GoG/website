@@ -17,6 +17,7 @@ import TermsOfService from './TermsOfService';
 import Support from './Support';
 import Feedback from './Feedback';
 import FAQ from './FAQ';
+import Pricing from './Pricing';
 import { useTranslation } from './useTranslation';
 import { useTheme } from './useTheme';
 
@@ -326,6 +327,9 @@ function HomePage({ theme, setTheme }) {
           <a href="#features" style={{ color: 'var(--text-muted)', textDecoration: 'none', fontSize: '0.9rem', fontWeight: 500, transition: 'color 0.2s' }} onMouseEnter={e => e.target.style.color = 'var(--text-main)'} onMouseLeave={e => e.target.style.color = 'var(--text-muted)'}>
             {t('nav_features')}
           </a>
+          <a href={getLocalizedLink('/pricing')} style={{ color: 'var(--text-muted)', textDecoration: 'none', fontSize: '0.9rem', fontWeight: 500, transition: 'color 0.2s' }} onMouseEnter={e => e.target.style.color = 'var(--text-main)'} onMouseLeave={e => e.target.style.color = 'var(--text-muted)'}>
+            {t('nav_pricing')}
+          </a>
           <a href={getLocalizedLink('/faq')} style={{ color: 'var(--text-muted)', textDecoration: 'none', fontSize: '0.9rem', fontWeight: 500, transition: 'color 0.2s' }} onMouseEnter={e => e.target.style.color = 'var(--text-main)'} onMouseLeave={e => e.target.style.color = 'var(--text-muted)'}>
             {t('nav_faq')}
           </a>
@@ -512,6 +516,12 @@ function HomePage({ theme, setTheme }) {
         </div>
         <div className="text-right flex flex-col items-end gap-2">
           <div className="flex gap-4">
+            <a href={getLocalizedLink('/pricing')}
+              className="text-gray-400 hover:text-white transition-colors"
+              style={{ fontSize: '0.9rem', fontStyle: 'italic', textDecoration: 'underline' }}
+            >
+              {t('footer_pricing')}
+            </a>
             <a href={getLocalizedLink('/privacy')}
               className="text-gray-400 hover:text-white transition-colors"
               style={{ fontSize: '0.9rem', fontStyle: 'italic', textDecoration: 'underline' }}
@@ -558,6 +568,7 @@ function App() {
     <Routes>
       {/* English Routes */}
       <Route path="/" element={<HomePage theme={theme} setTheme={setTheme} />} />
+      <Route path="/pricing" element={<Pricing theme={theme} setTheme={setTheme} />} />
       <Route path="/privacy" element={<PrivacyPolicy onBack={() => navigate('/')} theme={theme} setTheme={setTheme} />} />
       <Route path="/terms" element={<TermsOfService onBack={() => navigate('/')} theme={theme} setTheme={setTheme} />} />
       <Route path="/support" element={<Support onBack={() => navigate('/')} theme={theme} setTheme={setTheme} />} />
@@ -566,6 +577,7 @@ function App() {
 
       {/* Traditional Chinese Routes */}
       <Route path="/zh" element={<HomePage theme={theme} setTheme={setTheme} />} />
+      <Route path="/zh/pricing" element={<Pricing theme={theme} setTheme={setTheme} />} />
       <Route path="/zh/privacy" element={<PrivacyPolicy onBack={() => navigate('/zh')} theme={theme} setTheme={setTheme} />} />
       <Route path="/zh/terms" element={<TermsOfService onBack={() => navigate('/zh')} theme={theme} setTheme={setTheme} />} />
       <Route path="/zh/support" element={<Support onBack={() => navigate('/zh')} theme={theme} setTheme={setTheme} />} />
@@ -574,6 +586,7 @@ function App() {
 
       {/* Korean Routes */}
       <Route path="/ko" element={<HomePage theme={theme} setTheme={setTheme} />} />
+      <Route path="/ko/pricing" element={<Pricing theme={theme} setTheme={setTheme} />} />
       <Route path="/ko/privacy" element={<PrivacyPolicy onBack={() => navigate('/ko')} theme={theme} setTheme={setTheme} />} />
       <Route path="/ko/terms" element={<TermsOfService onBack={() => navigate('/ko')} theme={theme} setTheme={setTheme} />} />
       <Route path="/ko/support" element={<Support onBack={() => navigate('/ko')} theme={theme} setTheme={setTheme} />} />

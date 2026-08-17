@@ -72,7 +72,7 @@ export async function onRequestPost(context) {
       .run();
 
     return Response.json({ success: true });
-  } catch (err) {
+  } catch {
     return Response.json({ success: false, error: 'Server error' }, { status: 500 });
   }
 }

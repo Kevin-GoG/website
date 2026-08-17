@@ -1,8 +1,8 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { BookOpen, HelpCircle, MessageSquare, ArrowLeft } from 'lucide-react';
+import { BookOpen, HelpCircle, MessageSquare, ArrowLeft, CreditCard } from 'lucide-react';
 import { motion } from 'framer-motion';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { useTranslation } from './useTranslation';
 import { LanguageThemeSelector } from './App';
 
@@ -50,7 +50,6 @@ const SupportCard = ({ icon: Icon, title, description, label, href, external, de
 };
 
 const Support = ({ onBack, theme, setTheme }) => {
-  const navigate = useNavigate();
   const { lang, t, getLocalizedLink } = useTranslation();
 
   const supportItems = [
@@ -61,6 +60,14 @@ const Support = ({ onBack, theme, setTheme }) => {
       label: t('support_doc_label'),
       href: 'https://docs.iota.org',
       external: true,
+    },
+    {
+      icon: CreditCard,
+      title: t('nav_pricing'),
+      description: t('pricing_subtitle'),
+      label: t('nav_pricing'),
+      href: getLocalizedLink('/pricing'),
+      external: false,
     },
     {
       icon: HelpCircle,
