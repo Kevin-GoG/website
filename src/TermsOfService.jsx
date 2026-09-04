@@ -9,19 +9,19 @@ const CONTENT = {
   en: {
     title: "Terms of Service",
     lastUpdated: "Last Updated: 8/16/2026",
-    intro: "Please read these Terms of Service carefully before using the IOTA Wallet Pro website (https://walletpro.agentsblockchains.com) and the IOTA Wallet Pro browser extension (collectively, the “Service”). By accessing or using the Service, you agree to be bound by these Terms and our Privacy Policy. If you do not agree to these Terms, you may not access or use the Service.",
+    intro: "Please read these Terms of Service carefully before using the Pro Wallet for IOTA website (https://walletpro.agentsblockchains.com) and the Pro Wallet for IOTA browser extension (collectively, the “Service”). By accessing or using the Service, you agree to be bound by these Terms and our Privacy Policy. If you do not agree to these Terms, you may not access or use the Service.",
     sections: [
       {
         heading: "1. Introduction & Acceptance",
         paras: [
-          "The Service is operated by Liu Yun, an individual (the “Operator”). These Terms are a legally binding agreement between you (“you” or “User”) and the Operator governing your access to and use of the website and the browser extension.",
+          "The Service is operated by the Pro Wallet for IOTA Team (the “Operator”). These Terms are a legally binding agreement between you (“you” or “User”) and the Operator governing your access to and use of the website and the browser extension.",
           "By using the Service, you represent and warrant that: (a) you are at least 18 years of age (or the age of majority in your jurisdiction); (b) you have read, understood, and agree to these Terms and the Privacy Policy; and (c) if you act on behalf of an organization, you have the authority to bind that organization. Your continued use of the Service after any changes to these Terms constitutes acceptance of the updated Terms."
         ]
       },
       {
         heading: "2. Service Description",
         paras: [
-          "IOTA Wallet Pro is a self-custodial browser extension wallet for interacting with IOTA L1 (Move) and IOTA EVM networks, decentralized applications (dApps), and related blockchain functionality. The Service provides local wallet management tools, cross-chain bridge flows, batch sending, address book management, and optional cloud account features (registration, subscription management, and billing). The Service does not create a hosted account for your assets, custody your funds, or act as a financial intermediary.",
+          "Pro Wallet for IOTA is a self-custodial browser extension wallet for interacting with IOTA L1 (Move) and IOTA EVM networks, decentralized applications (dApps), and related blockchain functionality. The Service provides local wallet management tools, cross-chain bridge flows, batch sending, address book management, and optional cloud account features (registration, subscription management, and billing). The Service does not create a hosted account for your assets, custody your funds, or act as a financial intermediary.",
           "The Service, including any paid subscription features, is a digital, intangible product. Access to paid features is granted immediately upon successful payment. The Service does not use third-party artificial intelligence (AI) models to generate content. Blockchain transactions may require network fees, gas, storage deposits, or validator fees determined by the relevant network or third-party service; the Operator does not control these fees.",
           "The extension may allow you to connect to third-party decentralized applications, websites, RPC endpoints, validators, and external services that are not controlled by the Operator. You are responsible for reviewing and trusting any third party before connecting, signing messages, approving permissions, or submitting transactions."
         ]
@@ -145,24 +145,24 @@ const CONTENT = {
         ]
       }
     ],
-    ack: "By using the IOTA Wallet Pro website or extension, you acknowledge that you have read, understood, and agreed to these Terms of Service."
+    ack: "By using the Pro Wallet for IOTA website or extension, you acknowledge that you have read, understood, and agreed to these Terms of Service."
   },
   zh: {
     title: "服務條款",
     lastUpdated: "上次更新日期：2026年8月16日",
-    intro: "在使用 IOTA Wallet Pro 網站（https://walletpro.agentsblockchains.com）及 IOTA Wallet Pro 瀏覽器擴充功能（合稱「服務」）之前，請仔細閱讀本服務條款。存取或使用本服務，即表示您同意受本條款及我們的《隱私政策》約束。若您不同意本條款，則不得存取或使用本服務。",
+    intro: "在使用 Pro Wallet for IOTA 網站（https://walletpro.agentsblockchains.com）及 Pro Wallet for IOTA 瀏覽器擴充功能（合稱「服務」）之前，請仔細閱讀本服務條款。存取或使用本服務，即表示您同意受本條款及我們的《隱私政策》約束。若您不同意本條款，則不得存取或使用本服務。",
     sections: [
       {
         heading: "1. 簡介與接受",
         paras: [
-          "本服務由個人經營者 Liu Yun（以下簡稱「營運方」）營運。本條款是您（「您」或「用戶」）與營運方之間具有法律約束力的協議，規範您存取與使用本網站及瀏覽器擴充功能。",
+          "本服務由 Pro Wallet for IOTA 團隊（以下簡稱「營運方」）營運。本條款是您（「您」或「用戶」）與營運方之間具有法律約束力的協議，規範您存取與使用本網站及瀏覽器擴充功能。",
           "使用本服務，即表示您聲明並保證：(a) 您已年滿 18 歲（或達到您所在司法管轄區的法定成年年齡）；(b) 您已閱讀、理解並同意本條款及《隱私政策》；(c) 若您代表某機構行事，您擁有約束該機構的授權。在本條款變更後您繼續使用本服務，即構成對更新後條款的接受。"
         ]
       },
       {
         heading: "2. 服務說明",
         paras: [
-          "IOTA Wallet Pro 是一款用於與 IOTA L1（Move）及 IOTA EVM 網路、去中心化應用程式（dApp）及相關區塊鏈功能互動的自託管瀏覽器擴充功能錢包。本服務提供本機錢包管理工具、跨鏈橋接流程、批量發送、地址簿管理以及可選的雲端帳戶功能（註冊、訂閱管理與帳單）。本服務不為您的資產建立託管帳戶、不代管您的資金，亦不作為金融中介機構。",
+          "Pro Wallet for IOTA 是一款用於與 IOTA L1（Move）及 IOTA EVM 網路、去中心化應用程式（dApp）及相關區塊鏈功能互動的自託管瀏覽器擴充功能錢包。本服務提供本機錢包管理工具、跨鏈橋接流程、批量發送、地址簿管理以及可選的雲端帳戶功能（註冊、訂閱管理與帳單）。本服務不為您的資產建立託管帳戶、不代管您的資金，亦不作為金融中介機構。",
           "本服務（包括任何付費訂閱功能）為數位、無形的產品。付費功能的存取權將於付款成功後立即授予。本服務不使用第三方人工智慧（AI）模型生成內容。區塊鏈交易可能需要由相關網路或第三方服務決定的網路費、燃料費（Gas）、儲存押金或驗證者費用；營運方不控制這些費用。",
           "本擴充功能可能允許您連接到不受營運方控制的第三方去中心化應用程式、網站、RPC 節點、驗證者及外部服務。在連接、簽署訊息、核准權限或提交交易之前，您有責任評估並信任任何第三方。"
         ]
@@ -286,24 +286,24 @@ const CONTENT = {
         ]
       }
     ],
-    ack: "使用 IOTA Wallet Pro 網站或擴充功能，即表示您確認已閱讀、理解並同意本服務條款的全部內容。"
+    ack: "使用 Pro Wallet for IOTA 網站或擴充功能，即表示您確認已閱讀、理解並同意本服務條款的全部內容。"
   },
   ko: {
     title: "이용 약관",
     lastUpdated: "최종 수정일: 2026년 8월 16일",
-    intro: "IOTA Wallet Pro 웹사이트(https://walletpro.agentsblockchains.com) 및 IOTA Wallet Pro 브라우저 확장 프로그램(통칭하여 “서비스”)을 사용하기 전에 본 이용 약관을 주의 깊게 읽어 주십시오. 서비스에 접근하거나 이용함으로써 귀하는 본 약관 및 개인정보 처리방침에 구속되는 것에 동의합니다. 본 약관에 동의하지 않는 경우 서비스에 접근하거나 이용할 수 없습니다.",
+    intro: "Pro Wallet for IOTA 웹사이트(https://walletpro.agentsblockchains.com) 및 Pro Wallet for IOTA 브라우저 확장 프로그램(통칭하여 “서비스”)을 사용하기 전에 본 이용 약관을 주의 깊게 읽어 주십시오. 서비스에 접근하거나 이용함으로써 귀하는 본 약관 및 개인정보 처리방침에 구속되는 것에 동의합니다. 본 약관에 동의하지 않는 경우 서비스에 접근하거나 이용할 수 없습니다.",
     sections: [
       {
         heading: "1. 소개 및 동의",
         paras: [
-          "본 서비스는 개인 운영자인 Liu Yun(이하 “운영자”)가 운영합니다. 본 약관은 귀하(“귀하” 또는 “사용자”)와 운영자 간에 웹사이트 및 브라우저 확장 프로그램에 대한 귀하의 접근 및 이용을 규율하는 법적 구속력 있는 합의입니다.",
+          "본 서비스는 Pro Wallet for IOTA 팀(이하 “운영자”)이 운영합니다. 본 약관은 귀하(“귀하” 또는 “사용자”)와 운영자 간에 웹사이트 및 브라우저 확장 프로그램에 대한 귀하의 접근 및 이용을 규율하는 법적 구속력 있는 합의입니다.",
           "서비스를 이용함으로써 귀하는 다음을 진술하고 보증합니다: (a) 18세 이상(또는 귀하의 관할 지역의 성년 연령)입니다. (b) 본 약관 및 개인정보 처리방침을 읽고 이해했으며 이에 동의합니다. (c) 조직을 대신하여 행동하는 경우 해당 조직을 구속할 권한이 있습니다. 본 약관 변경 후에도 서비스를 계속 이용하는 것은 변경된 약관에 동의하는 것을 의미합니다."
         ]
       },
       {
         heading: "2. 서비스 설명",
         paras: [
-          "IOTA Wallet Pro는 IOTA L1(Move) 및 IOTA EVM 네트워크, 탈중앙화 애플리케이션(dApp) 및 관련 블록체인 기능과 상호 작용하기 위한 셀프 커스터디 브라우저 확장 프로그램 지갑입니다. 본 서비스는 로컬 지갑 관리 도구, 크로스체인 브리지 흐름, 배치 송금, 주소록 관리 및 선택적 클라우드 계정 기능(등록, 구독 관리, 결제)을 제공합니다. 본 서비스는 귀하의 자산을 위한 수탁 계정을 생성하거나 자산을 보관하거나 금융 중개업자 역할을 하지 않습니다.",
+          "Pro Wallet for IOTA는 IOTA L1(Move) 및 IOTA EVM 네트워크, 탈중앙화 애플리케이션(dApp) 및 관련 블록체인 기능과 상호 작용하기 위한 셀프 커스터디 브라우저 확장 프로그램 지갑입니다. 본 서비스는 로컬 지갑 관리 도구, 크로스체인 브리지 흐름, 배치 송금, 주소록 관리 및 선택적 클라우드 계정 기능(등록, 구독 관리, 결제)을 제공합니다. 본 서비스는 귀하의 자산을 위한 수탁 계정을 생성하거나 자산을 보관하거나 금융 중개업자 역할을 하지 않습니다.",
           "결제 구독 기능을 포함한 본 서비스는 디지털, 무형의 제품입니다. 유료 기능에 대한 접근은 결제 완료 즉시 부여됩니다. 본 서비스는 콘텐츠 생성에 타사 인공지능(AI) 모델을 사용하지 않습니다. 블록체인 트랜잭션에는 관련 네트워크 또는 타사 서비스가 결정하는 네트워크 수수료, 가스비, 스토리지 보증금 또는 검증자 수수료가 필요할 수 있으며, 운영자는 이러한 수수료를 통제하지 않습니다.",
           "확장 프로그램은 운영자가 통제하지 않는 타사 탈중앙화 애플리케이션, 웹사이트, RPC 노드, 검증자 및 외부 서비스에 연결할 수 있도록 지원할 수 있습니다. 연결, 메시지 서명, 권한 승인 또는 트랜잭션 제출 전에 해당 타사를 검토하고 신뢰할 책임은 귀하에게 있습니다."
         ]
@@ -427,7 +427,7 @@ const CONTENT = {
         ]
       }
     ],
-    ack: "IOTA Wallet Pro 웹사이트 또는 확장 프로그램을 사용하는 것은 본 이용 약관을 읽고 이해했으며 이에 동의함을 인정하는 것입니다."
+    ack: "Pro Wallet for IOTA 웹사이트 또는 확장 프로그램을 사용하는 것은 본 이용 약관을 읽고 이해했으며 이에 동의함을 인정하는 것입니다."
   }
 };
 

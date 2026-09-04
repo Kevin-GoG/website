@@ -388,11 +388,15 @@ body {
 /* Feature Screenshot */
 .feature-screenshot {
   width: 100%;
+  max-width: 420px;
+  height: auto;
   border-radius: 1.25rem;
   box-shadow: 0 8px 40px rgba(0, 0, 0, 0.5), 0 0 0 1px var(--glass-border);
 }
 
 .batch-screenshot {
+  display: flex;
+  justify-content: center;
   margin-bottom: 2rem;
 }
 
@@ -448,6 +452,12 @@ body {
   color: var(--text-muted);
   font-size: 1.05rem;
   line-height: 1.7;
+}
+
+.showcase-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .showcase-img img {
@@ -899,6 +909,58 @@ body {
   }
   .pricing-summary-strip {
     grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* Use Cases Section */
+.usecases-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.usecase-card {
+  padding: 2rem;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+/* Standards Section */
+.standards-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.25rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.standard-item {
+  padding: 1.5rem 1.75rem;
+  border-radius: 14px;
+}
+
+.standard-label {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--text-main);
+  margin-bottom: 0.5rem;
+}
+
+.standard-value {
+  font-size: 0.92rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .usecases-grid,
+  .standards-grid {
+    grid-template-columns: 1fr;
   }
 }
 

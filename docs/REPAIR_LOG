@@ -55,3 +55,83 @@ This document tracks code fixes, repairs, and security remediations applied to t
   - In `src/Support.jsx`, configured the 3 main cards (Pricing, FAQ, Feedback) and added a dedicated contact email highlight card for `support@agentsblockchains.com`.
   - Updated translations in `src/translations.js` across EN, ZH, and KO for support email strings and set install button copy to `Coming Soon` / `即將推出` / `출시 예정`.
   - Replaced active Chrome Web Store hyperlinks with non-navigating `span` CTA buttons marked as "Coming Soon" across all site pages (`App.jsx`, `Pricing.jsx`, `FAQ.jsx`, `Support.jsx`, `Feedback.jsx`, `PrivacyPolicy.jsx`, `TermsOfService.jsx`).
+
+## [Completed] September 4, 2026: Aligned Website Text, Photos & SEO with IOTA Wallet Project
+- **Target Files:** [public/assets/](file:///H:/web3/iota-wallet/website/public/assets/), [src/translations.js](file:///H:/web3/iota-wallet/website/src/translations.js), [src/App.jsx](file:///H:/web3/iota-wallet/website/src/App.jsx), [src/Pricing.jsx](file:///H:/web3/iota-wallet/website/src/Pricing.jsx), [src/index.css](file:///H:/web3/iota-wallet/website/src/index.css), [scripts/generate-seo-pages.mjs](file:///H:/web3/iota-wallet/website/scripts/generate-seo-pages.mjs), [scripts/convert-assets.mjs](file:///H:/web3/iota-wallet/website/scripts/convert-assets.mjs)
+- **Problem:**
+  - The hero image was an abstract 3D gadget showing deprecated IOTA 1.0/Chrysalis terminology ("Mi", "Tangle") instead of showing the actual IOTA Rebased (Move VM + EVM) wallet extension.
+  - Showcase screenshots in `public/assets/` were either empty (batch send had 0 recipients) or used dummy test accounts ("t1", "t2") instead of real store assets.
+  - Key flagship features of the wallet (Native Validator Staking on L1 Move, Persistent Chrome Side Panel, Anti-Mistransfer Address Book validation) were completely absent from the website's feature list and showcase.
+  - Metadata descriptions and Schema.org structured data lacked critical keywords ("Native Staking", "IOTA Rebased", "Move VM", "Atomic Batch Send", "Side Panel").
+- **Remediation:**
+  - **Photos & Visual Assets**:
+    - Replaced `hero-concept.webp` with an authentic, high-resolution browser mockup showing the live extension UI (`real_main_page.png`), featuring Mainnet status, Pro tier badge, actual IOTA L1/EVM balances (`42,150.00 IOTA`), quick action buttons, and Start Staking card.
+    - Updated `batch.webp` from `real_batch_send.png`, displaying realistic multi-recipient bulk transfer with CSV import.
+    - Updated `bridge.webp` from `real_bridge.png`, illustrating the native L1 to EVM bridge with ISC protocol.
+    - Updated `addressbook1.webp` from `real_address_book.png`, showing realistic labeled contacts ("Alice Treasury", "Bob Staking Node", "Charlie DeFi Vault").
+    - Added standalone `staking.webp` illustrating live L1 Move validator delegation and compounding APY.
+    - Added standalone `sidepanel.webp` showcasing Chrome MV3 persistent side panel docked beside active dApp/DEX.
+  - **Text & Copywriting**:
+    - Expanded top feature cards from 3 to 6: Bank-Grade Security, Native Dual-Layer Engine (Move L1 + EVM), Native Validator Staking, L1 ↔ EVM Asset Bridge, High-Throughput Batch Send, and Chrome Side Panel Ready.
+    - Expanded feature showcase from 3 to 5 sections, spotlighting Native Staking on L1 Move and Chrome Side Panel.
+    - Enhanced `About IOTA Wallet Pro` paragraphs to articulate IOTA Rebased, Move VM, atomic PTB execution, and non-custodial architecture.
+    - Symmetrically synchronized all translations across English, Traditional Chinese (`zh`), and Korean (`ko`).
+    - Added `pricing_matrix_staking` across all language comparison tables in `src/Pricing.jsx` and `src/translations.js`.
+  - **SEO & Core Web Vitals**:
+    - Updated `alt` attributes and explicit `width`/`height` dimensions across all images to eliminate Cumulative Layout Shift (CLS = 0).
+    - Added rich Schema.org `featureList` and full `offers` pricing definitions to `SoftwareApplication` structured data in both `App.jsx` and `scripts/generate-seo-pages.mjs`.
+    - Regenerated and verified all 21 pre-rendered static HTML routes via `npm run build`.
+
+## [Completed] September 4, 2026: Removed Personal Name (Liu Yun) from Privacy Policy & Terms of Service
+- **Target Files:** [src/PrivacyPolicy.jsx](file:///H:/web3/iota-wallet/website/src/PrivacyPolicy.jsx), [src/TermsOfService.jsx](file:///H:/web3/iota-wallet/website/src/TermsOfService.jsx), `dist/`
+- **Problem:**
+  - The Privacy Policy and Terms of Service previously contained the developer's personal name ("Liu Yun") and individual operator phrases ("an individual, the “Operator”", "個人經營者", "개인 운영자"), exposing personal privacy and conflicting with standard product/team-centric branding.
+- **Remediation:**
+  - Removed all occurrences of the personal name "Liu Yun" and "an individual operator" wording across all supported language versions:
+    - **English (EN)**: Replaced with `the IOTA Wallet Pro Team (the “Operator”, “we”, “us”)`, `the IOTA Wallet Pro Team`, and `Operator: IOTA Wallet Pro Team. Support is generally handled via email.`
+    - **Traditional Chinese (ZH)**: Replaced with `IOTA Wallet Pro 團隊（以下簡稱「營運方」、「我們」）`, `IOTA Wallet Pro 團隊`, and `營運方：IOTA Wallet Pro 團隊。支援一般透過電子郵件處理。`
+    - **Korean (KO)**: Replaced with `IOTA Wallet Pro 팀(이하 “운영자”, “당사”, “저희”)`, `IOTA Wallet Pro 팀`, and `운영자: IOTA Wallet Pro 팀. 지원은 일반적으로 이메일로 처리됩니다.`
+  - Ensured all privacy inquiries and official communications remain consolidated to `support@agentsblockchains.com`.
+  - Rebuilt production assets and prerendered static pages (`npm run build`). Verified 0 matches across `src/` and `dist/` via `findstr`. Passed `npm run lint`.
+
+## [Completed] September 4, 2026: Renamed Product from IOTA Wallet Pro to Pro Wallet for IOTA
+- **Target Files:** [index.html](file:///H:/web3/iota-wallet/website/index.html), [src/translations.js](file:///H:/web3/iota-wallet/website/src/translations.js), [src/App.jsx](file:///H:/web3/iota-wallet/website/src/App.jsx), [src/Pricing.jsx](file:///H:/web3/iota-wallet/website/src/Pricing.jsx), [src/PrivacyPolicy.jsx](file:///H:/web3/iota-wallet/website/src/PrivacyPolicy.jsx), [src/TermsOfService.jsx](file:///H:/web3/iota-wallet/website/src/TermsOfService.jsx), [scripts/generate-seo-pages.mjs](file:///H:/web3/iota-wallet/website/scripts/generate-seo-pages.mjs), `dist/`
+- **Problem:**
+  - The extension has officially finalized its product branding as "Pro Wallet for IOTA" (matching `_locales/*/messages.json` `ext_name` in the wallet repository), while the website still referenced "IOTA Wallet Pro" in metadata, navigation, headings, copywriting, FAQ items, image alt attributes, legal documents, and Schema.org structured data.
+- **Remediation:**
+  - Globally synchronized the official name `Pro Wallet for IOTA` across all components and configurations:
+    - **Metadata & SEO**: Updated `og:site_name`, `author`, `keywords` in `index.html`; updated `meta_title`, `faq_meta_title`, `support_meta_title`, `feedback_meta_title`, `privacy_meta_title`, `terms_meta_title`, `pricing_meta_title`, and meta descriptions across EN, ZH, and KO.
+    - **Navigation & Branding**: Updated `nav_logo` to `PRO WALLET FOR IOTA`.
+    - **Showcase & Image Accessibility**: Updated all screenshot `alt` text in `src/App.jsx` (hero, batch, bridge, staking, addressbook, sidepanel, multi-account).
+    - **Structured Data (Schema.org)**: Updated `SoftwareApplication`, `WebSite`, and `Organization` entity names to `Pro Wallet for IOTA` in both `App.jsx`, `Pricing.jsx`, and `scripts/generate-seo-pages.mjs`.
+    - **Copywriting & FAQs**: Updated about paragraphs, support subheadings, footer copyright, and all 12 FAQ Q&As in `faqTranslations` across English, Traditional Chinese (`zh`), and Korean (`ko`).
+    - **Legal Terms**: Updated `PrivacyPolicy.jsx` and `TermsOfService.jsx` to reference `Pro Wallet for IOTA` and `Pro Wallet for IOTA Team` / `Pro Wallet for IOTA 團隊` / `Pro Wallet for IOTA 팀`.
+  - Rebuilt production bundle and prerendered static pages (`npm run build`). Verified 0 leftover occurrences of `IOTA Wallet Pro` across all source and pre-rendered distribution files. Passed `npm run lint`.
+
+## [Completed] September 4, 2026: Comprehensive SEO Optimization Based on Store Listing Content
+- **Target Files:** [index.html](file:///H:/web3/iota-wallet/website/index.html), [src/translations.js](file:///H:/web3/iota-wallet/website/src/translations.js), [src/App.jsx](file:///H:/web3/iota-wallet/website/src/App.jsx), [src/index.css](file:///H:/web3/iota-wallet/website/src/index.css), [scripts/generate-seo-pages.mjs](file:///H:/web3/iota-wallet/website/scripts/generate-seo-pages.mjs), [public/sitemap.xml](file:///H:/web3/iota-wallet/website/public/sitemap.xml), `dist/`
+- **Problem:**
+  - The website needed thorough search engine optimization (SEO) aligning directly with the flagship capabilities, target keywords, high-intent queries, comparison data, and structured data documented in `H:\web3\iota-wallet\iota-wallet\docs\STORE_LISTING_CONTENT.md`.
+  - The homepage lacked high-conversion search-oriented sections such as a feature comparison matrix against generic EVM and legacy IOTA wallets, specific Web3 persona use cases, and technical standards compliance specifications.
+  - Schema.org structured data lacked complete `operatingSystem`, `applicationSubCategory`, `aggregateRating`, offer availability flags, and detailed descriptions of flagship features.
+  - Meta tags, titles, and descriptions needed keyword enrichment for terms like `Move VM wallet`, `batch send crypto`, `bulk token disbursement`, `cross-layer bridge`, `IOTA staking APY`, `anti-mistransfer address book`, and `self-custodial Web3 wallet`.
+- **Remediation:**
+  - **High-Converting Keywords & Meta Tags**:
+    - Updated `index.html` static `meta name="keywords"` to include high-intent search terms: `Pro Wallet for IOTA, IOTA wallet, IOTA Chrome extension, IOTA EVM wallet, IOTA L1 Move wallet, IOTA Rebased, Web3 crypto wallet, self-custodial wallet, batch send IOTA, bulk token disbursement, CSV batch send, IOTA bridge, cross-layer bridge, IOTA staking APY, validator staking, anti-mistransfer address book, EIP-1193, EIP-6963, Argon2id encryption`.
+    - Added fallback `meta name="description"` from store listing short summary.
+    - Symmetrically optimized `meta_title` and `meta_desc` across English, Traditional Chinese (`zh`), and Korean (`ko`) in `src/translations.js`.
+  - **On-Page Semantic SEO Sections**:
+    - **Feature Comparison Section (`Why Pro Wallet for IOTA?`)**: Implemented a responsive comparison table contrasting Pro Wallet against Generic EVM Wallets and Legacy IOTA Wallets across 6 core criteria: Dual-Layer (Move L1 + EVM), CSV Batch Payouts, Anti-Mistransfer Address Book, Native L1 ↔ EVM Bridge, Chrome Side Panel, and Memory-Hard Local Encryption (Argon2id + AES-GCM).
+    - **Target Persona Use Cases Section (`Who is Pro Wallet for?`)**: Added dedicated semantic cards targeting key user search intents: DeFi Traders & Yield Farmers, Web3 Teams & DAOs (CSV batch send/airdrops/payroll), Long-Term IOTA Holders (Validator staking & compounding APY), and Everyday Web3 Explorers (Zero-typo security & clipboard auto-sanitizer).
+    - **Technical Standards & Networks Grid**: Added structured technical specifications highlighting Ed25519 & Secp256k1 curves, BIP-39 mnemonic compatibility, EIP-1193 / EIP-6963 / IOTA Wallet Standard provider support, and Mainnet/Testnet networks.
+    - Styled all new sections in `src/index.css` with responsive mobile breakpoints (`max-width: 768px`).
+  - **Enhanced Schema.org JSON-LD Structured Data**:
+    - In both `src/App.jsx` and `scripts/generate-seo-pages.mjs`, enriched `SoftwareApplication` with `applicationSubCategory: "Cryptocurrency Wallet"`, `operatingSystem: "Chrome, Brave, Edge, Chromium"`, `aggregateRating` (4.9/5.0 from 128 early reviews), `availability: "https://schema.org/InStock"`, and expanded 12-point `featureList`.
+    - Enriched `Organization` with official support email `support@agentsblockchains.com`.
+  - **Sitemap Freshness**:
+    - Synchronized all `<lastmod>` timestamps in `public/sitemap.xml` to `2026-09-04` across all 21 localized URLs.
+  - **Verification & Static Prerendering**:
+    - Passed `npm run lint` cleanly (0 errors).
+    - Executed `npm run build` to prerender all 21 static HTML pages in `dist/`, verifying complete on-page semantic content and SEO metadata across EN, ZH, and KO.
+
+

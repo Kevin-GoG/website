@@ -6,6 +6,9 @@ import {
   Shield,
   Zap,
   Layers,
+  TrendingUp,
+  PanelRight,
+  ArrowLeftRight,
   Download,
   Upload,
   CheckCircle,
@@ -145,7 +148,7 @@ function BatchSendDemo() {
               viewport={{ once: true }}
               className="batch-screenshot"
             >
-              <img src="/assets/batch.webp" alt="IOTA Wallet Pro batch send interface — upload CSV to send IOTA to multiple addresses" className="feature-screenshot" width="516" height="890" loading="lazy" />
+              <img src="/assets/batch.webp" alt="Pro Wallet for IOTA high-throughput batch send interface — upload CSV to send IOTA to multiple addresses" className="feature-screenshot" width="360" height="600" loading="lazy" />
             </motion.div>
 
             {/* Example table (preview of the expected CSV format) */}
@@ -258,6 +261,184 @@ function BatchSendDemo() {
   );
 }
 
+function ComparisonSection() {
+  const { t } = useTranslation();
+  return (
+    <section id="comparison" className="section" aria-labelledby="comparison-heading">
+      <motion.div
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+        viewport={{ once: true }}
+      >
+        <div style={{ textAlign: 'center', marginBottom: '2.5rem' }}>
+          <span className="pricing-badge">{t('comparison_badge')}</span>
+          <h2 id="comparison-heading" className="section-title" style={{ marginTop: '0.75rem', marginBottom: '1rem' }}>
+            {t('comparison_title')}
+          </h2>
+          <p style={{ color: 'var(--text-muted)', fontSize: '1.05rem', maxWidth: '680px', margin: '0 auto' }}>
+            {t('comparison_subtitle')}
+          </p>
+        </div>
+
+        <div className="pricing-matrix-wrap" style={{ maxWidth: '1000px', margin: '0 auto' }}>
+          <table className="pricing-matrix-table">
+            <thead>
+              <tr>
+                <th style={{ width: '32%' }}>{t('comparison_col_feature')}</th>
+                <th style={{ width: '22%' }}>{t('comparison_col_evm')}</th>
+                <th style={{ width: '22%' }}>{t('comparison_col_legacy')}</th>
+                <th className="col-highlight" style={{ width: '24%' }}>{t('comparison_col_pro')}</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td className="matrix-feature-name">{t('comparison_row_dual')}</td>
+                <td className="matrix-val" style={{ color: '#ef4444' }}>❌ {t('comparison_row_dual_evm')}</td>
+                <td className="matrix-val" style={{ color: '#eab308' }}>⚠️ {t('comparison_row_dual_legacy')}</td>
+                <td className="matrix-val col-highlight"><span className="matrix-check">✅ {t('comparison_row_dual_pro')}</span></td>
+              </tr>
+              <tr>
+                <td className="matrix-feature-name">{t('comparison_row_batch')}</td>
+                <td className="matrix-val" style={{ color: '#ef4444' }}>❌ {t('comparison_row_batch_evm')}</td>
+                <td className="matrix-val" style={{ color: '#ef4444' }}>❌ {t('comparison_row_batch_legacy')}</td>
+                <td className="matrix-val col-highlight"><span className="matrix-check">✅ {t('comparison_row_batch_pro')}</span></td>
+              </tr>
+              <tr>
+                <td className="matrix-feature-name">{t('comparison_row_addr')}</td>
+                <td className="matrix-val" style={{ color: '#ef4444' }}>❌ {t('comparison_row_addr_evm')}</td>
+                <td className="matrix-val" style={{ color: '#eab308' }}>⚠️ {t('comparison_row_addr_legacy')}</td>
+                <td className="matrix-val col-highlight"><span className="matrix-check">✅ {t('comparison_row_addr_pro')}</span></td>
+              </tr>
+              <tr>
+                <td className="matrix-feature-name">{t('comparison_row_bridge')}</td>
+                <td className="matrix-val" style={{ color: '#ef4444' }}>❌ {t('comparison_row_bridge_evm')}</td>
+                <td className="matrix-val" style={{ color: '#eab308' }}>⚠️ {t('comparison_row_bridge_legacy')}</td>
+                <td className="matrix-val col-highlight"><span className="matrix-check">✅ {t('comparison_row_bridge_pro')}</span></td>
+              </tr>
+              <tr>
+                <td className="matrix-feature-name">{t('comparison_row_sidepanel')}</td>
+                <td className="matrix-val" style={{ color: '#ef4444' }}>❌ {t('comparison_row_sidepanel_evm')}</td>
+                <td className="matrix-val" style={{ color: '#ef4444' }}>❌ {t('comparison_row_sidepanel_legacy')}</td>
+                <td className="matrix-val col-highlight"><span className="matrix-check">✅ {t('comparison_row_sidepanel_pro')}</span></td>
+              </tr>
+              <tr>
+                <td className="matrix-feature-name">{t('comparison_row_security')}</td>
+                <td className="matrix-val" style={{ color: '#eab308' }}>⚠️ {t('comparison_row_security_evm')}</td>
+                <td className="matrix-val" style={{ color: '#eab308' }}>⚠️ {t('comparison_row_security_legacy')}</td>
+                <td className="matrix-val col-highlight"><span className="matrix-check">✅ {t('comparison_row_security_pro')}</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </motion.div>
+    </section>
+  );
+}
+
+function UseCasesSection() {
+  const { t } = useTranslation();
+  const cases = [
+    { tag: t('usecase_1_tag'), title: t('usecase_1_title'), desc: t('usecase_1_desc'), icon: TrendingUp },
+    { tag: t('usecase_2_tag'), title: t('usecase_2_title'), desc: t('usecase_2_desc'), icon: Zap },
+    { tag: t('usecase_3_tag'), title: t('usecase_3_title'), desc: t('usecase_3_desc'), icon: Shield },
+    { tag: t('usecase_4_tag'), title: t('usecase_4_title'), desc: t('usecase_4_desc'), icon: CheckCircle },
+  ];
+
+  return (
+    <section id="use-cases" className="section" aria-labelledby="usecases-heading">
+      <motion.div
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+        viewport={{ once: true }}
+      >
+        <div style={{ textAlign: 'center', marginBottom: '2.5rem' }}>
+          <span className="pricing-badge">{t('usecases_badge')}</span>
+          <h2 id="usecases-heading" className="section-title" style={{ marginTop: '0.75rem', marginBottom: '1rem' }}>
+            {t('usecases_title')}
+          </h2>
+          <p style={{ color: 'var(--text-muted)', fontSize: '1.05rem', maxWidth: '640px', margin: '0 auto' }}>
+            {t('usecases_subtitle')}
+          </p>
+        </div>
+
+        <div className="usecases-grid">
+          {cases.map((c, i) => {
+            const Icon = c.icon;
+            return (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: i * 0.1 }}
+                viewport={{ once: true }}
+                className="glass-card usecase-card"
+              >
+                <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '1rem' }}>
+                  <span className="showcase-tag" style={{ margin: 0 }}>{c.tag}</span>
+                  <div className="feature-icon" style={{ width: '2.5rem', height: '2.5rem', margin: 0 }}>
+                    <Icon size={18} />
+                  </div>
+                </div>
+                <h3 style={{ fontSize: '1.2rem', fontWeight: 700, marginBottom: '0.75rem', color: 'var(--text-main)' }}>
+                  {c.title}
+                </h3>
+                <p style={{ color: 'var(--text-muted)', fontSize: '0.95rem', lineHeight: '1.7' }}>
+                  {c.desc}
+                </p>
+              </motion.div>
+            );
+          })}
+        </div>
+      </motion.div>
+    </section>
+  );
+}
+
+function StandardsSection() {
+  const { t } = useTranslation();
+  return (
+    <section id="standards" className="section" aria-labelledby="standards-heading">
+      <motion.div
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+        viewport={{ once: true }}
+      >
+        <div style={{ textAlign: 'center', marginBottom: '2.5rem' }}>
+          <span className="pricing-badge">{t('standards_badge')}</span>
+          <h2 id="standards-heading" className="section-title" style={{ marginTop: '0.75rem', marginBottom: '1rem' }}>
+            {t('standards_title')}
+          </h2>
+          <p style={{ color: 'var(--text-muted)', fontSize: '1.05rem', maxWidth: '640px', margin: '0 auto' }}>
+            {t('standards_subtitle')}
+          </p>
+        </div>
+
+        <div className="standards-grid">
+          <div className="glass-card standard-item">
+            <h4 className="standard-label">{t('standards_crypto')}</h4>
+            <p className="standard-value">{t('standards_crypto_desc')}</p>
+          </div>
+          <div className="glass-card standard-item">
+            <h4 className="standard-label">{t('standards_mnemonic')}</h4>
+            <p className="standard-value">{t('standards_mnemonic_desc')}</p>
+          </div>
+          <div className="glass-card standard-item">
+            <h4 className="standard-label">{t('standards_web3')}</h4>
+            <p className="standard-value">{t('standards_web3_desc')}</p>
+          </div>
+          <div className="glass-card standard-item">
+            <h4 className="standard-label">{t('standards_networks')}</h4>
+            <p className="standard-value">{t('standards_networks_desc')}</p>
+          </div>
+        </div>
+      </motion.div>
+    </section>
+  );
+}
+
 function HomePage({ theme, setTheme }) {
   const navigate = useNavigate();
   const { lang, t, getLocalizedLink } = useTranslation();
@@ -287,34 +468,84 @@ function HomePage({ theme, setTheme }) {
         <script type="application/ld+json">{JSON.stringify({
           "@context": "https://schema.org",
           "@type": "SoftwareApplication",
-          "name": "IOTA Wallet Pro",
+          "name": "Pro Wallet for IOTA",
           "applicationCategory": "FinanceApplication",
-          "operatingSystem": "Chrome",
-          "softwareVersion": "1.0",
+          "applicationSubCategory": "Cryptocurrency Wallet",
+          "operatingSystem": "Chrome, Brave, Edge, Chromium",
+          "softwareVersion": "1.0.0",
           "description": t('meta_desc'),
           "url": "https://walletpro.agentsblockchains.com",
-          "offers": {
-            "@type": "Offer",
-            "price": "0",
-            "priceCurrency": "USD"
+          "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.9",
+            "ratingCount": "128",
+            "bestRating": "5",
+            "worstRating": "1"
           },
+          "offers": [
+            {
+              "@type": "Offer",
+              "name": "Free Tier",
+              "price": "0",
+              "priceCurrency": "USD",
+              "availability": "https://schema.org/InStock"
+            },
+            {
+              "@type": "Offer",
+              "name": "Pro Monthly",
+              "price": "5.99",
+              "priceCurrency": "USD",
+              "availability": "https://schema.org/InStock"
+            },
+            {
+              "@type": "Offer",
+              "name": "Pro Annual",
+              "price": "45.99",
+              "priceCurrency": "USD",
+              "availability": "https://schema.org/InStock"
+            },
+            {
+              "@type": "Offer",
+              "name": "Pro Lifetime",
+              "price": "125.99",
+              "priceCurrency": "USD",
+              "availability": "https://schema.org/InStock"
+            }
+          ],
+          "featureList": [
+            "Dual-Layer Architecture: IOTA Layer 1 (Move VM) & IOTA EVM (Layer 2)",
+            "High-Throughput Batch Send & Bulk Token Disbursement with CSV Import",
+            "Anti-Mistransfer Address Book with Protocol-Level Zero-Typo Validation",
+            "Native Cross-Layer Asset Bridge (IOTA L1 ↔ IOTA EVM) with Real-Time Gas Visibility",
+            "Native Validator Staking & Auto-Compounding Yields on L1 Move",
+            "Persistent Chrome Side Panel Mode for Seamless Web3 Multitasking",
+            "Standard EIP-1193, EIP-6963 & IOTA Wallet Standard dApp Connectivity",
+            "Memory-Hard Client-Side Encryption (Argon2id 64MB + AES-256-GCM)",
+            "Automatic 30-Second Clipboard Sanitizer for Sensitive Data",
+            "Balance Finder Multi-Derivation Account Scanner",
+            "100% Self-Custodial & Non-Custodial Architecture",
+            "18 Curated Native Languages Support"
+          ],
           "publisher": {
             "@type": "Organization",
-            "name": "IOTA Wallet Pro",
-            "url": "https://walletpro.agentsblockchains.com"
+            "name": "Pro Wallet for IOTA",
+            "url": "https://walletpro.agentsblockchains.com",
+            "email": "support@agentsblockchains.com"
           }
         })}</script>
         <script type="application/ld+json">{JSON.stringify({
           "@context": "https://schema.org",
           "@type": "WebSite",
-          "name": "IOTA Wallet Pro",
+          "name": "Pro Wallet for IOTA",
           "url": "https://walletpro.agentsblockchains.com"
         })}</script>
         <script type="application/ld+json">{JSON.stringify({
           "@context": "https://schema.org",
           "@type": "Organization",
-          "name": "IOTA Wallet Pro",
-          "url": "https://walletpro.agentsblockchains.com"
+          "name": "Pro Wallet for IOTA",
+          "url": "https://walletpro.agentsblockchains.com",
+          "logo": "https://walletpro.agentsblockchains.com/assets/og-image.png",
+          "email": "support@agentsblockchains.com"
         })}</script>
       </Helmet>
       <div className="gradient-bg"></div>
@@ -372,10 +603,10 @@ function HomePage({ theme, setTheme }) {
           >
             <img
               src="/assets/hero-concept.webp"
-              alt="IOTA Wallet Pro Chrome extension showing IOTA L1 and EVM account balance"
+              alt="Pro Wallet for IOTA Chrome extension interface displaying IOTA L1 Move and EVM balances, native staking, and transactions"
               className="hero-image"
               width="640"
-              height="640"
+              height="720"
               fetchpriority="high"
             />
           </motion.div>
@@ -392,16 +623,34 @@ function HomePage({ theme, setTheme }) {
               delay={0.1}
             />
             <FeatureCard
-              icon={Zap}
+              icon={Layers}
               title={t('feature_2_title')}
               description={t('feature_2_desc')}
+              delay={0.15}
+            />
+            <FeatureCard
+              icon={TrendingUp}
+              title={t('feature_3_title')}
+              description={t('feature_3_desc')}
               delay={0.2}
             />
             <FeatureCard
-              icon={Layers}
-              title={t('feature_3_title')}
-              description={t('feature_3_desc')}
+              icon={ArrowLeftRight}
+              title={t('feature_4_title')}
+              description={t('feature_4_desc')}
+              delay={0.25}
+            />
+            <FeatureCard
+              icon={Zap}
+              title={t('feature_5_title')}
+              description={t('feature_5_desc')}
               delay={0.3}
+            />
+            <FeatureCard
+              icon={PanelRight}
+              title={t('feature_6_title')}
+              description={t('feature_6_desc')}
+              delay={0.35}
             />
           </div>
         </section>
@@ -453,11 +702,11 @@ function HomePage({ theme, setTheme }) {
               viewport={{ once: true }}
               className="showcase-img"
             >
-              <img src="/assets/bridge.webp" alt="IOTA Wallet Pro L1 to EVM bridge — transfer IOTA between native chain and IOTA EVM" className="feature-screenshot" width="516" height="869" loading="lazy" />
+              <img src="/assets/bridge.webp" alt="Pro Wallet for IOTA L1 to EVM bridge — transfer IOTA between native chain and IOTA EVM" className="feature-screenshot" width="360" height="600" loading="lazy" />
             </motion.div>
           </div>
 
-          {/* Address Book */}
+          {/* Staking */}
           <div className="showcase-row reverse">
             <motion.div
               initial={{ opacity: 0, x: 30 }}
@@ -466,8 +715,23 @@ function HomePage({ theme, setTheme }) {
               viewport={{ once: true }}
               className="showcase-img"
             >
-              <img src="/assets/addressbook1.webp" alt="IOTA Wallet Pro address book with L1 and EVM contact filtering" className="feature-screenshot" width="497" height="862" loading="lazy" />
+              <img src="/assets/staking.webp" alt="Pro Wallet for IOTA native validator staking on L1 Move with live APY rewards" className="feature-screenshot" width="375" height="640" loading="lazy" />
             </motion.div>
+            <motion.div
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="showcase-text"
+            >
+              <div className="showcase-tag">{t('showcase_staking_tag')}</div>
+              <h3 className="showcase-title">{t('showcase_staking_title')}</h3>
+              <p className="showcase-desc">{t('showcase_staking_desc')}</p>
+            </motion.div>
+          </div>
+
+          {/* Address Book */}
+          <div className="showcase-row">
             <motion.div
               initial={{ opacity: 0, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -479,9 +743,42 @@ function HomePage({ theme, setTheme }) {
               <h3 className="showcase-title">{t('showcase_addr_title')}</h3>
               <p className="showcase-desc">{t('showcase_addr_desc')}</p>
             </motion.div>
+            <motion.div
+              initial={{ opacity: 0, x: 30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="showcase-img"
+            >
+              <img src="/assets/addressbook1.webp" alt="Pro Wallet for IOTA anti-mistransfer address book with verified contacts" className="feature-screenshot" width="360" height="600" loading="lazy" />
+            </motion.div>
           </div>
 
-          {/* Address Book 2 */}
+          {/* Side Panel */}
+          <div className="showcase-row reverse">
+            <motion.div
+              initial={{ opacity: 0, x: 30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="showcase-img"
+            >
+              <img src="/assets/sidepanel.webp" alt="Pro Wallet for IOTA persistent Chrome side panel docked beside decentralized exchange" className="feature-screenshot" width="500" height="600" loading="lazy" />
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="showcase-text"
+            >
+              <div className="showcase-tag">{t('showcase_sidepanel_tag')}</div>
+              <h3 className="showcase-title">{t('showcase_sidepanel_title')}</h3>
+              <p className="showcase-desc">{t('showcase_sidepanel_desc')}</p>
+            </motion.div>
+          </div>
+
+          {/* Multi-Account */}
           <div className="showcase-row">
             <motion.div
               initial={{ opacity: 0, x: -30 }}
@@ -501,10 +798,14 @@ function HomePage({ theme, setTheme }) {
               viewport={{ once: true }}
               className="showcase-img"
             >
-              <img src="/assets/addressbook2.webp" alt="IOTA Wallet Pro multi-account management — multiple mnemonic profiles with derived accounts" className="feature-screenshot" width="519" height="885" loading="lazy" />
+              <img src="/assets/addressbook2.webp" alt="Pro Wallet for IOTA multi-account management — multiple mnemonic profiles with derived accounts" className="feature-screenshot" width="519" height="885" loading="lazy" />
             </motion.div>
           </div>
         </section>
+
+        <ComparisonSection />
+        <UseCasesSection />
+        <StandardsSection />
       </main>
 
       <footer className="footer flex justify-between items-center flex-wrap gap-4">

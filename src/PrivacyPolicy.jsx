@@ -10,12 +10,12 @@ const CONTENT = {
   en: {
     title: "Privacy Policy",
     lastUpdated: "Last Updated: 8/16/2026",
-    intro: "This Privacy Policy explains how Liu Yun (an individual, the “Operator”, “we”, “us”) collects, uses, and protects information when you use the IOTA Wallet Pro website (https://walletpro.agentsblockchains.com) and the IOTA Wallet Pro browser extension (the “Service”). The extension is designed as a self-custodial wallet, which means your keys and recovery phrases remain under your control. Optional paid features require a cloud account; these are separate services and are not required for basic wallet functionality. This policy is for general reference only and does not constitute legal advice.",
+    intro: "This Privacy Policy explains how the Pro Wallet for IOTA Team (the “Operator”, “we”, “us”) collects, uses, and protects information when you use the Pro Wallet for IOTA website (https://walletpro.agentsblockchains.com) and the Pro Wallet for IOTA browser extension (the “Service”). The extension is designed as a self-custodial wallet, which means your keys and recovery phrases remain under your control. Optional paid features require a cloud account; these are separate services and are not required for basic wallet functionality. This policy is for general reference only and does not constitute legal advice.",
     sections: [
       {
         heading: "1. Data Controller",
         paras: [
-          "The data controller for the Service is Liu Yun, an individual operator, reachable at:",
+          "The data controller for the Service is the Pro Wallet for IOTA Team, reachable at:",
           "Privacy contact: support@agentsblockchains.com. The Operator has not designated a separate Data Protection Officer; for any DPO matters, contact the privacy contact above."
         ]
       },
@@ -117,21 +117,21 @@ const CONTENT = {
           "For any privacy questions or requests, contact us at:",
           "Privacy email: support@agentsblockchains.com",
           "Support email: support@agentsblockchains.com",
-          "Operator: Liu Yun, an individual. Support is generally handled via email; we are not able to accept all communications by mail as an individual operator."
+          "Operator: Pro Wallet for IOTA Team. Support is generally handled via email."
         ]
       }
     ],
-    ack: "By using the IOTA Wallet Pro website or extension, you acknowledge that you have read and understood this Privacy Policy."
+    ack: "By using the Pro Wallet for IOTA website or extension, you acknowledge that you have read and understood this Privacy Policy."
   },
   zh: {
     title: "隱私政策",
     lastUpdated: "上次更新日期：2026年8月16日",
-    intro: "本隱私政策說明了個人經營者 Liu Yun（以下簡稱「營運方」、「我們」）在您使用 IOTA Wallet Pro 網站（https://walletpro.agentsblockchains.com）及 IOTA Wallet Pro 瀏覽器擴充功能（「服務」）時如何收集、使用及保護資訊。本擴充功能旨在作為自託管錢包運作，這意味著您的金鑰和助記詞將完全保留在您的控制之下。可選的付費功能需要雲端帳戶，這類功能屬於獨立服務，並非基本錢包功能的必要條件。本政策僅供一般參考，不構成法律意見。",
+    intro: "本隱私政策說明了 Pro Wallet for IOTA 團隊（以下簡稱「營運方」、「我們」）在您使用 Pro Wallet for IOTA 網站（https://walletpro.agentsblockchains.com）及 Pro Wallet for IOTA 瀏覽器擴充功能（「服務」）時如何收集、使用及保護資訊。本擴充功能旨在作為自託管錢包運作，這意味著您的金鑰和助記詞將完全保留在您的控制之下。可選的付費功能需要雲端帳戶，這類功能屬於獨立服務，並非基本錢包功能的必要條件。本政策僅供一般參考，不構成法律意見。",
     sections: [
       {
         heading: "1. 資料控制者",
         paras: [
-          "本服務的資料控制者為個人經營者 Liu Yun，可透過以下方式聯絡：",
+          "本服務的資料控制者為 Pro Wallet for IOTA 團隊，可透過以下方式聯絡：",
           "隱私聯絡：support@agentsblockchains.com。營運方未另行指定資料保護官（DPO）；如有任何 DPO 相關事宜，請聯絡上述隱私聯絡管道。"
         ]
       },
@@ -233,21 +233,21 @@ const CONTENT = {
           "如有任何隱私問題或請求，請透過以下方式聯絡我們：",
           "隱私電子郵件：support@agentsblockchains.com",
           "支援電子郵件：support@agentsblockchains.com",
-          "營運方：Liu Yun，個人經營者。支援一般透過電子郵件處理；作為個人經營者，我們可能無法接受所有郵寄通訊。"
+          "營運方：Pro Wallet for IOTA 團隊。支援一般透過電子郵件處理。"
         ]
       }
     ],
-    ack: "使用 IOTA Wallet Pro 網站或擴充功能，即表示您確認已閱讀並理解本隱私政策的全部內容。"
+    ack: "使用 Pro Wallet for IOTA 網站或擴充功能，即表示您確認已閱讀並理解本隱私政策的全部內容。"
   },
   ko: {
     title: "개인정보 처리방침",
     lastUpdated: "최종 수정일: 2026년 8월 16일",
-    intro: "본 개인정보 처리방침은 개인 운영자 Liu Yun(이하 “운영자”, “당사”, “저희”)가 귀하가 IOTA Wallet Pro 웹사이트(https://walletpro.agentsblockchains.com) 및 IOTA Wallet Pro 브라우저 확장 프로그램(“서비스”)을 사용할 때 정보를 어떻게 수집, 사용 및 보호하는지 설명합니다. 본 확장 프로그램은 셀프 커스터디(비수탁형) 지갑으로 설계되었으므로 개인키와 복구 문구는 귀하의 제어 하에 유지됩니다. 선택적 유료 기능에는 클라우드 계정이 필요하며 이는 별도의 서비스로 기본 지갑 기능에는 필요하지 않습니다. 본 방침은 일반적인 참조용일 뿐 법률 자문을 구성하지 않습니다.",
+    intro: "본 개인정보 처리방침은 Pro Wallet for IOTA 팀(이하 “운영자”, “당사”, “저희”)이 귀하가 Pro Wallet for IOTA 웹사이트(https://walletpro.agentsblockchains.com) 및 Pro Wallet for IOTA 브라우저 확장 프로그램(“서비스”)을 사용할 때 정보를 어떻게 수집, 사용 및 보호하는지 설명합니다. 본 확장 프로그램은 셀프 커스터디(비수탁형) 지갑으로 설계되었으므로 개인키와 복구 문구는 귀하의 제어 하에 유지됩니다. 선택적 유료 기능에는 클라우드 계정이 필요하며 이는 별도의 서비스로 기본 지갑 기능에는 필요하지 않습니다. 본 방침은 일반적인 참조용일 뿐 법률 자문을 구성하지 않습니다.",
     sections: [
       {
         heading: "1. 개인정보 책임자",
         paras: [
-          "서비스의 개인정보 책임자는 개인 운영자 Liu Yun이며 다음으로 연락할 수 있습니다:",
+          "서비스의 개인정보 책임자는 Pro Wallet for IOTA 팀이며 다음으로 연락할 수 있습니다:",
           "개인정보 연락처: support@agentsblockchains.com. 운영자는 별도의 개인정보 보호 책임자(DPO)를 지정하지 않았으며, DPO 관련 사항은 위 개인정보 연락처로 문의하십시오."
         ]
       },
@@ -349,11 +349,11 @@ const CONTENT = {
           "개인정보 관련 질문이나 요청이 있으시면 다음으로 연락해 주십시오:",
           "개인정보 이메일: support@agentsblockchains.com",
           "지원 이메일: support@agentsblockchains.com",
-          "운영자: Liu Yun, 개인 운영자. 지원은 일반적으로 이메일로 처리되며, 개인 운영자로서 우편 접수는 불가능할 수 있습니다."
+          "운영자: Pro Wallet for IOTA 팀. 지원은 일반적으로 이메일로 처리됩니다."
         ]
       }
     ],
-    ack: "IOTA Wallet Pro 웹사이트 또는 확장 프로그램을 사용하는 것은 본 개인정보 처리방침을 읽고 충분히 이해했음을 의미합니다."
+    ack: "Pro Wallet for IOTA 웹사이트 또는 확장 프로그램을 사용하는 것은 본 개인정보 처리방침을 읽고 충분히 이해했음을 의미합니다."
   }
 };
 

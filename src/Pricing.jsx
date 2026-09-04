@@ -68,7 +68,7 @@ export default function Pricing({ theme, setTheme }) {
   const pricingSchema = {
     "@context": "https://schema.org",
     "@type": "SoftwareApplication",
-    "name": "IOTA Wallet Pro",
+    "name": "Pro Wallet for IOTA",
     "applicationCategory": "FinanceApplication",
     "operatingSystem": "Chrome",
     "softwareVersion": "1.0",
@@ -103,12 +103,13 @@ export default function Pricing({ theme, setTheme }) {
         "name": "Pro Lifetime",
         "price": "125.99",
         "priceCurrency": "USD",
+        "billingDuration": "P1Y",
         "description": "Permanent one-time purchase with unrestricted access to all current and future Pro features."
       }
     ],
     "publisher": {
       "@type": "Organization",
-      "name": "IOTA Wallet Pro",
+      "name": "Pro Wallet for IOTA",
       "url": "https://walletpro.agentsblockchains.com"
     }
   };
@@ -130,6 +131,7 @@ export default function Pricing({ theme, setTheme }) {
         { name: t('pricing_matrix_dapps'), free: t('pricing_matrix_dapps_val'), pro: t('pricing_matrix_dapps_val'), highlight: false },
         { name: t('pricing_matrix_security'), free: t('pricing_matrix_security_val'), pro: t('pricing_matrix_security_val'), highlight: false },
         { name: t('pricing_matrix_networks'), free: t('pricing_matrix_networks_val'), pro: t('pricing_matrix_networks_val'), highlight: false },
+        { name: t('pricing_matrix_staking'), free: t('pricing_matrix_staking_val'), pro: t('pricing_matrix_staking_val'), highlight: false },
         { name: t('pricing_matrix_history'), free: t('pricing_matrix_history_val'), pro: t('pricing_matrix_history_val'), highlight: false },
       ]
     },
@@ -590,7 +592,7 @@ export default function Pricing({ theme, setTheme }) {
         {/* Bottom CTA */}
         <section className="cta-section" style={{ marginBottom: '4rem' }}>
           <h2 style={{ fontSize: '2.25rem', fontWeight: 800, marginBottom: '1rem' }}>
-            Get Started with IOTA Wallet Pro Today
+            Get Started with Pro Wallet for IOTA Today
           </h2>
           <p style={{ color: 'var(--text-muted)', fontSize: '1.1rem', maxWidth: '580px', margin: '0 auto 2rem' }}>
             Install the extension in seconds. Enjoy free access immediately or upgrade to Pro for unlimited power features.
