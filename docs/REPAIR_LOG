@@ -134,4 +134,37 @@ This document tracks code fixes, repairs, and security remediations applied to t
     - Passed `npm run lint` cleanly (0 errors).
     - Executed `npm run build` to prerender all 21 static HTML pages in `dist/`, verifying complete on-page semantic content and SEO metadata across EN, ZH, and KO.
 
+## [Completed] September 4, 2026: Updated Dedicated Privacy Contact Email to privacy@agentsblockchains.com
+- **Target Files:** [src/PrivacyPolicy.jsx](file:///H:/web3/iota-wallet/website/src/PrivacyPolicy.jsx), [src/TermsOfService.jsx](file:///H:/web3/iota-wallet/website/src/TermsOfService.jsx), `dist/`
+- **Problem:**
+  - The Privacy Policy and Terms of Service previously used the general customer support email (`support@agentsblockchains.com`) for all privacy contact, DPO inquiries, data subject rights (GDPR/CCPA access/erasure), and legal/privacy notifications.
+  - To follow industry standard compliance best practices (as required by Google Chrome Web Store, GDPR, and CCPA), a dedicated privacy address (`privacy@agentsblockchains.com`) was required.
+- **Remediation:**
+  - In [src/PrivacyPolicy.jsx](file:///H:/web3/iota-wallet/website/src/PrivacyPolicy.jsx):
+    - Updated Section 1 (Data Controller & DPO contact), Section 7 (Data Subject Rights / GDPR requests), Section 8 (Children's privacy inquiries), and Section 11 (Contact Us privacy email) to `privacy@agentsblockchains.com` across all three languages (English, Traditional Chinese `zh`, and Korean `ko`).
+    - Retained `support@agentsblockchains.com` for general user feedback and product assistance.
+  - In [src/TermsOfService.jsx](file:///H:/web3/iota-wallet/website/src/TermsOfService.jsx):
+    - Updated Section 16 "Legal & Privacy" / "法務與隱私" / "법무 및 개인정보" contact channel to `privacy@agentsblockchains.com` across English, Traditional Chinese (`zh`), and Korean (`ko`).
+  - Verified with `findstr` across `src/` and `dist/`.
+  - Passed `npm run lint` cleanly (0 errors).
+  - Rebuilt production bundle and prerendered all 21 static routes (`npm run build`).
+
+## [Completed] September 4, 2026: Fixed Feature Comparison Table Alignment, Spacing & Visual Clarity
+- **Target Files:** [src/App.jsx](file:///H:/web3/iota-wallet/website/src/App.jsx), [src/index.css](file:///H:/web3/iota-wallet/website/src/index.css), `dist/`
+- **Problem:**
+  - The feature comparison table (`Why Pro Wallet for IOTA?`) had text alignment and visual layout issues:
+    - The `th` header cells and `td` body cells were misaligned (header lacked explicit `text-align: left` on the first column, causing headers to be centered while feature names were left-aligned).
+    - Table cells lacked consistent padding and dividing borders (`border-bottom`), making the rows squished together and hard to read.
+    - Status indicators (`❌`, `⚠️`, `✅`) were unstyled raw text without background contrast or boundary pills.
+    - The table container lacked glass-card encapsulation and responsive touch scroll formatting (`overflow-x: auto; -webkit-overflow-scrolling: touch;`).
+- **Remediation:**
+  - In [src/index.css](file:///H:/web3/iota-wallet/website/src/index.css):
+    - Added dedicated `.comparison-wrap` with glass-card styling, generous padding (`1.75rem 2rem`), and responsive horizontal scrolling.
+    - Added dedicated `.comparison-table` with separate border spacing, explicit column alignments (`th.col-feature` / `td.col-feature` left-aligned with `1.25rem` padding; `th.col-peer` / `td.col-peer` centered; `th.col-highlight` / `td.col-highlight` centered with active primary border and subtle highlight background).
+    - Added dedicated status pill badges (`.comparison-badge-pill--danger`, `.comparison-badge-pill--warning`, `.comparison-badge-pill--success`) with high-contrast text and subtle semi-transparent badge backgrounds.
+    - Added row hover state (`rgba(255, 255, 255, 0.02)`) and dividing bottom borders.
+  - In [src/App.jsx](file:///H:/web3/iota-wallet/website/src/App.jsx):
+    - Updated `ComparisonSection` markup to wrap the table in `<div className="glass-card comparison-wrap">` and apply the new column and badge pill classes.
+  - Verified with `npm run lint` (0 errors) and re-executed `npm run build` to update all 21 prerendered static pages in `dist/`.
+
 

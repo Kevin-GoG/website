@@ -281,52 +281,52 @@ function ComparisonSection() {
           </p>
         </div>
 
-        <div className="pricing-matrix-wrap" style={{ maxWidth: '1000px', margin: '0 auto' }}>
-          <table className="pricing-matrix-table">
+        <div className="glass-card comparison-wrap">
+          <table className="comparison-table">
             <thead>
               <tr>
-                <th style={{ width: '32%' }}>{t('comparison_col_feature')}</th>
-                <th style={{ width: '22%' }}>{t('comparison_col_evm')}</th>
-                <th style={{ width: '22%' }}>{t('comparison_col_legacy')}</th>
-                <th className="col-highlight" style={{ width: '24%' }}>{t('comparison_col_pro')}</th>
+                <th className="col-feature" style={{ width: '31%' }}>{t('comparison_col_feature')}</th>
+                <th className="col-peer" style={{ width: '23%' }}>{t('comparison_col_evm')}</th>
+                <th className="col-peer" style={{ width: '23%' }}>{t('comparison_col_legacy')}</th>
+                <th className="col-highlight" style={{ width: '23%' }}>{t('comparison_col_pro')}</th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td className="matrix-feature-name">{t('comparison_row_dual')}</td>
-                <td className="matrix-val" style={{ color: '#ef4444' }}>❌ {t('comparison_row_dual_evm')}</td>
-                <td className="matrix-val" style={{ color: '#eab308' }}>⚠️ {t('comparison_row_dual_legacy')}</td>
-                <td className="matrix-val col-highlight"><span className="matrix-check">✅ {t('comparison_row_dual_pro')}</span></td>
+                <td className="col-feature">{t('comparison_row_dual')}</td>
+                <td className="col-peer"><span className="comparison-badge-pill comparison-badge-pill--danger">❌ {t('comparison_row_dual_evm')}</span></td>
+                <td className="col-peer"><span className="comparison-badge-pill comparison-badge-pill--warning">⚠️ {t('comparison_row_dual_legacy')}</span></td>
+                <td className="col-highlight"><span className="comparison-badge-pill comparison-badge-pill--success">✅ {t('comparison_row_dual_pro')}</span></td>
               </tr>
               <tr>
-                <td className="matrix-feature-name">{t('comparison_row_batch')}</td>
-                <td className="matrix-val" style={{ color: '#ef4444' }}>❌ {t('comparison_row_batch_evm')}</td>
-                <td className="matrix-val" style={{ color: '#ef4444' }}>❌ {t('comparison_row_batch_legacy')}</td>
-                <td className="matrix-val col-highlight"><span className="matrix-check">✅ {t('comparison_row_batch_pro')}</span></td>
+                <td className="col-feature">{t('comparison_row_batch')}</td>
+                <td className="col-peer"><span className="comparison-badge-pill comparison-badge-pill--danger">❌ {t('comparison_row_batch_evm')}</span></td>
+                <td className="col-peer"><span className="comparison-badge-pill comparison-badge-pill--danger">❌ {t('comparison_row_batch_legacy')}</span></td>
+                <td className="col-highlight"><span className="comparison-badge-pill comparison-badge-pill--success">✅ {t('comparison_row_batch_pro')}</span></td>
               </tr>
               <tr>
-                <td className="matrix-feature-name">{t('comparison_row_addr')}</td>
-                <td className="matrix-val" style={{ color: '#ef4444' }}>❌ {t('comparison_row_addr_evm')}</td>
-                <td className="matrix-val" style={{ color: '#eab308' }}>⚠️ {t('comparison_row_addr_legacy')}</td>
-                <td className="matrix-val col-highlight"><span className="matrix-check">✅ {t('comparison_row_addr_pro')}</span></td>
+                <td className="col-feature">{t('comparison_row_addr')}</td>
+                <td className="col-peer"><span className="comparison-badge-pill comparison-badge-pill--danger">❌ {t('comparison_row_addr_evm')}</span></td>
+                <td className="col-peer"><span className="comparison-badge-pill comparison-badge-pill--warning">⚠️ {t('comparison_row_addr_legacy')}</span></td>
+                <td className="col-highlight"><span className="comparison-badge-pill comparison-badge-pill--success">✅ {t('comparison_row_addr_pro')}</span></td>
               </tr>
               <tr>
-                <td className="matrix-feature-name">{t('comparison_row_bridge')}</td>
-                <td className="matrix-val" style={{ color: '#ef4444' }}>❌ {t('comparison_row_bridge_evm')}</td>
-                <td className="matrix-val" style={{ color: '#eab308' }}>⚠️ {t('comparison_row_bridge_legacy')}</td>
-                <td className="matrix-val col-highlight"><span className="matrix-check">✅ {t('comparison_row_bridge_pro')}</span></td>
+                <td className="col-feature">{t('comparison_row_bridge')}</td>
+                <td className="col-peer"><span className="comparison-badge-pill comparison-badge-pill--danger">❌ {t('comparison_row_bridge_evm')}</span></td>
+                <td className="col-peer"><span className="comparison-badge-pill comparison-badge-pill--warning">⚠️ {t('comparison_row_bridge_legacy')}</span></td>
+                <td className="col-highlight"><span className="comparison-badge-pill comparison-badge-pill--success">✅ {t('comparison_row_bridge_pro')}</span></td>
               </tr>
               <tr>
-                <td className="matrix-feature-name">{t('comparison_row_sidepanel')}</td>
-                <td className="matrix-val" style={{ color: '#ef4444' }}>❌ {t('comparison_row_sidepanel_evm')}</td>
-                <td className="matrix-val" style={{ color: '#ef4444' }}>❌ {t('comparison_row_sidepanel_legacy')}</td>
-                <td className="matrix-val col-highlight"><span className="matrix-check">✅ {t('comparison_row_sidepanel_pro')}</span></td>
+                <td className="col-feature">{t('comparison_row_sidepanel')}</td>
+                <td className="col-peer"><span className="comparison-badge-pill comparison-badge-pill--danger">❌ {t('comparison_row_sidepanel_evm')}</span></td>
+                <td className="col-peer"><span className="comparison-badge-pill comparison-badge-pill--danger">❌ {t('comparison_row_sidepanel_legacy')}</span></td>
+                <td className="col-highlight"><span className="comparison-badge-pill comparison-badge-pill--success">✅ {t('comparison_row_sidepanel_pro')}</span></td>
               </tr>
               <tr>
-                <td className="matrix-feature-name">{t('comparison_row_security')}</td>
-                <td className="matrix-val" style={{ color: '#eab308' }}>⚠️ {t('comparison_row_security_evm')}</td>
-                <td className="matrix-val" style={{ color: '#eab308' }}>⚠️ {t('comparison_row_security_legacy')}</td>
-                <td className="matrix-val col-highlight"><span className="matrix-check">✅ {t('comparison_row_security_pro')}</span></td>
+                <td className="col-feature">{t('comparison_row_security')}</td>
+                <td className="col-peer"><span className="comparison-badge-pill comparison-badge-pill--warning">⚠️ {t('comparison_row_security_evm')}</span></td>
+                <td className="col-peer"><span className="comparison-badge-pill comparison-badge-pill--warning">⚠️ {t('comparison_row_security_legacy')}</span></td>
+                <td className="col-highlight"><span className="comparison-badge-pill comparison-badge-pill--success">✅ {t('comparison_row_security_pro')}</span></td>
               </tr>
             </tbody>
           </table>

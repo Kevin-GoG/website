@@ -16,7 +16,7 @@ const CONTENT = {
         heading: "1. Data Controller",
         paras: [
           "The data controller for the Service is the Pro Wallet for IOTA Team, reachable at:",
-          "Privacy contact: support@agentsblockchains.com. The Operator has not designated a separate Data Protection Officer; for any DPO matters, contact the privacy contact above."
+          "Privacy contact: privacy@agentsblockchains.com. The Operator has not designated a separate Data Protection Officer; for any DPO matters, contact the privacy contact above."
         ]
       },
       {
@@ -90,13 +90,13 @@ const CONTENT = {
         paras: [
           "Under applicable law (including the GDPR, where it applies to you), you have the right to:",
           "(1) be informed about how your data is processed; (2) access your data; (3) rectify inaccurate data; (4) request erasure; (5) restrict processing; (6) data portability; (7) object to processing; and (8) withdraw consent at any time. You also have the right to lodge a complaint with your local data protection authority.",
-          "To exercise any of these rights, contact support@agentsblockchains.com. We will respond within 30 calendar days. Because the Service is self-custodial, you can usually delete local wallet data yourself by uninstalling the extension or clearing local storage."
+          "To exercise any of these rights, contact privacy@agentsblockchains.com. We will respond within 30 calendar days. Because the Service is self-custodial, you can usually delete local wallet data yourself by uninstalling the extension or clearing local storage."
         ]
       },
       {
         heading: "8. Children's Privacy",
         paras: [
-          "The Service is intended for users aged 18 or older. We do not knowingly collect personal information from children under the age of 13 (or the minimum age set by your local law), and we do not knowingly allow children to use paid features. If we learn that we have collected data from a child below this age, we will delete it. If you believe a child has provided us information, please contact support@agentsblockchains.com."
+          "The Service is intended for users aged 18 or older. We do not knowingly collect personal information from children under the age of 13 (or the minimum age set by your local law), and we do not knowingly allow children to use paid features. If we learn that we have collected data from a child below this age, we will delete it. If you believe a child has provided us information, please contact privacy@agentsblockchains.com."
         ]
       },
       {
@@ -115,7 +115,7 @@ const CONTENT = {
         heading: "11. Contact Us",
         paras: [
           "For any privacy questions or requests, contact us at:",
-          "Privacy email: support@agentsblockchains.com",
+          "Privacy email: privacy@agentsblockchains.com",
           "Support email: support@agentsblockchains.com",
           "Operator: Pro Wallet for IOTA Team. Support is generally handled via email."
         ]
@@ -132,7 +132,7 @@ const CONTENT = {
         heading: "1. 資料控制者",
         paras: [
           "本服務的資料控制者為 Pro Wallet for IOTA 團隊，可透過以下方式聯絡：",
-          "隱私聯絡：support@agentsblockchains.com。營運方未另行指定資料保護官（DPO）；如有任何 DPO 相關事宜，請聯絡上述隱私聯絡管道。"
+          "隱私聯絡：privacy@agentsblockchains.com。營運方未另行指定資料保護官（DPO）；如有任何 DPO 相關事宜，請聯絡上述隱私聯絡管道。"
         ]
       },
       {
@@ -206,13 +206,13 @@ const CONTENT = {
         paras: [
           "根據適用法律（包括適用於您的 GDPR），您有權：",
           "(1) 被告知您的數據如何被處理；(2) 存取您的數據；(3) 更正不準確的數據；(4) 要求刪除；(5) 限制處理；(6) 數據可攜性；(7) 反對處理；(8) 隨時撤回同意。您亦有權向當地資料保護機構提出申訴。",
-          "如需行使上述任何權利，請聯絡 support@agentsblockchains.com。我們將於 30 個月曆日內回覆。由於本服務為自託管，您通常可以自行透過卸載擴充功能或清除本機儲存來刪除本機錢包數據。"
+          "如需行使上述任何權利，請聯絡 privacy@agentsblockchains.com。我們將於 30 個月曆日內回覆。由於本服務為自託管，您通常可以自行透過卸載擴充功能或清除本機儲存來刪除本機錢包數據。"
         ]
       },
       {
         heading: "8. 兒童隱私",
         paras: [
-          "本服務僅供 18 歲以上使用者使用。我們不會在知情的情況下收集 13 歲以下（或您當地法律所定的最低年齡）兒童的個人資訊，亦不會在知情的情況下允許兒童使用付費功能。若我們得知已收集到此年齡以下兒童的數據，將予以刪除。如您認為有兒童向我們提供了資訊，請聯絡 support@agentsblockchains.com。"
+          "本服務僅供 18 歲以上使用者使用。我們不會在知情的情況下收集 13 歲以下（或您當地法律所定的最低年齡）兒童的個人資訊，亦不會在知情的情況下允許兒童使用付費功能。若我們得知已收集到此年齡以下兒童的數據，將予以刪除。如您認為有兒童向我們提供了資訊，請聯絡 privacy@agentsblockchains.com。"
         ]
       },
       {
@@ -231,7 +231,7 @@ const CONTENT = {
         heading: "11. 聯絡我們",
         paras: [
           "如有任何隱私問題或請求，請透過以下方式聯絡我們：",
-          "隱私電子郵件：support@agentsblockchains.com",
+          "隱私電子郵件：privacy@agentsblockchains.com",
           "支援電子郵件：support@agentsblockchains.com",
           "營運方：Pro Wallet for IOTA 團隊。支援一般透過電子郵件處理。"
         ]
@@ -248,7 +248,7 @@ const CONTENT = {
         heading: "1. 개인정보 책임자",
         paras: [
           "서비스의 개인정보 책임자는 Pro Wallet for IOTA 팀이며 다음으로 연락할 수 있습니다:",
-          "개인정보 연락처: support@agentsblockchains.com. 운영자는 별도의 개인정보 보호 책임자(DPO)를 지정하지 않았으며, DPO 관련 사항은 위 개인정보 연락처로 문의하십시오."
+          "개인정보 연락처: privacy@agentsblockchains.com. 운영자는 별도의 개인정보 보호 책임자(DPO)를 지정하지 않았으며, DPO 관련 사항은 위 개인정보 연락처로 문의하십시오."
         ]
       },
       {
@@ -322,13 +322,13 @@ const CONTENT = {
         paras: [
           "적용 가능한 법률(GDPR이 귀하에게 적용되는 경우 포함)에 따라 귀하는 다음 권리를 가집니다:",
           "(1) 데이터 처리 방식에 대한 고지를 받을 권리; (2) 데이터에 대한 접근; (3) 부정확한 데이터의 정정; (4) 삭제 요청; (5) 처리 제한; (6) 데이터 이동권; (7) 처리에 대한 반대; (8) 언제든지 동의 철회. 또한 관할 개인정보보호 기관에 불만을 제기할 권리가 있습니다.",
-          "이러한 권리를 행사하려면 support@agentsblockchains.com으로 연락하십시오. 당사는 30일 이내에 응답합니다. 본 서비스는 셀프 커스터디 방식이므로 확장 프로그램을 제거하거나 브라우저 스토리지를 삭제하여 로컬 지갑 데이터를 직접 삭제할 수 있는 경우가 많습니다."
+          "이러한 권리를 행사하려면 privacy@agentsblockchains.com으로 연락하십시오. 당사는 30일 이내에 응답합니다. 본 서비스는 셀프 커스터디 방식이므로 확장 프로그램을 제거하거나 브라우저 스토리지를 삭제하여 로컬 지갑 데이터를 직접 삭제할 수 있는 경우가 많습니다."
         ]
       },
       {
         heading: "8. 아동의 개인정보 보호",
         paras: [
-          "본 서비스는 18세 이상의 사용자만 이용할 수 있습니다. 당사는 13세 미만(또는 현지 법률이 정한 최소 연령) 아동의 개인정보를 고의로 수집하지 않으며, 아동이 유료 기능을 사용하도록 고의로 허용하지 않습니다. 이 연령 미만 아동의 데이터를 수집한 사실을 알게 되면 이를 삭제합니다. 아동이 당사에 정보를 제공했다고 생각되면 support@agentsblockchains.com으로 연락해 주십시오."
+          "본 서비스는 18세 이상의 사용자만 이용할 수 있습니다. 당사는 13세 미만(또는 현지 법률이 정한 최소 연령) 아동의 개인정보를 고의로 수집하지 않으며, 아동이 유료 기능을 사용하도록 고의로 허용하지 않습니다. 이 연령 미만 아동의 데이터를 수집한 사실을 알게 되면 이를 삭제합니다. 아동이 당사에 정보를 제공했다고 생각되면 privacy@agentsblockchains.com으로 연락해 주십시오."
         ]
       },
       {
@@ -347,7 +347,7 @@ const CONTENT = {
         heading: "11. 문의하기",
         paras: [
           "개인정보 관련 질문이나 요청이 있으시면 다음으로 연락해 주십시오:",
-          "개인정보 이메일: support@agentsblockchains.com",
+          "개인정보 이메일: privacy@agentsblockchains.com",
           "지원 이메일: support@agentsblockchains.com",
           "운영자: Pro Wallet for IOTA 팀. 지원은 일반적으로 이메일로 처리됩니다."
         ]

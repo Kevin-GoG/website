@@ -140,7 +140,7 @@ const CONTENT = {
           "Billing: support@agentsblockchains.com",
           "Refunds: support@agentsblockchains.com",
           "Cancel Subscription: in-product account settings, or support@agentsblockchains.com",
-          "Legal & Privacy: support@agentsblockchains.com",
+          "Legal & Privacy: privacy@agentsblockchains.com",
           "Security: support@agentsblockchains.com"
         ]
       }
@@ -281,7 +281,7 @@ const CONTENT = {
           "帳單：support@agentsblockchains.com",
           "退款：support@agentsblockchains.com",
           "取消訂閱：應用程式內帳戶設定，或 support@agentsblockchains.com",
-          "法務與隱私：support@agentsblockchains.com",
+          "法務與隱私：privacy@agentsblockchains.com",
           "安全：support@agentsblockchains.com"
         ]
       }
@@ -422,7 +422,7 @@ const CONTENT = {
           "결제: support@agentsblockchains.com",
           "환불: support@agentsblockchains.com",
           "구독 취소: 앱 내 계정 설정 또는 support@agentsblockchains.com",
-          "법무 및 개인정보: support@agentsblockchains.com",
+          "법무 및 개인정보: privacy@agentsblockchains.com",
           "보안: support@agentsblockchains.com"
         ]
       }
